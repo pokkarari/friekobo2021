@@ -217,46 +217,38 @@ p {
   background-image: url(../images/home-suzume2.png);
   background-size: 20%;
   background-position: 70% 100%;
-/*  padding: 0 0 150px 0;*/
+}
+
+.home-gallery-top {
+  text-align: center;
+}
+.home-gallery-top .more-btn {
+
 }
 
 .home-gallery-bg {
   position: relative;
-  background-image: url(../images/home-gallery-top.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
+/*  background-image: url(../images/home-gallery-top.jpg);*/
+/*  background-repeat: no-repeat;
+  background-size: contain;*/
 /*  background-color: rgba(255,255,255,.4);*/
-  background-blend-mode: lighten;
-  min-height: 100vh;
-}
-
-.home-gallery-top {
+/*  background-blend-mode: lighten;*/
 /*  min-height: 100vh;*/
-  text-align: center;
 }
-
-.home-gallery-bg .more-btn {
-  position: absolute;
-  bottom: 100px;
-  left: 40%;
-}
-
-
-.home-gallry-works01 {
+/*.home-gallry-works01 {
   position: relative;
   top: 200px;
-/*  border : 2px solid #85B7D5;*/
-/*  background-color: #85B7D5;*/
+  border : 2px solid #85B7D5;
   list-style: none;
-}
-.home-gallry-works01 img{
+}*/
+/*.home-gallry-works01 img{
   margin: 0 auto;
   width: auto;
-}
+}*/
 
 .home-gallry-works02 {
-  position: relative;
-  top: 200px;
+  position: absolute;
+  bottom: -20px;
   display:grid;
   gap: 12px;
   grid-template-columns: repeat(3, 1fr);
