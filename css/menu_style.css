@@ -1,0 +1,142 @@
+@charset "UTF-8";
+
+/*------------------------------
+
+ハンバーガーメニューに関するCSS
+
+------------------------------*/
+.hb-menu {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 100;/* 重なり順を一番上に */
+  width: 95%;
+  align-items: center;
+  padding: 20px;
+}
+
+
+/* チェックボックスは非表示に */
+.drawer-hidden {
+  display: none;
+}
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer-open {
+  display: flex;
+  height: 60px;
+  width: 55px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 99;
+  cursor: pointer;
+/*  border: 1px solid #000;*/
+  border-radius: 4px;
+  background-color: rgba(255,255,255,.7);
+  overflow: hidden;
+}
+
+/* ハンバーガーメニューのアイコン */
+.drawer-open span,
+.drawer-open span:before,
+.drawer-open span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 40px;
+  border-radius: 3px;
+  background: #271A10;
+  transition: 0.5s;
+  position: absolute;
+}
+
+/*MENUの文字*/
+.drawer-open p {
+  color: #271A10;
+  font-size: 1.3rem;
+  padding-top: 10px;
+}
+
+/*三本線のうち一番上の棒の位置を調整*/
+.drawer-open span:before {
+  bottom:8px;
+}
+/*三本線のうち一番下の棒の位置を調整*/
+.drawer-open span:after {
+  top:8px;
+}
+
+/*アイコンがクリックされたら真ん中の線を透明にする*/
+#drawer-check:checked ~ .drawer-open span {
+  background: rgba(255,255,255,0);
+}
+/*MENUの文字も透明にする*/
+#drawer-check:checked ~ .drawer-open p {
+  opacity: 0;
+}
+
+/*アイコンがクリックされたらアイコンが×印になるように上下の線を回転*/
+#drawer-check:checked ~ .drawer-open span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+#drawer-check:checked ~ .drawer-open span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+
+/*メニューのデザイン*/
+.drawer-content {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 100%; /*メニューを画面の外に飛ばす*/
+  z-index: 98;
+  background: #fff;
+  transition: 0.5s;
+}
+
+.hb-menu-logo {
+  padding-top: 20px;
+  padding-left: 5%;
+}
+.hb-menu-logo img {
+  width: 60px;
+  height: 60px;
+}
+
+.drawer-item {
+  list-style: none;
+  text-align: left;
+  padding-left: 10%;
+  padding-top: 20px;
+  font-size: 1.8rem;
+  border-bottom: 1px solid #271A10;
+}
+
+.drawer-item span {
+  font-size: 1.2rem;
+}
+
+.drawer-item a {
+  display: block;
+  color: #271A10;
+}
+.drawer-item a:hover {
+  display: block;
+  color: #271A10;
+  background-color: #85B7D5;
+}
+
+.hb-menu-bg {
+  padding-left: 40%;
+}
+
+
+/*アイコンがクリックされたらメニューを表示*/
+#drawer-check:checked ~ .drawer-content {
+  left: 30%; /*メニューを画面に入れる*/
+}

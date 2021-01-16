@@ -1,0 +1,127 @@
+﻿@charset "utf-8";
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 12px;
+}
+
+h1 {
+  font-size: 24px;
+  border-left: 8px solid #FFAD00;
+  padding-left: 10px;
+}
+
+table {
+  border: 1px solid #666;
+  border-collapse: collapse;
+  width: 100%;
+}
+th {
+  border: 1px solid #666;
+  background-color: #ffc864;
+  padding: 4px;
+}
+td {
+  border: 1px solid #666;
+  padding: 4px;
+}
+
+table#loginbox {
+  width: 250px;
+}
+table#loginbox input {
+  width: 150px;
+}
+
+#container {
+  width: 970px;
+  margin: 0 auto;
+}
+
+header {
+  padding: 10px;
+  background-color: #FFAD00;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  height: 20px;
+}
+
+header .inner {
+	width:970px;
+	margin:auto;
+}
+
+#container header span {
+  float: left;
+}
+#account {
+  float: right;
+}
+#account a {
+  color: #ddd;
+}
+
+#nav {
+  padding: 10px;
+}
+
+footer {
+  padding: 10px;
+}
+
+main {
+  padding: 10px;
+}
+
+main h1 {
+  margin-top: 0;
+}
+
+.error {
+  color: #f00;
+}
+
+#pages {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  text-align: right;
+}
+
+th.fixed {
+  width: 150px;
+}
+
+td.center {
+  text-align: center;
+}
+
+td.right {
+  text-align: right;
+}
+
+td span.title {
+  display:block;
+  font-size:14px;
+  font-weight: bolder;
+}
+
+td img {
+  width:64px;
+  height:64px;
+}
+
+#admin_index th:first-child, #admin_index th:nth-child(3){
+  width:100px;
+}
+
+#admin_index  th:nth-child(4), #admin_index th:nth-child(5){
+  width:50px;
+}
+
+header .inner span a, header .inner span a:visited {
+  color: #fff;
+  text-decoration:none;
+}

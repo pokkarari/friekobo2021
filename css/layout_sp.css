@@ -1,0 +1,200 @@
+@charset "UTF-8";
+/* タブレット版 768pxまでに設定
+-----------------------------------------*/
+@media screen and (min-width: 768px){
+
+  /* 見出し */
+  .page-title {
+
+  }
+
+  /* HEADER */
+
+.home-menu-area{
+    display: none;
+}
+
+.home-gallery-bg {
+  background-size: contain;
+}
+
+
+
+
+
+/* 以下作業中 */
+
+
+
+  /* HOME */
+.home-content {
+
+}
+
+/*横並び*/
+.page-header {
+
+}
+
+/* NEWS */
+.home-news-title{
+  padding: 20px;
+/*  width: 400px;*/
+  margin: 0 auto;
+}
+
+
+/* GALLERY */
+.home-gallery-area {
+
+}
+.home-gallery-bg {
+  background-size: contain;
+  min-height: auto;
+}
+
+.home-gallry-works01 img{
+  margin: 0 auto;
+  width: 150px;
+}
+
+
+/*HOW TO*/
+.homo-howto-main img {
+  width: 80%;
+}
+
+
+
+/* フォーム */
+input[type="text"],
+input[type="email"],
+textarea {
+  max-width: 100%;
+}
+
+
+/* 記事の部分 */
+/*article {
+  width: 74%;
+}*/
+
+/* サイドバー */
+/*aside {
+  width: 22%;
+}
+
+
+/* サイドバー */
+/*aside {
+    width: 22%;
+}
+
+.news-contents {
+  display: flex;
+  justify-content:  space-between;
+  margin-bottom: 50px;
+}
+.post-info {
+  background-image: url(../images/kikyu.png);
+  position: relative;
+  padding-top: 4px;
+  margin-bottom: 40px;
+}
+
+.post-date {
+  color: #271a10;
+  margin-bottom: 0;
+  border-bottom: 1px solid;
+}
+
+.post-title {
+  font-size: 2rem;
+  font-weight: normal;
+}
+.post-date,
+.post-title,
+.post-cat {
+  margin-left: 100px;
+}
+
+article img {
+  margin-bottom: 20px;
+}
+
+article p {
+  margin-bottom: 1rem;
+}
+
+.sub-title {
+  font-size: 1.375rem;
+  padding: 0 8px 8px;
+  border-bottom: 2px #86B8D5 solid;
+  font-weight: normal;
+}
+
+.sub-menu {
+  margin-bottom: 60px;
+  list-style: none;
+}
+.sub-menu li {
+  border-bottom: 1px #ddd solid;
+}
+.sub-menu a {
+  color: #432;
+  padding: 10px;
+  display: block;
+}
+.sub-menu a:hover {
+  color: #271A10;
+}
+*/
+}
+
+
+
+/* PC版 1024pxまでに設定
+-----------------------------------------*/
+
+ @media screen and (min-width: 1024px) {
+
+/* PC版用のメニュー */
+.home-menu-area {
+  position: relative;
+}
+
+.home-menu {
+  display: flex;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  margin-top: 34px;
+  list-style: none;
+}
+
+.home-menu li {
+  margin-left: 36px;
+}
+.home-menu a {
+  color: #fff;
+  padding-bottom: 5px;
+}
+
+.home-menu a:hover {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+
+.home-menu-area {
+  display: flex;
+  justify-content: space-between;
+  background: #85B7D5;
+  padding-bottom: 20px;
+}
+
+
+
+/* NEWS */
+
+
+
+}

@@ -1,0 +1,321 @@
+/* テスト用のコピペメモ */
+
+/* メニュー3テストの ハンバーガーアイコン */
+/*============
+nav
+=============*/
+nav {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  bottom: 0;
+  width: 300px;
+  background: #ffffff;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  transition: all .5s;
+  z-index: 3;
+  opacity: 0;
+}
+.open nav {
+  left: 0;
+  opacity: 1;
+}
+nav .inner {
+  padding: 25px;
+}
+nav .inner ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav .inner ul li {
+  position: relative;
+  margin: 0;
+  border-bottom: 1px solid #333;
+}
+nav .inner ul li a {
+  display: block;
+  color: #333;
+  font-size: 14px;
+  padding: 1em;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+nav .inner ul li a:hover {
+  background: #e4e4e4;
+}
+@media screen and (max-width: 767px) {
+  nav {
+    left: -220px;
+    width: 220px;
+  }
+}
+/*============
+.toggle_btn
+=============*/
+.toggle_btn {
+  display: block;
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  width: 30px;
+  height: 30px;
+  transition: all .5s;
+  cursor: pointer;
+  z-index: 3;
+}
+.toggle_btn span {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background-color: #333;
+  border-radius: 4px;
+  transition: all .5s;
+}
+.toggle_btn span:nth-child(1) {
+  top: 4px;
+}
+.toggle_btn span:nth-child(2) {
+  top: 14px;
+}
+.toggle_btn span:nth-child(3) {
+  bottom: 4px;
+}
+.open .toggle_btn span {
+  background-color: #fff;
+}
+.open .toggle_btn span:nth-child(1) {
+  -webkit-transform: translateY(10px) rotate(-315deg);
+  transform: translateY(10px) rotate(-315deg);
+}
+.open .toggle_btn span:nth-child(2) {
+  opacity: 0;
+}
+.open .toggle_btn span:nth-child(3) {
+  -webkit-transform: translateY(-10px) rotate(315deg);
+  transform: translateY(-10px) rotate(315deg);
+}
+/*============
+#mask
+=============*/
+#mask {
+  display: none;
+  transition: all .5s;
+}
+.open #mask {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: .8;
+  z-index: 2;
+  cursor: pointer;
+}
+/*ここまで*/
+
+/* ハンバーガーメニュー2のみ */
+.menu-link {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  position: relative;
+  left: 50%;
+  margin: 100px 0 0 -20px;
+}
+.menu-link:before {
+  content: "";
+  background: #fff;
+  height: 4px;
+  width: 40px;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  margin: 0 0 0 -20px;
+  display: block;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+}
+.menu-link:after {
+  content: "";
+  background: #fff;
+  height: 4px;
+  width: 40px;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  margin: 0 0 0 -20px;
+  display: block;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+}
+.menu-link.close:before {
+  transform: rotate(45deg);
+  top: -15px;
+  width: 25px;
+  margin: 0 0 0 -13px;
+}
+.menu-link.close:after {
+  transform: rotate(-45deg);
+  top: -15px;
+  width: 25px;
+  margin: 0 0 0 -13px;
+}
+/*ここまで*/
+
+
+
+
+@media screen and (max-width: 600px){
+  .page-title {
+    font-size: 2.5rem;
+  }
+
+  /* HEADER */
+  .main-nav {
+    display: none;
+/*    font-size: 1rem;
+    margin-top: 10px;
+  }
+  .main-nav li {
+    margin: 0 20px;*/
+  }
+
+.home-menu-area{
+    display: none;
+}
+
+
+  /* HOME */
+.home-content {
+  margin-top: 20%;
+}
+
+/*横並び*/
+.page-header {
+  flex-direction: column;
+  align-items: center;
+}
+
+/* NEWS */
+.home-news-title {
+  flex-direction: column;
+  width: auto;
+  padding-right: 20px;
+}
+
+
+
+/* GALLERY */
+.home-gallery-area {
+
+}
+.home-gallery-bg {
+  background-size: contain;
+}
+
+
+/* フォーム */
+input[type="text"],
+input[type="email"],
+textarea {
+  max-width: 100%;
+}
+/* 記事の部分 */
+article {
+  width: 74%;
+}
+
+/* サイドバー */
+aside {
+  width: 22%;
+}
+
+
+/* サイドバー */
+aside {
+    width: 22%;
+}
+
+.news-contents {
+  display: flex;
+  justify-content:  space-between;
+  margin-bottom: 50px;
+}
+.post-info {
+  background-image: url(../images/kikyu.png);
+  position: relative;
+  padding-top: 4px;
+  margin-bottom: 40px;
+}
+
+.post-date {
+  color: #271a10;
+  margin-bottom: 0;
+  border-bottom: 1px solid;
+}
+/*
+.post-date span {
+
+}*/
+
+.post-title {
+/*  font-family: "Yu Mincho", "YuMincho", serif;*/
+  font-size: 2rem;
+  font-weight: normal;
+}
+.post-date,
+.post-title,
+.post-cat {
+  margin-left: 100px;
+}
+
+article img {
+  margin-bottom: 20px;
+}
+
+article p {
+  margin-bottom: 1rem;
+}
+
+.sub-title {
+  font-size: 1.375rem;
+  padding: 0 8px 8px;
+  border-bottom: 2px #86B8D5 solid;
+  font-weight: normal;
+}
+
+.sub-menu {
+  margin-bottom: 60px;
+  list-style: none;
+}
+.sub-menu li {
+  border-bottom: 1px #ddd solid;
+}
+.sub-menu a {
+  color: #432;
+  padding: 10px;
+  display: block;
+}
+.sub-menu a:hover {
+  color: #271A10;
+}
+
+}
+
+
