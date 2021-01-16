@@ -140,3 +140,12 @@
 #drawer-check:checked ~ .drawer-content {
   left: 30%; /*メニューを画面に入れる*/
 }
+
+
+.drawer-content .sns-bt {
+  padding: 30px;
+  text-align: left;
+}
+.drawer-content .sns-bt li{
+    font-size: 2.6rem;
+}

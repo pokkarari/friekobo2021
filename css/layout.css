@@ -56,10 +56,11 @@ p {
   font-style: normal;
   text-transform: uppercase;
   padding-top: 50px;
+  line-height: 24px;
 }
 
 .page-title span {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-family: a-otf-jun-pro, sans-serif;
 }
 
@@ -97,6 +98,7 @@ p {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  border-bottom: 20px solid #85B7D5;
 }
 
 #home {
@@ -132,7 +134,7 @@ p {
 .home-news-bg1 {
   position: absolute;
   right: 0px;
-  bottom: 100px;
+  top: 0px;
   z-index: -2;
   width: 35%;
 }
@@ -146,6 +148,7 @@ p {
 
 .home-news-title{
   padding: 20px;
+  padding-top: 60px;
   width: auto;
   margin: 0 auto;
 }
@@ -154,7 +157,8 @@ p {
   display: grid;
   gap:10px;
   grid-template-columns: 100px auto;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  line-height: 1.4em;
   border: 2px solid #85B7D5;
   list-style: none;
   background-color: rgba(255,255,255,.7);
@@ -292,7 +296,7 @@ p {
   position: absolute;
   width: 50%;
   right: 0px;
-  top: 150px;
+  top: 100px;
   z-index: -2;
 }
 
@@ -406,7 +410,7 @@ p {
   left: 15%;
 }
 .mic-character {
-  width: 300px;
+  width: 280px;
 }
 
 
@@ -434,15 +438,15 @@ p {
 
 .home-contact-cat {
   position: absolute;
-  top: -80px;
+  top: -50px;
   left: 30%;
-  width: 150px;
+  width: 120px;
 }
 
 .more-btn2 {
   text-align: center;
   width: 220px;
-  margin: 80px auto 0 auto;
+  margin: 40px auto 0 auto;
   padding: 10px;
   color: #fff;
 }
@@ -463,45 +467,46 @@ p {
 
 
 /* home-sns */
-.home-sns-area {
+.sns-area {
   text-align: center;
   font-size: 1.2rem;
   padding: 50px;
 }
-.home-sns-area img {
-  width: 150px;
+.sns-fish {
+  width: 100px;
+  margin-top: 100px;
 }
 
-.home-sns-bt p{
+.sns-bt p{
   text-align: center;
   color: #85B7D5;
   margin: 32px;
 }
 
-.home-sns-nav {
+.sns-bt-nav {
 
 }
 
-.home-sns-nav li {
+.sns-bt-nav li {
   display: inline-block;
   list-style: none;
   font-size: 1.8rem;
   margin-right: 20px;
 }
-.home-sns-nav a {
+.sns-bt-nav a {
   color: #85B7D5;
   padding-bottom: 5px;
 }
-.home-sns-nav a:hover {
+.sns-bt-nav a:hover {
   color: #85B7D5;
 }
 
-.home-sns-blog {
+.sns-blog {
   margin: 32px;
 }
 
-.home-sns-blog img {
-  width: 220px;
+.sns-blog img {
+  width: 180px;
 }
 
 

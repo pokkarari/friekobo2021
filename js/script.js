@@ -27,6 +27,8 @@
                 ScrollReveal().reveal('.animatespeed2', { duration: '1800' ,delay: '500'} );
                 ScrollReveal().reveal('.animatespeed3', { duration: '1800' ,delay: '1000'} );
                 ScrollReveal().reveal('.animatetop', { distance: '100px', origin: 'top',duration: '2000'});
+                ScrollReveal().reveal('.text6', {   duration: 1600,  scale: 0.1,  reset: true
+                  });
             });
 
 // ギャラリーの表示 slick
