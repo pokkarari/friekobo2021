@@ -214,16 +214,40 @@ p {
 
 /* home-ギャラリー */
 .home-gallery-area {
-  background-image: url(../images/home-suzume2.png);
+/*  background-image: url(../images/home-suzume2.png);
   background-size: 20%;
-  background-position: 70% 100%;
+  background-position: 70% 100%;*/
 }
 
 .home-gallery-top {
   text-align: center;
 }
-.home-gallery-top .more-btn {
 
+.home-gallery-top .suzume2 {
+
+}
+
+.more-btn {
+  text-align: center;
+}
+.more-btn a {
+  display: block;
+  border: 2px solid #85B7D5;
+  width: 150px;
+  margin: 10px auto;
+  border-radius:10px;
+  color: #fff;
+  background-color: #85B7D5;
+/*  background-color: rgba(255,255,255,.7);*/
+  padding: 10px;
+}
+.more-btn a:hover {
+  color: #fff;
+  opacity: 0.8;
+}
+
+.home-gallery-top .more-btn {
+  padding: 30px;
 }
 
 .home-gallery-bg {
@@ -254,31 +278,9 @@ p {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.more-btn {
-  text-align: center;
-}
-.more-btn a {
-  display: block;
-  border: 2px solid #85B7D5;
-  width: 150px;
-  margin: 30px auto;
-  border-radius:10px;
-  color: #fff;
-  background-color: #85B7D5;
-/*  background-color: rgba(255,255,255,.7);*/
-  padding: 10px;
-}
-.more-btn a:hover {
-  color: #fff;
-  opacity: 0.8;
-}
-
-/* home-line2
 .home-line2 {
-  padding: 0;
-  margin: 100px auto;
+  margin-bottom: 100px;
 }
-
 
 /* home-about */
 .home-about-area {
@@ -290,14 +292,14 @@ p {
   position: absolute;
   width: 50%;
   right: 0px;
-  top: -50px;
+  top: 150px;
   z-index: -2;
 }
 
 .home-about-bg2 {
   position: absolute;
   width: 50%;
-  top:600px;
+  bottom:-150px;
   left: 0px;
   z-index: -1;
 }
@@ -349,14 +351,14 @@ p {
 /* homr-line3 */
 .home-line3 {
   position: relative;
-  margin-top: 120px;
-  margin-bottom: 60px;
+  margin-top: 200px;
 }
+
 .home-line3 img{
     position: absolute;
     top: 0;
     left: 0;
-    width: 150px;
+    width: 80px;
     animation: animeSlide1 3s linear;
     transform: translateX(-100%);/*初期位置*/
     animation-fill-mode:forwards;/*コレが最後停止*/
@@ -387,6 +389,7 @@ p {
   margin-bottom: 400px;
   background-color: #85B7D5;
   border: 3px solid #85B7D5;
+  margin-top: 150px;
   padding:0;
   text-align: center;
 
