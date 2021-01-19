@@ -149,8 +149,8 @@ $(function(){
                 </ul>
                 <h3 class="sub-title">こうぼうとろう画 </h3>
                 <p>
-                    自分でも予想を超えた作品になることが魅力の一つである、絵画の技法のろう画。ろう画からオリジナルキャラクター「ウォネとその他の皆さんその他のみなさん」は生まれました。
-                    <br>さまざまな表情のねこや動物たちの表情から、見た方が笑顔になってもらえたらと言う思いで描いています。
+                    絵画の技法のろう画。このろう画は、自分でも予想を超えた作品になることが魅力の一つです。<br>さまざまな表情のねこや動物たちから、たくさんの人に笑顔になってもらえたらと言う思いで描いています。笑顔の絵は描いていても、なんだかニヤリとなってしまいます。
+                    ろう画からオリジナルキャラクター「ウォネとその他の皆さんその他のみなさん」は生みだして、ハンドメイド作品も手がけています。
                 </p>
             </aside>
         </div><!-- /.news-contents -->
@@ -158,22 +158,22 @@ $(function(){
 
 
 
-    <div class="home-sns-area wrapper">
+    <div class="sns-area wrapper">
         <p class="home-topmark"><a href="#">▲トップへ</a></p>
-        <img src="images/hikousen1.png" alt="">
-        <div class="home-sns-bt">
+        <img class="sns-fish" src="images/hikousen1.png" alt="">
+        <div class="sns-bt">
             <p>FRIE KOBO OFFICIAL</p>
-            <lu class="home-sns-nav">
+            <lu class="sns-bt-nav">
                 <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                 <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                 <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                 <li><a href="#"><i class="fab fa-youtube"></i></a></li>
             </lu><!-- /.sns-bt-nav -->
         </div><!-- /.sns-bt -->
-        <div class="home-sns-blog">
+        <div class="sns-blog">
             <img src="images/home-blog-bar.png" alt="">
         </div>
-    </div><!-- /.sns-area -->
+    </div><!-- /.home-sns-area -->
 
     <div class="home-sns-bg">
         <a href="#"><img src="images/home-footer.jpg" alt=""></a>
