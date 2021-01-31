@@ -196,6 +196,7 @@ p {
 }
 .home-line img {
   width: 100%;
+  height: 20px;
   object-fit: cover;
 }
 
@@ -285,7 +286,7 @@ p {
 }
 
 .home-line2 {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 /* home-about */
@@ -311,7 +312,7 @@ p {
 }
 
 .home-about-top {
-  margin: 40px auto;
+  margin: 60px auto;
   padding: 6%;
 }
 .home-about-top p {
@@ -364,11 +365,11 @@ p {
     position: absolute;
     top: 0;
     left: 0;
-    width: 80px;
-    animation: animeSlide1 3s linear;
+    width: 100px;
+    animation: animeSlide1 8s linear;
     transform: translateX(-100%);/*初期位置*/
     animation-fill-mode:forwards;/*コレが最後停止*/
-    animation-iteration-count:3; /*アニメーションを3回再生する*/
+    animation-iteration-count:infinite; /*アニメーションをエンドレス再生する*/
 }
 @keyframes animeSlide1{
   from {
@@ -376,25 +377,26 @@ p {
   }
 
   to {
-    margin-left: 40%;
+    margin-right: 100%;
     transform: translateX(-100%);
   }
+
 }
 
-.home-line4 img {
+.home-line4 {
+  padding-top: 100px;
 
 }
 
 
 /* home-howto */
-
 .home-howto-area {
   position: relative;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
-  margin-bottom: 400px;
+/*  margin-bottom: 400px;*/
   background-color: #85B7D5;
-  border: 3px solid #85B7D5;
+/*  border: 3px solid #85B7D5;*/
   margin-top: 150px;
   padding:0;
   text-align: center;
@@ -403,16 +405,33 @@ p {
 }
 
 .homo-howto-main p {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
+  font-size: 2.0rem;
+  margin: 30px auto;
+  padding: 40px;
+  background: #fff;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+
+
 }
 .homo-howto-main img {
   position: absolute;
-  bottom:-150px;
+  bottom:-100px;
   left: 15%;
+  padding-top: 20px;
 }
 .mic-character {
   width: 280px;
+}
+.home-howto-img{
+  margin-bottom: 50px;
+  background-color: #85B7D5;
+}
+
+.home-line5 {
+  padding: 150px 0 100px 0 ;
 }
 
 
@@ -420,7 +439,6 @@ p {
 .home-contact-area {
   position: relative;
   text-align: center;
-  background-color: #fff;
   padding: 30px;
 }
 
@@ -430,12 +448,13 @@ p {
 
 .home-contact-top {
   border: 2px solid #85B7D5;
-  border-radius: 10px;
+/*  border-radius: 10px;*/
+  border-image: url(../images/line_img.png) 33%/25px 25px repeat;
   background: url(../images/home-suzume3.png);
   background-repeat: no-repeat;
-  background-position: left bottom;
-  background-size:60%;
-  background-color: rgba(255,255,255,.4);
+  background-position: left 20px bottom 20px;
+  background-size:50%;
+  background-color: rgba(255,255,255,1);
     width:auto;
     height:400px;
 
@@ -475,7 +494,7 @@ p {
 /* home-sns */
 .sns-area {
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   padding: 50px;
 }
 .sns-fish {
@@ -489,15 +508,23 @@ p {
   margin: 32px;
 }
 
-.sns-bt-nav {
+.sns-twitter {
+  border: 2px solid #85B7D5;
+  border-radius: 20px;
+  padding: 10px;
+  background: #fff;
+}
 
+.sns-bt-nav {
+  padding-top: 10px;
 }
 
 .sns-bt-nav li {
   display: inline-block;
   list-style: none;
-  font-size: 1.8rem;
+  font-size: 2.8rem;
   margin-right: 20px;
+  padding-top: 20px;
 }
 .sns-bt-nav a {
   color: #85B7D5;

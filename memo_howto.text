@@ -7,7 +7,7 @@ HOW TO
 このサイトでは、読みやすいように平仮名で表記しています
 
 ろう画の描き方
-基本的な描き方で、下の絵を描いてみます
+下の絵を基本的な描き方で描いてみます
 
 出来上がりの絵
 
@@ -47,3 +47,38 @@ imge
 絵の全体の黒いバランスを整えます。
 完成！
 imge
+
+
+【メモーーーーー背景の色を斜めにする
+  /* 背景斜め レイアウト用のhtml*/
+        <div class="naname1">
+              <p>レイアウト</p>
+        </div>
+        <div class="naname2">
+            <p>レイアウト</p>
+        </div>
+  /* 背景斜め レイアウト用のCSS*/
+.naname1,
+.naname2{
+  /*レイアウト用のCSS*/
+  padding: 50px;
+}
+.naname1{
+  padding-top: 0;
+  position: relative;
+  background-color: #FFFFE1;
+}
+.naname1::before{
+  content:"";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+
+  /*ここで三角形のサイズを決める。
+  必ず幅100vwにして、ブラウザサイズいっぱいにする。*/
+  border-width: 0 0 50px 100vw ;
+  border-color: transparent transparent #85B7D5 transparent;
+}
