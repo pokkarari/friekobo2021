@@ -31,6 +31,16 @@
                   });
             });
 
+// 作品画像の拡大表示 プラグインColorBox
+$(function() {
+  $(".home-gallery-works").colorbox({
+    maxWidth:"90%",
+    maxHeight:"90%",
+    opacity: 0.7
+  });
+});
+
+
 // ギャラリーの表示 slick
 // ブレイクポイントによって画像数が変化
 // $(function(){

@@ -15,14 +15,18 @@
 
 <!--  <link rel="stylesheet" href="slick/slick-theme.css"> --><!--slickプラグイン-->
 <!--  <link rel="stylesheet" href="slick/slick.css"> --> <!--slickプラグイン-->
-<link rel="stylesheet" type="text/css" href="fancybox-master/dist/jquery.fancybox.css"><!-- FancyBox3プラグイン -->
 
+
+<!-- <link rel="stylesheet" type="text/css" href="fancybox-master/dist/jquery.fancybox.css"> --><!-- FancyBox3プラグイン -->
+<link rel="stylesheet" href="colorbox/colorbox.css"><!-- colorboxプラグイン -->
 
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet"><!-- フォントアイコン-->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!--JQueryプラグイン-->
 
 <!--     <script type="text/javascript" src="js/slick.min.js"></script> --><!--slickプラグイン-->
-
+    <script src="colorbox/jquery.colorbox-min.js"></script>
+    <!-- 画像表示ColorBoxプラグイン -->
      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.0/smooth-scroll.min.js"></script>
       <!-- スクロールでページトップへ -->
     <script src="https://unpkg.com/scrollreveal"></script>
@@ -59,7 +63,7 @@
                     <li class="drawer-item"><a href="index.html">Home <span>ホーム</span></a></li>
                     <li class="drawer-item"><a href="news.php">News <span>おしらせ</span></a></li>
                     <li class="drawer-item"><a href="">Gallery <span>ギャラリー</span></a></li>
-                    <li class="drawer-item"><a href="">How To <span>ろう画ってなに？</span></a></li>
+                    <li class="drawer-item"><a href="">How To <span>ろう画とは？</span></a></li>
                     <li class="drawer-item"><a href="">About <span>エフリエこうぼうについて</span></a></li>
                     <li class="drawer-item"><a href="">Contact <span>お問い合わせ</span></a></li>
                     <li class="drawer-item"><a href="">Blog <span>ブログ</span></a></li>
@@ -148,12 +152,12 @@
                         <li><img src="images/home-gallry-work2.jpg" alt="" ></li>
                         <li><img src="images/home-gallry-work2.jpg" alt="" ></li>
                     </ul> -->
-                <figure class="home-gallry-works02 wrapper">
-                    <a href="images/home-gallry-work1.jpg" data-fancybox data-caption="キャプションを記述">
+                <figure class="wrapper">
+                    <a class="home-gallery-works" href="images/home-gallry-work1.jpg" title="キャプションを記述">
                     <img src="images/home-gallry-work1.jpg" alt="サムネイル画像" /></a>
-                    <a href="images/home-gallry-work2.jpg" data-fancybox data-caption="キャプションを記述">
-                    <img src="images/home-gallry-work2.jpg" alt="サムネイル画像" /></a>
-                    <a href="images/home-gallry-work3.jpg" data-fancybox data-caption="キャプションを記述">
+                    <a class="home-gallery-works" href="images/home-gallry-work2.jpg" data-fancybox data-caption="キャプションを記述">
+                    <img class="home-gallery-works" src="images/home-gallry-work2.jpg" alt="サムネイル画像" /></a>
+                    <a class="home-gallery-works" href="images/home-gallry-work3.jpg" data-fancybox data-caption="キャプションを記述">
                     <img src="images/home-gallry-work3.jpg" alt="サムネイル画像" /></a>
                 </figure>
             </div><!-- /.gallery-area-bg -->
@@ -203,15 +207,15 @@
     </div><!-- /.home-line /.home-line4 -->
 
 
-    <div class="home-howto-area">
-            <h2 class="page-title">How&nbsp&nbspto</h2>
+    <div class="home-howto-area wrapper">
+        <h2 class="page-title">How&nbsp&nbspto</h2>
         <div class="homo-howto-main">
 
             <p>ろう画とは？</p>
             <img class="mic-character animateleft animatespeed2" src="images/home-howto-mic.png" alt="">
         </div>
 
-        <div class="home-howto-img wrapper">
+        <div class="home-howto-img">
             <img src="images/top_rouga_img.jpg" alt="">
         </div>
 
