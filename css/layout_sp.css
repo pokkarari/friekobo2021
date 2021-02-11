@@ -38,9 +38,9 @@
 
 /* NEWS */
 .home-news-title{
-  padding: 20px;
-/*  width: 400px;*/
-  margin: 0 auto;
+/*  padding: 20px;
+  width: 700px;
+  margin: 0 auto;*/
 }
 
 
@@ -53,15 +53,10 @@
   min-height: auto;
 }
 
-.home-gallry-works01 img{
-  margin: 0 auto;
-  width: 150px;
-}
-
 
 /*HOW TO*/
 .homo-howto-main img {
-  width: 80%;
+
 }
 
 
@@ -76,80 +71,9 @@ textarea {
 
 /* 記事の部分 */
 /*article {
-  width: 74%;
+
 }*/
 
-/* サイドバー */
-/*aside {
-  width: 22%;
-}
-
-
-/* サイドバー */
-/*aside {
-    width: 22%;
-}
-
-.news-contents {
-  display: flex;
-  justify-content:  space-between;
-  margin-bottom: 50px;
-}
-.post-info {
-  background-image: url(../images/kikyu.png);
-  position: relative;
-  padding-top: 4px;
-  margin-bottom: 40px;
-}
-
-.post-date {
-  color: #271a10;
-  margin-bottom: 0;
-  border-bottom: 1px solid;
-}
-
-.post-title {
-  font-size: 2rem;
-  font-weight: normal;
-}
-.post-date,
-.post-title,
-.post-cat {
-  margin-left: 100px;
-}
-
-article img {
-  margin-bottom: 20px;
-}
-
-article p {
-  margin-bottom: 1rem;
-}
-
-.sub-title {
-  font-size: 1.375rem;
-  padding: 0 8px 8px;
-  border-bottom: 2px #86B8D5 solid;
-  font-weight: normal;
-}
-
-.sub-menu {
-  margin-bottom: 60px;
-  list-style: none;
-}
-.sub-menu li {
-  border-bottom: 1px #ddd solid;
-}
-.sub-menu a {
-  color: #432;
-  padding: 10px;
-  display: block;
-}
-.sub-menu a:hover {
-  color: #271A10;
-}
-*/
-}
 
 
 

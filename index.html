@@ -18,7 +18,7 @@
 
 
 <!-- <link rel="stylesheet" type="text/css" href="fancybox-master/dist/jquery.fancybox.css"> --><!-- FancyBox3プラグイン -->
-<link rel="stylesheet" href="colorbox/colorbox.css"><!-- colorboxプラグイン -->
+    <link rel="stylesheet" href="colorbox/colorbox.css"><!-- colorboxプラグイン -->
 
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet"><!-- フォントアイコン-->
 
@@ -42,9 +42,9 @@
 </head>
 
 <body>
-    <div id="home" class="big-bg">
-        <img class="home-scroll" src="images/scroll-bt.png" alt="">
-        <header class="page-header wrapper">
+
+        <header class="page-header">
+
     <!-- ここからハンバーガーメニュー -->
             <div class="hb-menu">
                 <div class="logo">
@@ -83,15 +83,19 @@
                   </nav><!-- /.drawer-content -->
                 </div> <!-- /.drawer -->
             </div><!-- hb-menu -->
+
         </header>
+
+    <div id="home" class="big-bg">
+        <img class="home-scroll" src="images/scroll-bt.png" alt="">
 
         <div class="home-content wrapper">
             <h1 class="page-title">
-            <a href="index.html"><img class="home_title" src="images/kobo-logo.svg" alt="エフリエこうぼう"></a></h1>
+            <a href="index.html"><img class="home-title" src="images/kobo-logo.svg" alt="エフリエこうぼう"></a></h1>
         </div><!-- /.home-content -->
     </div><!-- /#home -->
 
-   <div class="home-menu-area">
+    <div class="home-menu-area">
         <ul class="home-menu wrapper">
             <li><a href="gallery.html">Home</a></li>
             <li><a href="news.php">News</a></li>
@@ -105,7 +109,7 @@
 
 
 
-    <div class="home-news-area animeite">
+    <section class="home-news-area animeite">
         <div class="home-news-title">
             <h2 class="page-title">NEWS   <span>おしらせ</span></h2>
             <div class="home-news-item">
@@ -128,7 +132,7 @@
             <div class="home-news-bg2 animateleft animatespeed1">
                 <img src="images/home-tonkachi.jpg" alt="">
             </div>
-    </div><!-- /.home-news-area -->
+    </section><!-- /.home-news-area -->
 
     <div class="home-line-move text6">
         <img src="images/home-frontcar.jpg" alt="">
@@ -138,7 +142,7 @@
         <img src="images/home-move-ber1.jpg" alt="">
     </div><!-- /.home-line -->
 
-    <div class="home-gallery-area">
+    <section class="home-gallery-area">
         <div class="home-gallery-top">
             <h2 class="page-title">GALLERY   <span class="subHeadings">ギャラリー</span></h2>
             <p>ろう画を中心に作品をご紹介しています。</p>
@@ -152,13 +156,13 @@
                         <li><img src="images/home-gallry-work2.jpg" alt="" ></li>
                         <li><img src="images/home-gallry-work2.jpg" alt="" ></li>
                     </ul> -->
-                <figure class="wrapper">
-                    <a class="home-gallery-works" href="images/home-gallry-work1.jpg" title="キャプションを記述">
-                    <img src="images/home-gallry-work1.jpg" alt="サムネイル画像" /></a>
-                    <a class="home-gallery-works" href="images/home-gallry-work2.jpg" data-fancybox data-caption="キャプションを記述">
-                    <img class="home-gallery-works" src="images/home-gallry-work2.jpg" alt="サムネイル画像" /></a>
-                    <a class="home-gallery-works" href="images/home-gallry-work3.jpg" data-fancybox data-caption="キャプションを記述">
-                    <img src="images/home-gallry-work3.jpg" alt="サムネイル画像" /></a>
+                <figure class="home-gallery-list">
+                        <a class="home-gallery-works" href="images/home-gallry-work1.jpg" title="キャプションを記述">
+                        <img src="images/home-gallry-work1.jpg" alt="サムネイル画像" /></a>
+                        <a class="home-gallery-works" href="images/home-gallry-work2.jpg" title="キャプションを記述">
+                        <img src="images/home-gallry-work2.jpg" alt="サムネイル画像" /></a>
+                        <a class="home-gallery-works" href="images/home-gallry-work3.jpg" title="">
+                        <img src="images/home-gallry-work3.jpg" alt="サムネイル画像" /></a>
                 </figure>
             </div><!-- /.gallery-area-bg -->
             <div class="more-btn">
@@ -166,7 +170,7 @@
             </div><!-- /.more-btn -->
             <img class="suzume2" src="images/home-suzume2.png" alt="">
         </div><!-- home-gallery-top -->
-    </div><!-- /.home-gallery-area-->
+    </section><!-- /.home-gallery-area-->
 
 
     <div class="home-line home-line2">
@@ -174,7 +178,7 @@
     </div><!-- /.home-line -->
 
 
-    <div class="home-about-area">
+    <section class="home-about-area">
         <h2 class="page-title">About<span><br>エフリエこうぼうについて</span></h2>
         <div class="home-about-top">
             <div class="home-about-bgcolor">
@@ -196,7 +200,7 @@
         <div class="home-about-bg2 animateleft animatespeed1">
             <img src="images/home-back-mirror.jpg" alt="">
         </div><!--/.home-about-bg1-->
-    </div><!-- /.about-area-->
+    </section><!-- /.home-about-area-->
 
     <div class="home-line3">
         <img src="images/move-car.png" alt="">
@@ -207,7 +211,7 @@
     </div><!-- /.home-line /.home-line4 -->
 
 
-    <div class="home-howto-area wrapper">
+    <section class="home-howto-area wrapper">
         <h2 class="page-title">How&nbsp&nbspto</h2>
         <div class="homo-howto-main">
 
@@ -218,20 +222,14 @@
         <div class="home-howto-img">
             <img src="images/top_rouga_img.jpg" alt="">
         </div>
-
-<!--         <div class="item2">
-            <p>情報はこちらからもどうぞ</p>
-            <a class="twitter-timeline" href="https://twitter.com/friekobo?ref_src=twsrc%5Etfw" height="300" data-chrome="noheader">Tweets by friekobo</a>
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8" data-tweet-limit="1" ></script>
-        </div> -->
-    </div><!-- /.home-howto-area -->
+    </section><!-- /.home-howto-area -->
 
     <div class="home-line home-line5">
         <img src="images/home-move-ber2.jpg" alt="">
     </div><!-- /.home-line /.home-line4 -->
 
 
-    <div class="home-contact-area">
+    <section class="home-contact-area wrapper">
         <div class="home-contact-top">
             <h2 class="page-title">Contact<br><span class="subHeadings">お問い合わせ</span></h2>
             <p>ご質問・ご感想などをどうぞ</p>
@@ -240,10 +238,10 @@
               <p><a href="#">お問い合わせはこちら</a></p>
             </div>
         </div><!-- /.home-contact-top -->
-    </div><!-- /.home-contact-area -->
+    </section><!-- /.home-contact-area -->
 
 
-    <div class="sns-area wrapper">
+    <section class="sns-area wrapper">
 
         <img class="sns-fish" src="images/hikousen1.png" alt="">
         <div class="sns-bt">
@@ -262,7 +260,7 @@
             <img src="images/home-blog-bar.png" alt="">
         </div>
         <p class="home-topmark"><a href="#">▲トップへ</a></p>
-    </div><!-- /.home-sns-area -->
+    </section><!-- /.home-sns-area -->
 
     <div class="home-sns-bg">
         <a href="#"><img src="images/home-footer.jpg" alt=""></a>
