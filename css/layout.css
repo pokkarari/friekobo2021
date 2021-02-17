@@ -64,7 +64,7 @@ p {
   font-family: a-otf-jun-pro, sans-serif;
 }
 .page-title img {
-  height: 100px;
+  height: 60px;
 }
 
 
@@ -275,7 +275,7 @@ p {
 .home-gallery-list {
   display: flex;
 /*  flex-wrap: wrap;*/
-  align-items: center;
+  align-items: top;
   justify-content: center;
   padding: 10px;
 
@@ -310,7 +310,7 @@ p {
 .home-about-bg1 {
   position: absolute;
   right: 0px;
-  top: -50px;
+  top: -100px;
   z-index: -2;
     width: 50%;
 
@@ -384,11 +384,11 @@ p {
   margin: 120px 0 0 0;
   padding-bottom: 50px;
   background-color: #fff;
+  height: 600px;
 }
 
 .home-howto-area .page-title img {
   margin-top: 50px;
-  height: 50px;
 /*  position: absolute;
   bottom:-100px;
   left: 15%;
@@ -445,7 +445,6 @@ p {
 
 .home-contact-top {
   border: 2px solid #85B7D5;
-/*  border-radius: 10px;*/
   border-image: url(../images/line_img.png) 33%/25px 25px repeat;
   background: url(../images/home-suzume3.png);
   background-repeat: no-repeat;
@@ -453,7 +452,7 @@ p {
   background-size:50%;
   background-color: rgba(255,255,255,1);
     width:auto;
-    height:400px;
+    height:500px;
 
 }
 .home-contact-top .page-title {
@@ -462,7 +461,6 @@ p {
 
 .home-contact-top .page-title img {
   width: 200px;
-  height: 50px;
 }
 
 
