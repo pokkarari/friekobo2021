@@ -59,10 +59,14 @@ p {
   line-height: 24px;
 }
 
-.page-title span {
+.page-title p {
   font-size: 1.4rem;
   font-family: a-otf-jun-pro, sans-serif;
 }
+.page-title img {
+  height: 100px;
+}
+
 
 /* ボタン */
 .button {
@@ -75,6 +79,8 @@ p {
 .button:hover {
   background: #0090aa;
 }
+
+
 
 /* HOME */
 .home-content {
@@ -161,7 +167,7 @@ p {
   gap:10px;
   grid-template-columns: 100px auto;*/
   font-size: 1.2rem;
-  line-height: 1.4em;
+  line-height: 1.8em;
   border: 2px solid #85B7D5;
   border-image: url(../images/line_img.png) 33%/25px 25px repeat;
   list-style: none;
@@ -194,8 +200,8 @@ p {
 .home-line {
   display: grid;
   grid-template-columns:1fr;
-  margin: 50px auto;
-
+/*  margin: 50px auto;*/
+  padding-top: 100px;
 }
 .home-line img {
   width: 100%;
@@ -204,7 +210,7 @@ p {
 
 .home-line-move {
   text-align: center;
-  padding-top: 150px;
+  padding: 20px 0 50px 0;
 }
 
 .home-line-move img {
@@ -223,6 +229,7 @@ p {
 
 /* home-ギャラリー */
 .home-gallery-area {
+
 /*  background-image: url(../images/home-suzume2.png);
   background-size: 20%;
   background-position: 70% 100%;*/
@@ -230,10 +237,11 @@ p {
 
 .home-gallery-top {
   text-align: center;
+  background-color: #fff;
 }
 
-.home-gallery-top .suzume2 {
-  padding-left: 40%;
+.home-gallery-suzume {
+  padding: 30px 30px 0 60%;
 
 }
 
@@ -261,42 +269,35 @@ p {
 
 .home-gallery-bg {
   position: relative;
-/*  background-image: url(../images/home-gallery-top.jpg);*/
-/*  background-repeat: no-repeat;
-  background-size: contain;*/
-/*  background-color: rgba(255,255,255,.4);*/
-/*  background-blend-mode: lighten;*/
-/*  min-height: 100vh;*/
-}
-/*.home-gallry-works01 {
-  position: relative;
-  top: 200px;
-  border : 2px solid #85B7D5;
-  list-style: none;
-}*/
-/*.home-gallry-works01 img{
-  margin: 0 auto;
-  width: auto;
-}*/
-
-
-.home-gallry-works {
-  position: absolute;
-  bottom: -20px;
-  display:flex;
-
-/*  grid-template-columns: repeat(3, 1fr);*/
-/*  max-width: 100px;*/
 }
 
-.home-gallry-works img {
-  width: 100px;
+
+.home-gallery-list {
+  display: flex;
+/*  flex-wrap: wrap;*/
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+
+
 }
+.home-gallery-works {
+  padding: 10px;
+
+}
+
+.home-gallery-list img {
+
+
+}
+
+/*-----------------------*/
 
 .home-line2 {
-  margin-bottom: 50px;
+  padding-bottom: 100px;
 }
 
+/*-----------------------*/
 
 
 
@@ -308,10 +309,11 @@ p {
 }
 .home-about-bg1 {
   position: absolute;
-  width: 50%;
   right: 0px;
-  top: 100px;
+  top: -50px;
   z-index: -2;
+    width: 50%;
+
 }
 
 .home-about-bg2 {
@@ -324,16 +326,24 @@ p {
 
 .home-about-top {
   margin: 60px auto;
-  padding: 6%;
+  padding: 0 6%;
 }
 .home-about-top p {
   margin: 0 12px 12px 12px  ;
   text-align: left;
 }
+.home-about-top .page-title p {
+  text-align: center;
+}
+.home-about-top .page-title {
+  padding: 0;
+}
+
 .home-about-bgcolor {
   border-radius: 28px;
   background-color: rgba(255,255,255,.6);
   padding: 12px;
+  margin: 20px;
 }
 
 
@@ -366,10 +376,33 @@ p {
 }
 
 
+
+
+
+/* home-howto */
+.home-howto-area {
+  margin: 120px 0 0 0;
+  padding-bottom: 50px;
+  background-color: #fff;
+}
+
+.home-howto-area .page-title img {
+  margin-top: 50px;
+  height: 50px;
+/*  position: absolute;
+  bottom:-100px;
+  left: 15%;
+  padding-top: 20px;*/
+}
+
+
+
+
+
 /* homr-line3 */
 .home-line3 {
   position: relative;
-  margin-top: 200px;
+  margin-top: 100px;
 }
 
 .home-line3 img{
@@ -395,51 +428,8 @@ p {
 }
 
 .home-line4 {
-  padding-top: 100px;
+  padding: 100px 0 150px 0  ;
 
-}
-
-
-/* home-howto */
-.home-howto-area {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
-/*  margin-bottom: 400px;*/
-/*  background-color: #85B7D5;*/
-  border: 3px solid #85B7D5;
-  margin: 150px 4% 0 4%;
-  text-align: center;
-}
-
-.homo-howto-main p {
-  font-size: 2.4rem;
-  border: 6px solid #85B7D5;
-  margin: 30px auto;
-  padding: 30px;
-  background: #fff;
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  text-align: center;
-}
-.homo-howto-main img {
-  position: absolute;
-  bottom:-100px;
-  left: 15%;
-  padding-top: 20px;
-}
-.mic-character {
-  width: 280px;
-}
-.home-howto-img img{
-  margin-bottom: 50px;
-  background-color: #85B7D5;
-  padding-right: 0;
-}
-
-.home-line5 {
-  padding: 150px 0 100px 0 ;
 }
 
 
@@ -465,6 +455,14 @@ p {
     width:auto;
     height:400px;
 
+}
+.home-contact-top .page-title {
+  padding-bottom: 20px;
+}
+
+.home-contact-top .page-title img {
+  width: 200px;
+  height: 50px;
 }
 
 
