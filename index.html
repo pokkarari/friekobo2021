@@ -13,8 +13,10 @@
     <link rel="stylesheet" href="css/layout.css"><!-- メインcssファイル モバイルファースト-->
     <link rel="stylesheet" href="css/layout_sp.css">
 
-<!--  <link rel="stylesheet" href="slick/slick-theme.css"> --><!--slickプラグイン-->
-<!--  <link rel="stylesheet" href="slick/slick.css"> --> <!--slickプラグイン-->
+ <link rel="stylesheet" href="slick/slick-theme.css">
+<!--slickプラグイン-->
+ <link rel="stylesheet" href="slick/slick.css">
+ <!--slickプラグイン-->
 
 
 <!-- <link rel="stylesheet" type="text/css" href="fancybox-master/dist/jquery.fancybox.css"> --><!-- FancyBox3プラグイン -->
@@ -86,10 +88,11 @@
 
         </header>
 
+<main>
     <div id="home" class="big-bg">
         <img class="home-scroll" src="images/scroll-bt.png" alt="">
         <div class="home-content wrapper">
-            <h1 class="page-title">
+            <h1 class="home-logo">
             <a href="index.html"><img class="home-title" src="images/kobo-logo.svg" alt="エフリエこうぼう"></a></h1>
         </div><!-- /.home-content -->
     </div><!-- /#home -->
@@ -109,7 +112,7 @@
 
 
 <!-- おしらせエリア -->
-    <div class="home-news-area animeite">
+    <div class="home-news-area">
         <div class="home-news-title">
             <h2 class="page-title"><img src="images/home/moji-news.png" alt="おしらせ"><p>おしらせ</p></h2>
             <div class="home-news-item wrapper">
@@ -124,7 +127,7 @@
             <div class="more-btn"><a href="#">もっとみる</a></div>
         </div><!-- /.home-news-item-->
 
-        </div>
+        </div><!-- home-news-title -->
 
             <div class="home-news-bg1 animateright animatespeed1">
                 <img src="images/engawa.jpg" alt="縁側に座るねこ">
@@ -134,6 +137,7 @@
             </div><!-- home-news-bg2 -->
     </div><!-- /.home-news-area -->
 
+
 <!-- 車庫のバーと正面車 -->
     <div class="home-line">
         <img src="images/home-move-ber1.jpg" alt="">
@@ -142,21 +146,14 @@
         <img src="images/home-frontcar.jpg" alt="">
     </div><!-- /.home-line-move -->
 
+
 <!-- ギャラリーエリア -->
     <div class="home-gallery-area">
         <div class="home-gallery-top">
             <h2 class="page-title"><img src="images/home/moji-gallery.png" alt="ギャラリー"><p class="subHeadings">ギャラリー</p></h2>
             <p>ろう画を中心に作品をご紹介しています。</p>
-            <div class="home-gallery-bg"><img src="images/home-gallery-top.jpg" alt="">
-
-<!--                     <ul class="home-gallry-works01 ">
-                        <li><img src="images/home-gallry-work1.jpg" alt="" ></li>
-                        <li><img src="images/home-gallry-work2.jpg" alt="" ></li>
-                        <li><img src="images/home-gallry-work3.jpg" alt="" ></li>
-                        <li><img src="images/home-gallry-work1.jpg" alt="" ></li>
-                        <li><img src="images/home-gallry-work2.jpg" alt="" ></li>
-                        <li><img src="images/home-gallry-work2.jpg" alt="" ></li>
-                    </ul> -->
+            <div class="home-gallery-bg">
+                <img src="images/home-gallery-top.jpg" alt="">
                 <figure class="home-gallery-list">
                         <a class="home-gallery-works" href="images/home/home-gallery-w1.jpg" title="カフェにて">
                         <img src="images/home/home-gallery-w1.jpg" alt="サムネイル画像" /></a>
@@ -171,7 +168,13 @@
             </div><!-- /.more-btn -->
         </div><!-- home-gallery-top -->
         <div class="home-gallery-suzume">
-            <img class="suzume2" src="images/home-suzume2.png" alt=""></div>
+            <img class="suzume2" src="images/home-suzume2.png" alt="">
+        </div>
+       <ul class="slick01">
+         <li><img alt="画像1" src="images/home/home-gallery-w1.jpg" /></li>
+         <li><img alt="画像1" src="images/home/home-gallery-w2.jpg" /></li>
+         <li><img alt="画像1" src="images/home/home-gallery-w3.jpg" /></li>
+       </ul>
     </div><!-- /.home-gallery-area-->
 
 <!-- ラインバー -->
@@ -187,7 +190,7 @@
         </div><!--/.home-about-bg1-->
         <div class="home-about-bgcolor">
             <div class="home-about-top">
-                <h2 class="page-title"><img src="images/home/moji-about.png" alt=""><p><br>エフリエこうぼうについて</p></h2>
+                <h2 class="page-title"><img src="images/home/moji-about.png" alt=""><p>エフリエこうぼうについて</p></h2>
                 <img class="home-about-mike" src="images/home-about_mikeneko.png">
                 <p>ろう画のねこや動物作品を制作したり、ハンドメイド作品を手がけたりしています。ねこのオリジナルキャラクター「ウォネとその他の皆さん」で元気になれることをモットーに世界を広げています。</p>
                 <div class="home-about-move">
@@ -196,7 +199,7 @@
                     </div><!-- /.more-btn /.home-about-car-->
                     <div class="home-kochira">
                         <p><a href="#">▶ろう画とは？と疑問の場合はこちら</a></p>
-                    </div>
+                    </div><!-- home-kochira -->
                 </div><!--/.home-about-move-->
             </div><!-- home-about-bgcolor -->
         </div><!--/.home-about-top-->
@@ -238,6 +241,7 @@
             </div>
         </div><!-- /.home-contact-top -->
     </div><!-- /.home-contact-area -->
+</main>
 
 <!-- SNSやブログ -->
     <div class="sns-area wrapper">

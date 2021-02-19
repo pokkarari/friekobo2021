@@ -55,23 +55,23 @@ p {
   font-weight: 800;
   font-style: normal;
   text-transform: uppercase;
-  padding: 50px 0;
+  padding: 50px 0 30px 0;
   line-height: 24px;
 }
 
 .page-title p {
   font-size: 1.4rem;
   font-family: a-otf-jun-pro, sans-serif;
+  padding-top: 20px;
 }
 .page-title img {
-  height: 60px;
+  height: 50px;
 }
 
 
 /* ボタン */
 .button {
   font-size: 1.6rem;
-  background: #0bd;
   color: #fff;
   border-radius: 5px;
   padding: 18px 32px;
@@ -252,11 +252,12 @@ p {
   display: block;
   border: 2px solid #85B7D5;
   border-image: url(../images/line_img.png) 33%/25px 25px repeat;
-  width: 150px;
+  width: 120px;
   margin: 10px auto;
   margin-top: 20px;
   color: #85B7D5;
-  padding: 10px;
+  font-size: 12px;
+  padding: 6px 0;
 }
 .more-btn a:hover {
   color: #85B7D5;
@@ -271,8 +272,12 @@ p {
   position: relative;
 }
 
+.home-gallery-listup {
 
+}
 .home-gallery-list {
+   position: absolute;
+  bottom: -50px;
   display: flex;
 /*  flex-wrap: wrap;*/
   align-items: top;
@@ -290,6 +295,7 @@ p {
 
 
 }
+
 
 /*-----------------------*/
 
@@ -384,7 +390,7 @@ p {
   margin: 120px 0 0 0;
   padding-bottom: 50px;
   background-color: #fff;
-  height: 600px;
+  height: 700px;
 }
 
 .home-howto-area .page-title img {
@@ -482,8 +488,8 @@ p {
   display: block;
   width: 220px;
   margin: 0 auto;
-  padding: 15px;
-  border-radius:10px;
+  padding: 10px;
+  border-radius:20px;
   background-color:#FAAF3B;
   color: #fff;
 }
@@ -598,14 +604,60 @@ footer p {
 
 
 /*------------------------
-*/
+テスト用*/
 
+/*.home-news-area {
 
+  margin: 20px;
 
+}
 
+.home-news-bg {
+  background: #fff;
+  opacity: 0.8;
+  border: 3px solid #74A7CBFF;
+  border-image: url(../images/line_img.png) 33%/25px 25px repeat;
+}
 
+.home-news-title {
+  display: flex;
+  justify-content: space-between;
+}
 
+.home-news-title .page-title {
+  align-items: top;
+  justify-content: left;
+  padding: 0;
+}
 
+.home-news-title .page-title img {
+  width: 150px;
+}
+
+.home-news-title .more-btn {
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: right;
+}
+
+.more-btn a {
+  font-size: 1rem;
+  flex-wrap: wrap;
+  align-items: bottom;
+  justify-content: right;
+  margin: 0 6px;
+  width: 100px;
+}
+
+.home-news-bg1 {
+  top: -20px;
+  right: -20px;
+}
+
+.home-news-item {
+  border-image: none;
+  border: none;
+}*/
 
 
 
