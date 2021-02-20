@@ -18,18 +18,18 @@
 
 
 // スクロールでスライドscrollreveal
-            $(function(){
-                ScrollReveal().reveal('.animate');
-                // ScrollReveal().reveal('.animateright', { distance: '50px', origin: 'right', viewFactor: '0.2' });
-                ScrollReveal().reveal('.animateleft', { distance: '200px', origin: 'left', viewFactor: '0.2' });
-                ScrollReveal().reveal('.animateslow', { duration: '3000', reset: 'true'});
-                ScrollReveal().reveal('.animatespeed1', { duration: '1800' } );
-                ScrollReveal().reveal('.animatespeed2', { duration: '1800' ,delay: '500'} );
-                ScrollReveal().reveal('.animatespeed3', { duration: '1800' ,delay: '1000'} );
-                ScrollReveal().reveal('.animatetop', { distance: '100px', origin: 'top',duration: '2000'});
-                ScrollReveal().reveal('.text6', {   duration: 1600,  scale: 0.1,  reset: true
-                  });
-            });
+$(function(){
+    ScrollReveal().reveal('.animate');
+    // ScrollReveal().reveal('.animateright', { distance: '50px', origin: 'right', viewFactor: '0.2' });
+    ScrollReveal().reveal('.animateleft', { distance: '200px', origin: 'left', viewFactor: '0.2' });
+    ScrollReveal().reveal('.animateslow', { duration: '3000', reset: 'true'});
+    ScrollReveal().reveal('.animatespeed1', { duration: '1800' } );
+    ScrollReveal().reveal('.animatespeed2', { duration: '1800' ,delay: '500'} );
+    ScrollReveal().reveal('.animatespeed3', { duration: '1800' ,delay: '1000'} );
+    ScrollReveal().reveal('.animatetop', { distance: '100px', origin: 'top',duration: '2000'});
+    ScrollReveal().reveal('.text6', {   duration: 1600,  scale: 0.1,  reset: true
+      });
+});
 
 // 作品画像の拡大表示 プラグインColorBox
 $(function() {
@@ -42,6 +42,9 @@ $(function() {
 
 
 // ギャラリーの表示 slick
+// $('.slick01').slick({
+
+// });
 // ブレイクポイントによって画像数が変化
 // $(function(){
 //   $('.home-gallry-works01').slick({

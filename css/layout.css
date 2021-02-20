@@ -180,6 +180,7 @@ p {
   text-align: left;
   margin-bottom: 5px;
   color: #000;
+  padding-left: 15px;
 /*  background-color: #85B7D5;*/
 }
 
@@ -187,6 +188,8 @@ p {
   text-align: left;
   margin-bottom: 1em;
   border-bottom: 1px solid #85B7D5;
+  padding-bottom: 5px;
+  padding-left: 20px;
 }
 
 .home-news-item a {
@@ -272,29 +275,27 @@ p {
   position: relative;
 }
 
-.home-gallery-listup {
-
-}
 .home-gallery-list {
-   position: absolute;
-  bottom: -50px;
-  display: flex;
-/*  flex-wrap: wrap;*/
+/*   position: absolute;
+  bottom: -50px;*/
+/*  display: flex;
+  flex-wrap: wrap;
   align-items: top;
   justify-content: center;
-  padding: 10px;
-
-
-}
-.home-gallery-works {
-  padding: 10px;
-
+  padding: 10px;*/
 }
 
-.home-gallery-list img {
 
+/*ギャラリー slickカスタマイズ分*/
+.slick01 img {
+  border: 5px solid #73A7CBFF;
+  height: 30vw;
+}
+
+.slick-slider {
 
 }
+
 
 
 /*-----------------------*/
@@ -350,7 +351,7 @@ p {
   background-color: rgba(255,255,255,.6);
   padding: 12px;
   margin: 20px;
-}
+  }
 
 
 .home-about-mike {

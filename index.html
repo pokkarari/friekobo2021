@@ -26,7 +26,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!--JQueryプラグイン-->
 
-<!--     <script type="text/javascript" src="js/slick.min.js"></script> --><!--slickプラグイン-->
     <script src="colorbox/jquery.colorbox-min.js"></script>
     <!-- 画像表示ColorBoxプラグイン -->
      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.0/smooth-scroll.min.js"></script>
@@ -154,14 +153,21 @@
             <p>ろう画を中心に作品をご紹介しています。</p>
             <div class="home-gallery-bg">
                 <img src="images/home-gallery-top.jpg" alt="">
-                <figure class="home-gallery-list">
+<!--                 <figure class="home-gallery-list">
                         <a class="home-gallery-works" href="images/home/home-gallery-w1.jpg" title="カフェにて">
                         <img src="images/home/home-gallery-w1.jpg" alt="サムネイル画像" /></a>
                         <a class="home-gallery-works" href="images/home/home-gallery-w2.jpg" title="おまつりのあと">
                         <img src="images/home/home-gallery-w2.jpg" alt="サムネイル画像" /></a>
                         <a class="home-gallery-works" href="images/home/home-gallery-w3.jpg" title="さくらさくら">
                         <img src="images/home/home-gallery-w3.jpg" alt="サムネイル画像" /></a>
-                </figure>
+                </figure> -->
+                <div class=".home-gallery-list">
+                    <ul class="slick01">
+                        <li><a class="home-gallery-works" href="images/home/home-gallery-w1.jpg" title="カフェにて"><img alt="画像1" src="images/home/home-gallery-w1.jpg"></a></li>
+                        <li><a class="home-gallery-works" href="images/home/home-gallery-w2.jpg" title="おまつりのあと"><img alt="画像2" src="images/home/home-gallery-w2.jpg"></a></li>
+                        <li><a class="home-gallery-works" href="images/home/home-gallery-w3.jpg" title="さくらさくら"><img alt="画像3" src="images/home/home-gallery-w3.jpg"></a></li>
+                   </ul>
+                </div>
             </div><!-- /.gallery-area-bg -->
             <div class="more-btn">
                 <p><a href="#">もっとみる</a></p>
@@ -170,11 +176,6 @@
         <div class="home-gallery-suzume">
             <img class="suzume2" src="images/home-suzume2.png" alt="">
         </div>
-       <ul class="slick01">
-         <li><img alt="画像1" src="images/home/home-gallery-w1.jpg" /></li>
-         <li><img alt="画像1" src="images/home/home-gallery-w2.jpg" /></li>
-         <li><img alt="画像1" src="images/home/home-gallery-w3.jpg" /></li>
-       </ul>
     </div><!-- /.home-gallery-area-->
 
 <!-- ラインバー -->
@@ -280,6 +281,9 @@
     </div><!-- /.pagetop-btn --ページTOPへ戻るボタン-->
 
 <script src="js/script.js"></script>
+<script type="text/javascript" src="js/slick.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<!-- ギャラリーのスライドプラグイン slick -->
 <script src="fancybox-master/dist/jquery.fancybox.min.js"></script>
 <script>
     $('[data-fancybox]').fancybox({

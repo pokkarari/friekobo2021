@@ -57,19 +57,27 @@
         .cboxSlideshow_off #cboxSlideshow{background-position:-150px -25px; right:27px;}
         .cboxSlideshow_off #cboxSlideshow:hover{background-position:-125px 0px;}
 
+
+
         /*以下 カスタマイズ設定*/
 #cboxOverlay {
-  background: #000;
+  background: #fff;
 }
+
+#colorbox {
+  border: 2px solid #838383;
+}
+
 #cboxLoadedContent {
   background: #fff;
 }
+
 #cboxLoadedContent {
   padding: 0;
   overflow: auto;
-  -moz-box-shadow: 0px 1px 5px #000000;
+/*  -moz-box-shadow: 0px 1px 5px #000000;
   -webkit-box-shadow: 0px 1px 5px #000000;
-  box-shadow: 0px 1px 10px #000000;
+  box-shadow: 0px 1px 10px #000000;*/
 }
 /*#cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose , #cboxTitle {
   top: -30px;*/
@@ -79,5 +87,15 @@
 }
 #cboxTitle {
   color: #271A10;
+  background: #fff;
+/*  border: 1px solid #271A10;*/
 }
-
+#colorbox{outline:0;}
+    #cboxTopLeft {background:#fff;}
+    #cboxTopCenter{background:#fff;}
+    #cboxTopRight{background:#fff;}
+    #cboxBottomLeft{background:#fff;}
+    #cboxBottomCenter{background:#fff;}
+    #cboxBottomRight{background:#fff;}
+    #cboxMiddleLeft{background:#fff;}
+    #cboxMiddleRight{background:#fff;}

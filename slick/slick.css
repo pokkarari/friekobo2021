@@ -117,3 +117,29 @@
 .slick-arrow.slick-hidden {
     display: none;
 }
+
+
+/*----------------------*/
+/*ここからオリジナルをカスタマイズ分*/
+
+.slick-prev
+{
+    left: 50px;
+}
+.slick-next
+{
+    right: 50px;
+}
+.slick-theme.css,
+.slick-prev:before,
+.slick-next:before
+{
+    color: #000;
+}
+
+.slick-theme.css,
+.slick-prev,
+.slick-next
+{
+    z-index: 100;
+}
