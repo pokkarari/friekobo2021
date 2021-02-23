@@ -15,6 +15,10 @@
   padding: 20px;
 }
 
+.hb-menu img{
+  width: 25%;
+}
+
 
 /* チェックボックスは非表示に */
 .drawer-hidden {
@@ -125,7 +129,7 @@
   display: block;
   color: #271A10;
 }
-.drawer-item a:hover {
+.drawer-item:hover {
   display: block;
   color: #271A10;
   background-color: #85B7D5;

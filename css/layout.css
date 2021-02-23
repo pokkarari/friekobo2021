@@ -80,6 +80,32 @@ p {
   background: #0090aa;
 }
 
+.more-btn {
+  text-align: center;
+}
+.more-btn a:after {
+  content: url(../images/more-btn-right.svg);
+  display: inline-block;
+/*  transform: rotateZ( 90deg );*/
+  vertical-align:baseline;
+  padding-top: 2px;
+
+}
+.more-btn a {
+  display: block;
+  border: 2px solid #85B7D5;
+  border-image: url(../images/line_img.png) 33%/25px 25px repeat;
+  width: 120px;
+  margin: 10px auto;
+  margin-top: 20px;
+  color: #85B7D5;
+  font-size: 12px;
+  padding: 6px 0;
+}
+.more-btn a:hover {
+  color: #85B7D5;
+  opacity: 0.7;
+}
 
 
 /* HOME */
@@ -93,6 +119,7 @@ p {
 
 .home-title {
   max-width: 150px;
+  opacity: 0.9;
 }
 
 
@@ -198,13 +225,16 @@ p {
 .home-news-item a:hover {
   color:#0F92D3;
 }
+.home-news-item .more-btn a {
+  color: #74A7CBFF;
+}
 
 /* home-line1 */
 .home-line {
   display: grid;
   grid-template-columns:1fr;
 /*  margin: 50px auto;*/
-  padding-top: 100px;
+  padding-top: 120px;
 }
 .home-line img {
   width: 100%;
@@ -248,25 +278,6 @@ p {
 
 }
 
-.more-btn {
-  text-align: center;
-}
-.more-btn a {
-  display: block;
-  border: 2px solid #85B7D5;
-  border-image: url(../images/line_img.png) 33%/25px 25px repeat;
-  width: 120px;
-  margin: 10px auto;
-  margin-top: 20px;
-  color: #85B7D5;
-  font-size: 12px;
-  padding: 6px 0;
-}
-.more-btn a:hover {
-  color: #85B7D5;
-  opacity: 0.7;
-}
-
 .home-gallery-top .more-btn {
   padding: 30px;
 }
@@ -276,8 +287,8 @@ p {
 }
 
 .home-gallery-list {
-/*   position: absolute;
-  bottom: -50px;*/
+   position: absolute;
+  bottom: -50px;
 /*  display: flex;
   flex-wrap: wrap;
   align-items: top;
@@ -289,12 +300,10 @@ p {
 /*ギャラリー slickカスタマイズ分*/
 .slick01 img {
   border: 5px solid #73A7CBFF;
-  height: 30vw;
+  height: 40vw;
+  border-radius: 10px;
 }
 
-.slick-slider {
-
-}
 
 
 
@@ -453,13 +462,13 @@ p {
 .home-contact-top {
   border: 2px solid #85B7D5;
   border-image: url(../images/line_img.png) 33%/25px 25px repeat;
-  background: url(../images/home-suzume3.png);
   background-repeat: no-repeat;
   background-position: left 20px bottom 20px;
   background-size:50%;
-  background-color: rgba(255,255,255,1);
+  background-color: rgba(255,255,255,0.5);
     width:auto;
-    height:500px;
+    height:400px;
+    margin: 0 20px;
 
 }
 .home-contact-top .page-title {
@@ -476,6 +485,14 @@ p {
   top: -74px;
   left: 35%;
   width: 120px;
+}
+
+.home-contact-suzume {
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  z-index: -3;
+  width: 70%;
 }
 
 .more-btn2 {
@@ -509,7 +526,7 @@ p {
 }
 .sns-fish {
   width: 100px;
-  margin-top: 100px;
+  margin-top: 150px;
 }
 
 .sns-bt p{
@@ -607,58 +624,7 @@ footer p {
 /*------------------------
 テスト用*/
 
-/*.home-news-area {
 
-  margin: 20px;
-
-}
-
-.home-news-bg {
-  background: #fff;
-  opacity: 0.8;
-  border: 3px solid #74A7CBFF;
-  border-image: url(../images/line_img.png) 33%/25px 25px repeat;
-}
-
-.home-news-title {
-  display: flex;
-  justify-content: space-between;
-}
-
-.home-news-title .page-title {
-  align-items: top;
-  justify-content: left;
-  padding: 0;
-}
-
-.home-news-title .page-title img {
-  width: 150px;
-}
-
-.home-news-title .more-btn {
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: right;
-}
-
-.more-btn a {
-  font-size: 1rem;
-  flex-wrap: wrap;
-  align-items: bottom;
-  justify-content: right;
-  margin: 0 6px;
-  width: 100px;
-}
-
-.home-news-bg1 {
-  top: -20px;
-  right: -20px;
-}
-
-.home-news-item {
-  border-image: none;
-  border: none;
-}*/
 
 
 

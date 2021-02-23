@@ -27,9 +27,13 @@ $(function(){
     ScrollReveal().reveal('.animatespeed2', { duration: '1800' ,delay: '500'} );
     ScrollReveal().reveal('.animatespeed3', { duration: '1800' ,delay: '1000'} );
     ScrollReveal().reveal('.animatetop', { distance: '100px', origin: 'top',duration: '2000'});
-    ScrollReveal().reveal('.text6', {   duration: 1600,  scale: 0.1,  reset: true
-      });
+    ScrollReveal().reveal('.text6', {   duration: 1600,  scale: 0.1,  reset: 'true'});
 });
+
+//ハンバーガーメニューの時に背景をスクロールさせない
+
+
+
 
 // 作品画像の拡大表示 プラグインColorBox
 $(function() {
