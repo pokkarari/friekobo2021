@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="10" viewBox="0 0 20 10">
-  <g id="グループ_12" data-name="グループ 12" transform="translate(-178 -1851)">
-    <g id="more-btn_矢印" data-name="more-btn 矢印" transform="translate(188 1852)">
-      <path id="パス_37" data-name="パス 37" d="M1698,1850.984l4,4-4,4" transform="translate(-1698 -1850.984)" fill="none" stroke="#93bddb" stroke-width="2"/>
+  <g id="g_12" data-name="g 12" transform="translate(-178 -1851)">
+    <g id="more-btn_y" data-name="more-btn-y" transform="translate(188 1852)">
+      <path id="p_37" data-name="p 37" d="M1698,1850.984l4,4-4,4" transform="translate(-1698 -1850.984)" fill="none" stroke="#93bddb" stroke-width="2"/>
     </g>
-    <rect id="長方形_23" data-name="長方形 23" width="20" height="10" transform="translate(178 1851)" fill="none"/>
+    <rect id="s_23" data-name="s_23" width="20" height="10" transform="translate(178 1851)" fill="none"/>
   </g>
 </svg>

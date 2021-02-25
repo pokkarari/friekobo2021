@@ -13,6 +13,7 @@ body {
   /*color: #85B7D5;---水色*/
   /*coloer:#FFFFE1 ---背景の色の黄色*/
   background-color: #FFFFE1;
+/*  background-color: #FEFBF6;*/
 }
 a {
   text-decoration: none;
@@ -95,7 +96,7 @@ p {
   display: block;
   border: 2px solid #85B7D5;
   border-image: url(../images/line_img.png) 33%/25px 25px repeat;
-  width: 120px;
+/*  width: 120px;*/
   margin: 10px auto;
   margin-top: 20px;
   color: #85B7D5;
@@ -285,6 +286,9 @@ p {
 .home-gallery-bg {
   position: relative;
 }
+.home-gallery-bg > img {
+  border-radius: 20px;
+}
 
 .home-gallery-list {
    position: absolute;
@@ -299,7 +303,7 @@ p {
 
 /*ギャラリー slickカスタマイズ分*/
 .slick01 img {
-  border: 5px solid #73A7CBFF;
+  border: 5px solid #fff;
   height: 40vw;
   border-radius: 10px;
 }
@@ -619,6 +623,91 @@ footer p {
   color: #fff;
   font-size: 1rem;
 }
+
+
+/* --------HOW TOのページ--------*/
+/*howto 共通*/
+.howto-title {
+  text-align: center;
+  border-top: 3px solid #000;
+  border-bottom: 3px solid #000;
+}
+
+.howto-top-bg{
+  text-align: center;
+  height: 300px;
+  background-image: url(images/howto/);
+}
+
+.howto-rougahowto-area {
+
+}
+
+/*描き方ステップ*/
+.howto-painting-step {
+  background-color: #fff;
+/*  margin:20px;*/
+  padding: 20px;
+}
+.howto-painting-step p{
+  font-size: 1.4rem;
+}
+.painting-step-area {
+
+}
+.painting-step-title {
+  margin: 40px auto 80px 0;
+  padding: 0 20px;
+}
+.painting-step-title:before {
+  content: "●";
+/*  content: url(../images/howto/);*/
+  width: 80px;
+}
+.step-img {
+  text-align: center;
+  position: relative;
+}
+
+.step-img-fix{
+  border: 10px solid #74A7CBFF;
+  border-radius: 10px;
+  width: 250px;
+  height: 250px;
+}
+/*.step-img-fix:before {
+  content:url(../images/howto/);
+  border: 10px solid #000;
+  border-radius: 10px;
+  width: 300px;
+  height: 300px;
+}*/
+.step-img-up {
+  position: absolute;
+  top:-60px;
+  left: 25%;
+  width: 120px;
+  height: 120px;
+  border: 10px solid #fff;
+  border-radius: 50%;
+  background-color: #ff1;
+}
+
+.step-caption {
+  margin: 20px auto 20px 10px;
+}
+
+
+
+
+
+
+
+.howto-attract {
+
+}
+
+
 
 
 /*------------------------
