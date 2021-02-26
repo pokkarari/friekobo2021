@@ -52,7 +52,11 @@
   background-size: contain;
   min-height: auto;
 }
-
+.home-news-lineup {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4,1fr);
+}
 
 /*HOW TO*/
 .homo-howto-main img {
@@ -68,11 +72,9 @@ textarea {
   max-width: 100%;
 }
 
-
+}
 /* 記事の部分 */
-/*article {
-
-}*/
+/*article */
 
 
 
