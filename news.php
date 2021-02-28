@@ -64,7 +64,8 @@ $(function(){
                 <div class="drawer">
                   <input type="checkbox" id="drawer-check" class="drawer-hidden">
                   <!-- ハンバーガーアイコン-->
-                  <label for="drawer-check" class="drawer-open"><span><p class="hb-menu-moji">MENU</p></span></label>
+                  <label for="drawer-check" class="drawer-open"></label>
+                  <p class="hb-menu-moji">MENU</p>
                   <!-- メニュー -->
                   <nav class="drawer-content">
                     <div class="hb-menu-logo">
@@ -110,32 +111,33 @@ $(function(){
                     <?php endif; ?>
                 </div><!--/.news-cat-->
 
-<!-- 日にち・タイトル-->
+<!-- 日付 タイトル -->
                 <div class="news-info">
                     <?php if(isset($news["category"])): ?>
-                    <a href="<?php h($news["category"]); ?>.html">
-                        <p class="news-date"><?php
-                            $d = new DateTime($news["posted"]);
-                            $fmt = $d -> format('Y年m月d日') ?>
-                            <?php h($fmt); ?> <span></span></p>
+                        <p class="news-date">
+                    		<a href="<?php h($news["category"]); ?>.html">
+                       	 <?php
+                                $d = new DateTime($news["posted"]);
+                                $fmt = $d -> format('Y年m月d日'); ?>
+                         <?php h($fmt); ?></a>
+                        </p>
                     	<h4 class="news-title">
-                            	<?php h($news["title"]); ?></h4></a>
+                            	<?php h($news["title"]); ?>
+                           </h4>
                         <?php else: ?>
                             <p class="news-date"><?php
                                 $d = new DateTime($news["posted"]);
-                                $fmt = $d -> format('Y年m月d日') ?>
+                                $fmt = $d -> format('Y年m月d日'); ?>
                                 <?php h($fmt); ?> <span></span></p>
                             <h4 class="news-title">
                                 <?php h($news["title"]); ?></h4>
                         <?php endif; ?>
                 </div><!-- /.news-info -->
 
-
-
 <!-- お知らせの中身 -->
                 <div class="news-massage">
                     <p><?php h($news["message"]); ?></p>
-                </div>
+                </div><!-- news-massage -->
 
                 <div class="news-list-image"><!-- 画像-->
                     <?php if(isset($news["image"])): ?>
@@ -143,23 +145,26 @@ $(function(){
                     <?php else: ?>
                	        <img class="media-object" src="images/news_coler.png" height="30" width="30" alt="">
                     <?php endif; ?>
-                </div>
+                </div><!-- news-list-image -->
                    <?php endforeach; ?>
-            </article>
 
+            </article>
+<!-- line -->
+        <hr class="cp_hr03">
+
+<!-- （ページの数字） -->
+
+<!-- サイド -->
             <aside>
-                <h3 class="sub-title">カテゴリー</h3>
+<!-- 年別一覧 -->
+                <h3 class="sub-title">年別一覧</h3>
                 <ul class="sub-menu">
-                    <li><a href="#">出展情報</a></li>
-                    <li><a href="#">作品ギャラリー</a></li>
-                    <li><a href="#">イベント</a></li>
-                    <li><a href="#">ろう画とは</a></li>
+                    <li><a href="#">2021年</a></li>
                 </ul>
-                <h3 class="sub-title">こうぼうとろう画 </h3>
-                <p>
-                    絵画の技法のろう画。このろう画は、自分でも予想を超えた作品になることが魅力の一つです。<br>さまざまな表情のねこや動物たちから、たくさんの人に笑顔になってもらえたらと言う思いで描いています。笑顔の絵は描いていても、なんだかニヤリとなってしまいます。
-                    ろう画からオリジナルキャラクター「ウォネとその他の皆さんその他のみなさん」は生みだし、ハンドメイド作品も手がけています。
-                </p>
+<!-- カテゴリー一覧 -->
+                <h3 class="sub-title">カテゴリー一覧</h3>
+                <p>おしらせ</p>
+
             </aside>
         </div><!-- /.news-contents -->
     </main><!-- /ここまでがいるもの 現在のところ数は無限-->
