@@ -87,7 +87,7 @@ $(function(){
             </div><!-- hb-menu -->
         </header>
 
-        <div class="news-titile wrapper">
+        <div class="news-top-title wrapper">
             <img src="images/kobo-logo.svg" alt="">
             <h2 class="page-title">News</h2>
         </div><!-- /.wrapper -->
@@ -96,36 +96,44 @@ $(function(){
 
      <main>
         <div class="news-contents wrapper">
-          <article class="news-list">    <!-- ここからがおしらせリスト-->
-                <?php foreach ($newsList as $news): ?>
-                <div class="post-info"><!-- 日にち・タイトル-->
-                    <?php if(isset($news["category"])): ?>
-                    <a href="<?php h($news["category"]); ?>.html">
-                        <p class="post-date"><?php
-                            $d = new DateTime($news["posted"]);
-                            $fmt = $d -> format('Y年m月d日') ?>
-                            <?php h($fmt); ?> <span></span></p>
-                    	<h4 class="post-title">
-                            	<?php h($news["title"]); ?></h4></a>
-                        <?php else: ?>
-                            <p class="post-date"><?php
-                                $d = new DateTime($news["posted"]);
-                                $fmt = $d -> format('Y年m月d日') ?>
-                                <?php h($fmt); ?> <span></span></p>
-                            <h4 class="post-title">
-                                <?php h($news["title"]); ?></h4>
-                        <?php endif; ?>
-                </div><!-- /.post-info -->
 
-                <div class="post-cat"><!-- カテゴリー-->
+<!-- ここからがおしらせリスト-->
+          <article class="news-list">
+                <?php foreach ($newsList as $news): ?>
+
+<!-- カテゴリー-->
+                <div class="news-cat">
                     <?php if(isset($news["category"])): ?>
                         <p>カテゴリー :<a href="<?php h($news["category"]); ?>.html"><span><?php h($news["category"]); ?></span></a></p>
                     <?php else: ?>
                         <p>カテゴリー :<span><?php h($news["category"]); ?></span></p>
                     <?php endif; ?>
-                    </div><!--/.post-cat-->
+                </div><!--/.news-cat-->
 
-                <div class="post-massage"><!-- お知らせの中身 -->
+<!-- 日にち・タイトル-->
+                <div class="news-info">
+                    <?php if(isset($news["category"])): ?>
+                    <a href="<?php h($news["category"]); ?>.html">
+                        <p class="news-date"><?php
+                            $d = new DateTime($news["posted"]);
+                            $fmt = $d -> format('Y年m月d日') ?>
+                            <?php h($fmt); ?> <span></span></p>
+                    	<h4 class="news-title">
+                            	<?php h($news["title"]); ?></h4></a>
+                        <?php else: ?>
+                            <p class="news-date"><?php
+                                $d = new DateTime($news["posted"]);
+                                $fmt = $d -> format('Y年m月d日') ?>
+                                <?php h($fmt); ?> <span></span></p>
+                            <h4 class="news-title">
+                                <?php h($news["title"]); ?></h4>
+                        <?php endif; ?>
+                </div><!-- /.news-info -->
+
+
+
+<!-- お知らせの中身 -->
+                <div class="news-massage">
                     <p><?php h($news["message"]); ?></p>
                 </div>
 

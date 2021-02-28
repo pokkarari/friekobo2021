@@ -284,7 +284,7 @@ p {
 }
 
 .home-gallery-top .more-btn {
-  padding: 30px;
+
 }
 
 .home-gallery-bg {
@@ -295,15 +295,18 @@ p {
 }
 
 .home-gallery-list {
-   position: absolute;
-  bottom: -50px;
+   position: relative;
+/*  bottom: -50px;*/
 /*  display: flex;
   flex-wrap: wrap;
   align-items: top;
   justify-content: center;
   padding: 10px;*/
 }
-
+.slick01 {
+  position: absolute;
+  border-top: -50px;
+}
 
 /*ギャラリー slickカスタマイズ分*/
 .slick01 img {
@@ -499,8 +502,7 @@ p {
   position: absolute;
   bottom: -100px;
   left: 0;
-  z-index: -3;
-  width: 70%;
+  width: 60%;
 }
 
 .more-btn2 {
@@ -633,18 +635,36 @@ footer p {
 /*howto 共通*/
 .howto-title {
   text-align: center;
-  border-top: 3px solid #000;
-  border-bottom: 3px solid #000;
-  margin: 20px;
+  border-top: 2px solid #74A7CBFF;
+  border-bottom: 2px solid #74A7CBFF;
+  margin: 40px 20px;
+  padding: 20px 0;
+}
+
+.bg-fff {
+  background: #fff;
+}
+
+.howto-point {
+  border: 2px solid #74A7CBFF;
+  border-radius: 10px;
+  margin: 20px 10px;
+  padding: 10px;
 }
 
 .howto-top-bg{
   position: relative;
-  text-align: center;
-  height: 300px;
-  background-image: url(../images/howto/top_rouga_img.jpg);
+  text-align: left;
+  height: 250px;
+  background-image: url(../images/howto/news-headimg.jpg);
   background-size: cover;
   background-position: center;
+}
+
+.howto-top-bg > img {
+  width: 60px;
+  margin: 20px;
+  opacity: 0.8;
 }
 
 .howto-top-title {
@@ -654,13 +674,52 @@ footer p {
   display: inline-block;
   text-align: center;
   width: 50%;
-  background: rgba(254,255,218,0.9);
+  background: rgba(254,255,218,1);
   border-radius: 20px 0 0 20px;
-  padding: 20px 20px 0 20px;
+  padding: 20px 20px 20px 20px;
+}
+.howto-toha {
+/*  position: relative;*/
+  display: grid;
+  grid-template-columns:30% 1fr;
+}
+.howto-toha img {
+/*width:75%;*/
+
+/*  left: -100px;*/
+
 }
 .howto-rougahowto-area {
 
 }
+
+.howto-completion-img {
+  text-align: center;
+}
+
+.howto-completion-img img {
+  border: 5px solid #74A7CBFF;
+}
+
+
+.howto-painting ul{
+  list-style: none;
+}
+.howto-tools-img {
+  display: grid;
+  grid-row-gap: 10px;
+  grid-column-gap: 20px;
+  grid-template-columns: repeat(3,1fr);
+  background: #fff;
+  margin: 20px 0 10px 0;
+}
+
+.howto-tools-name {
+  padding: 20px;
+  margin: 5px 30px;
+}
+
+
 
 /*描き方ステップ*/
 .howto-painting-step {

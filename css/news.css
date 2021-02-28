@@ -10,7 +10,7 @@
 #news .page-title {
   text-align: center;
 }
-.news-titile {
+.news-top-title {
   font-size: 1.8rem;
   text-align: center;
 }
@@ -19,11 +19,11 @@
   width: 100px;
 }
 
-.post-title {
+.news-title {
   font-size: 1.6rem;
   border-bottom: 1px solid #000;
 }
-.post-massege {
+.news-massege {
   font-size: 1.4rem;
 }
 
@@ -32,11 +32,11 @@
   padding-right: 1em;
 }
 
-.post-cat {
+.news-cat {
   font-size: 12rem;
 }
 
-.post-massage {
+.news-massage {
   padding: 15px;
 }
 
