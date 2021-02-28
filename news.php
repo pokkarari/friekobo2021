@@ -53,7 +53,7 @@ $(function(){
 </head>
 
 <body>
-    <div id="news" class="news_page big-bg">
+    <div id="news">
 
         <header class="page-header ">
     <!-- ここからハンバーガーメニュー -->
@@ -64,8 +64,7 @@ $(function(){
                 <div class="drawer">
                   <input type="checkbox" id="drawer-check" class="drawer-hidden">
                   <!-- ハンバーガーアイコン-->
-                  <label for="drawer-check" class="drawer-open"></label>
-                  <p class="hb-menu-moji">MENU</p>
+                  <label for="drawer-check" class="drawer-open"><span><p class="hb-menu-moji">MENU</p></span></label>
                   <!-- メニュー -->
                   <nav class="drawer-content">
                     <div class="hb-menu-logo">
@@ -88,87 +87,83 @@ $(function(){
             </div><!-- hb-menu -->
         </header>
 
-        <div class="news-top-title wrapper">
-            <img src="images/kobo-logo.svg" alt="">
-            <h2 class="page-title">News</h2>
-        </div><!-- /.wrapper -->
-    </div><!--/#news /.news_page big-bg-->
+        <div class="page-top-img wrapper">
+            <h1 class="page-top-title"><img src="images/kobo-logo.svg" alt=""></h1>
+            <div class="howto-top-title">
+              <h2><img src="images/home/moji-news.png" alt="NEWS"></h2>
+              <p>おしらせ</p>
+            </div>
+        </div><!-- /.page-top-img -->
 
 
      <main>
-        <div class="news-contents wrapper">
+        <div id="news" class="wrapper">
 
 <!-- ここからがおしらせリスト-->
           <article class="news-list">
                 <?php foreach ($newsList as $news): ?>
-
-<!-- カテゴリー-->
-                <div class="news-cat">
-                    <?php if(isset($news["category"])): ?>
-                        <p>カテゴリー :<a href="<?php h($news["category"]); ?>.html"><span><?php h($news["category"]); ?></span></a></p>
-                    <?php else: ?>
-                        <p>カテゴリー :<span><?php h($news["category"]); ?></span></p>
-                    <?php endif; ?>
-                </div><!--/.news-cat-->
-
-<!-- 日付 タイトル -->
-                <div class="news-info">
-                    <?php if(isset($news["category"])): ?>
-                        <p class="news-date">
-                    		<a href="<?php h($news["category"]); ?>.html">
-                       	 <?php
-                                $d = new DateTime($news["posted"]);
-                                $fmt = $d -> format('Y年m月d日'); ?>
-                         <?php h($fmt); ?></a>
-                        </p>
-                    	<h4 class="news-title">
-                            	<?php h($news["title"]); ?>
-                           </h4>
+<!-- カテゴリーと日付 -->
+                <div class="news-contents">
+                    <div class="news-cat-mark">
+                            <?php if(isset($news["category"])): ?>
+                            <a href="<?php h($news["category"]); ?>.html">
+                            <p><?php h($news["category"]); ?></p></a>
                         <?php else: ?>
-                            <p class="news-date"><?php
-                                $d = new DateTime($news["posted"]);
-                                $fmt = $d -> format('Y年m月d日'); ?>
-                                <?php h($fmt); ?> <span></span></p>
-                            <h4 class="news-title">
-                                <?php h($news["title"]); ?></h4>
+                            <p><?php h($news["category"]); ?></p>
                         <?php endif; ?>
-                </div><!-- /.news-info -->
+                    </div><!--/.news-cat-mark -->
+                    <div class="news-date">
+                        <p><?php
+                            $d = new DateTime($news["posted"]);
+                            $fmt = $d -> format("Y年m月j日"); ?>
+                            <?php h($fmt); ?>
+                        </p>
+                    </div><!-- /.news-date -->
+                </div><!-- /.news-contents -->
+<!-- タイトル -->
+                <div class="news-title">
+                    <h3><?php h($news["title"]); ?></h3>
+                </div><!-- news-title -->
 
 <!-- お知らせの中身 -->
                 <div class="news-massage">
                     <p><?php h($news["message"]); ?></p>
                 </div><!-- news-massage -->
-
-                <div class="news-list-image"><!-- 画像-->
+<!-- 画像-->
+                <div class="news-list-img">
                     <?php if(isset($news["image"])): ?>
                         <img class="media-object" src="images/press/<?php h($news["image"]); ?>" alt="おしらせ写真">
                     <?php else: ?>
                	        <img class="media-object" src="images/news_coler.png" height="30" width="30" alt="">
                     <?php endif; ?>
                 </div><!-- news-list-image -->
+<!-- line -->
+                <hr class="cp_hr01">
                    <?php endforeach; ?>
 
             </article>
-<!-- line -->
-        <hr class="cp_hr03">
+        </div><!-- #news -->
+
 
 <!-- （ページの数字） -->
 
 <!-- サイド -->
             <aside>
 <!-- 年別一覧 -->
-                <h3 class="sub-title">年別一覧</h3>
-                <ul class="sub-menu">
+                <h3 class="news-yaer-title category-title">年別一覧</h3>
+                <ul class="snews-yaer-menu">
                     <li><a href="#">2021年</a></li>
                 </ul>
 <!-- カテゴリー一覧 -->
-                <h3 class="sub-title">カテゴリー一覧</h3>
-                <p>おしらせ</p>
+                <h3 class="news-cat-title category-title">カテゴリー一覧</h3>
+                <ul class="news-cat-menu">
+                    <li><a href="#">おしらせ</a></li>
+                </ul>
 
             </aside>
         </div><!-- /.news-contents -->
     </main><!-- /ここまでがいるもの 現在のところ数は無限-->
-
+</div><!-- #news -->
 
 
     <div class="sns-area wrapper">
@@ -176,12 +171,12 @@ $(function(){
         <img class="sns-fish" src="images/hikousen1.png" alt="">
         <div class="sns-bt">
             <p>FRIE KOBO OFFICIAL</p>
-            <lu class="sns-bt-nav">
+            <ul class="sns-bt-nav">
                 <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                 <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                 <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                 <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-            </lu><!-- /.sns-bt-nav -->
+            </ul><!-- /.sns-bt-nav -->
         </div><!-- /.sns-bt -->
         <div class="sns-blog">
             <img src="images/home-blog-bar.png" alt="">

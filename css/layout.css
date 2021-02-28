@@ -26,8 +26,6 @@ p {
   font-size: 1.6rem;
 }
 
-
-
 /* HEADER */
 .logo {
   width: 150px;
@@ -68,7 +66,19 @@ p {
 .page-title img {
   height: 50px;
 }
+.page-top-title {
+  width: 60px;
+  margin: 20px;
+  opacity: 0.8;
+}
 
+.category-title {
+  text-align: center;
+  border-top: 2px solid #74A7CBFF;
+  border-bottom: 2px solid #74A7CBFF;
+  margin: 40px 20px;
+  padding: 20px 0;
+}
 
 /* ボタン */
 .button {
@@ -112,6 +122,23 @@ p {
   opacity: 0.7;
 }
 
+/*ライン*/
+/*細い*/
+.cp_hr01 {
+  border-width: 1px 0 0 0;
+  border-style: dotted;
+  border-color: #1e88e5;
+}
+
+/* 各ページのヒーローイメージ*/
+.page-top-img {
+  position: relative;
+  text-align: left;
+  height: 250px;
+  background-image: url(../images/howto/news-headimg.jpg);
+  background-size: cover;
+  background-position: center;
+}
 
 /* HOME */
 .home-content {
@@ -633,12 +660,11 @@ footer p {
 
 /* --------HOW TOのページ--------*/
 /*howto 共通*/
-.howto-title {
-  text-align: center;
-  border-top: 2px solid #74A7CBFF;
-  border-bottom: 2px solid #74A7CBFF;
-  margin: 40px 20px;
-  padding: 20px 0;
+/*.category-title {
+タイトルは上にまとめてある
+}*/
+#howto .page-top-img {
+  background-image: url(../images/howto/news-headimg.jpg);
 }
 
 .bg-fff {
@@ -650,21 +676,6 @@ footer p {
   border-radius: 10px;
   margin: 20px 10px;
   padding: 10px;
-}
-
-.howto-top-bg{
-  position: relative;
-  text-align: left;
-  height: 250px;
-  background-image: url(../images/howto/news-headimg.jpg);
-  background-size: cover;
-  background-position: center;
-}
-
-.howto-top-bg > img {
-  width: 60px;
-  margin: 20px;
-  opacity: 0.8;
 }
 
 .howto-top-title {
@@ -776,14 +787,6 @@ footer p {
 }
 
 
-
-
-
-
-
-.howto-attract {
-
-}
 
 
 

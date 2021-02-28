@@ -1,55 +1,57 @@
 @charset "UTF-8";
 /* News */
-#news {
-  background-image: url(../images/news-bg.jpg);
-  background-color: rgba(255,255,255,.6);
-  background-blend-mode: lighten;
-  height: 270px;
-  margin-bottom: 40px;
+#news .page-top-img {
+  background-image: url(../images/news/news-headimg.jpg);
 }
-#news .page-title {
+.news-contents {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0 0 0;
+}
+.news-cat-mark {
+  display: inline-block;
   text-align: center;
+  background: #74A7CBFF;
+  border: 2px solid #74A7CBFF;
+  border-radius: 14px;
 }
-.news-top-title {
-  font-size: 1.8rem;
-  text-align: center;
+
+.news-cat-mark p{
+  font-size: 1.2rem;
+  color: #fff;
+  padding: 0 12px 2px 12px;
 }
-.news-titile img{
-  padding-top: 30px;
-  width: 100px;
+
+.news-date p {
+  display: inline-block;
+  font-family: "YuGothic";
+  color: #74A7CBFF;
 }
 
 .news-title {
   font-size: 1.6rem;
-  border-bottom: 1px solid #000;
+  margin: 5px 0 30px 0;
+  padding: 0 5px 5px 5px;
+  border-bottom: 2px solid #74A7CBFF;
 }
-.news-massege {
+}
+.news-massage p {
   font-size: 1.4rem;
+  margin: 0 30px;
+  padding: 20px;
 }
 
-.news-list{
-  padding-left: 1em;
-  padding-right: 1em;
-}
 
-.news-cat {
-  font-size: 12rem;
-}
-
-.news-massage {
-  padding: 15px;
-}
-
-.news-list-image {
+.news-list-img {
   padding-bottom: 20px;
+  text-align: center;
 }
-.news-list-image img {
+.news-list-img img {
   padding: 20px;
   width: 300px;
 }
+
+
 /* モバイル版
 -----------------------------------------*/
-@media screen and (max-width: 600px){
-
-}
 
