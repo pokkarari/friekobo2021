@@ -115,10 +115,10 @@
 /*ここからオリジナルをカスタマイズ分*/
 
 .slick-prev {
-    left: 20px;
+    left: 0px;
 }
 .slick-next {
-    right: 20px;
+    right: 0px;
 }
 .slick-theme.css,
 .slick-prev:before,

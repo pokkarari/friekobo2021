@@ -6,7 +6,8 @@ html {
 }
 body {
   font-size: 1.4rem;
-  font-family: "a-otf-jun-pro","Yu Gothic Medium", "游ゴシック Medium", "YuGothic","游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+  font-weight: 500;
+  font-family: "a-otf-jun-pro","fot-udmarugo-large-pr6n","Yu Gothic Medium", "游ゴシック Medium", "YuGothic","游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
   line-height: 1.7;
   color: #271A10;
   /*color: #271A10 ---全体の文字の色こげ茶*/
@@ -14,6 +15,8 @@ body {
   /*coloer:#FFFFE1 ---背景の色の黄色*/
   background-color: #FFFFE1;
 /*  background-color: #FEFBF6;*/
+/*background-image: url(../images/home/kobo-texture01.png);*/
+background-repeat: repeat;
 }
 a {
   text-decoration: none;
@@ -50,8 +53,6 @@ p {
 .page-title {
   text-align: center;
   font-size: 3.2rem;
-  font-family: vdl-v7marugothic, sans-serif;
-  font-weight: 800;
   font-style: normal;
   text-transform: uppercase;
   padding: 50px 0 30px 0;
@@ -60,7 +61,8 @@ p {
 
 .page-title p {
   font-size: 1.4rem;
-  font-family: a-otf-jun-pro, sans-serif;
+  font-family: fot-udmarugo-large-pr6n, sans-serif;
+  font-weight: 600;
   padding-top: 20px;
 }
 .page-title img {
@@ -123,11 +125,11 @@ p {
 }
 
 /*ライン*/
-/*細い*/
+/*細いドット*/
 .cp_hr01 {
   border-width: 1px 0 0 0;
   border-style: dotted;
-  border-color: #1e88e5;
+  border-color: #74A7CBFF;
 }
 
 /* 各ページのヒーローイメージ*/
@@ -210,8 +212,9 @@ p {
 .home-news-bg2 {
   position: absolute;
   bottom:-100px;
+  left: -20px;
   z-index: -1;
-  width: 50%;
+  width: 60%;
 }
 
 .home-news-title{
@@ -302,6 +305,8 @@ p {
 
 .home-gallery-top {
   text-align: center;
+  /*background-image: url(../images/home/texture02.png);*/
+  background-repeat: repeat;
   background-color: #fff;
 }
 
@@ -348,7 +353,9 @@ p {
 /*-----------------------*/
 
 .home-line2 {
-  padding-bottom: 100px;
+  padding-bottom: 120px;
+/*  transform: rotate( 10deg );*/
+  padding-top: 50px;
 }
 
 /*-----------------------*/
@@ -438,7 +445,9 @@ p {
   margin: 120px 0 0 0;
   padding-bottom: 50px;
   background-color: #fff;
-  height: 700px;
+  background-image: url(../images/howto/brush-yellow.svg);
+  background-position: 80% -20px;
+  background-size: 45px auto;
 }
 
 .home-howto-area .page-title img {
@@ -457,6 +466,7 @@ p {
 .home-line3 {
   position: relative;
   margin-top: 100px;
+/*  transform: rotate( -15deg );*/
 }
 
 .home-line3 img{
@@ -482,7 +492,8 @@ p {
 }
 
 .home-line4 {
-  padding: 100px 0 150px 0  ;
+  padding: 100px 0 150px 0;
+/*  transform: rotate( -15deg );*/
 
 }
 
@@ -499,7 +510,8 @@ p {
 
 .home-contact-top {
   /*border: 2px solid #85B7D5;*/
-  border-image: url(../images/handline-square.png) 33%/25px 25px repeat;
+  border: 1px solid #fff;
+  border-image: url(../images/waku-blue01.png) 33%/25px 25px repeat;
   background-repeat: no-repeat;
   background-position: left 20px bottom 20px;
   background-size:50%;
@@ -527,7 +539,7 @@ p {
 
 .home-contact-suzume {
   position: absolute;
-  bottom: -100px;
+  bottom: -80px;
   left: 0;
   width: 60%;
 }
@@ -825,7 +837,7 @@ justify-content: center;
 }
 .test-news-deta p:nth-child(1){
 display: inline-block;
-/*background: #fff;*/
+font-family:sans-serif;
 margin: 5px 0;
 }
 .test-news-deta p:nth-child(2){
