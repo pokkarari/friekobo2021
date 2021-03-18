@@ -96,9 +96,9 @@ p {
 .more-btn {
   text-align: center;
   border: 2px solid #85B7D5;
-  border-image: url(../images/handline-square.png) 33%/25px 25px repeat;
-  width: 150px;
-  margin: 10px auto;
+  border-image: url(../images/waku-blue01.png) 33%/25px 25px repeat;
+  width: 200px;
+  margin: 20px auto;
 }
 .more-btn a:after {
   content: url(../images/more-btn-right.svg);
@@ -106,6 +106,7 @@ p {
 /*  transform: rotateZ( 90deg );*/
   vertical-align:baseline;
   padding-top: 2px;
+  margin-left: 10px;
   width: 20px;
 
 }
