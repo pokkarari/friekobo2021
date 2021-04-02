@@ -1,0 +1,39 @@
+/*問い合わせフォーム用スタイル */
+.form {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.form input {               /*お名前、メールアドレス、題名入力用*/
+    width: 80%;
+    padding: 10px 15px;     /*内側余白 上下10px, 左右15px*/
+    font-size: 16px;
+    border-radius: 3px;     /*ボックス角の丸み*/
+    border: 2px solid #ddd; /*枠線*/
+    box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
+}
+
+.form textarea {            /*お問い合わせ内容入力用*/
+    height: 150px;
+    width: 80%;
+    padding: 10px 15px;     /*内側余白 上下10px, 左右15px*/
+    margin-bottom:10px;
+    font-size: 16px;
+    border-radius: 3px;     /*ボックス角の丸み*/
+    border: 2px solid #ddd; /*枠線*/
+    box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
+}
+
+.contact-submit {           /*送信ボタン*/
+    width: 80%;
+    margin: 0 auto;
+}
+.contact-submit input {     /*送信ボタン押下*/
+    text-align: center;
+    font-size: 18px;
+    width: 80%;
+    padding: 10px 15px;     /*内側余白 上下10px, 左右15px*/
+    border-radius: 3px;     /*ボックス角の丸み*/
+    border: 2px solid #ddd; /*枠線*/
+    box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
+}
