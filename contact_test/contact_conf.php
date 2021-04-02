@@ -35,7 +35,7 @@ if(isset($_POST["send"])){
                "from" => $myEmail,
               "protocol" => "SMTP_AUTH",
               "user" => $myEmail,
-              "pass" => "frie8528"];//ここの行にサーバー情報を入れる
+              "pass" => ""];//ここの行にサーバー情報を入れる
     $qdmail -> smtp(true);
     $qdmail -> smtpServer($param);
 

@@ -1,0 +1,17 @@
+指定したファイルだけ見れなくする。
+<Files ~ "^access\.log$">
+「access.log」というファイルだけが見れないようになります。他のファイル名にしたいときは、「access\.log」の部分を書き換えてください。「.」（ドット）の前には、必ず「\」を入れてください。
+
+
+.htaccess　に記す　特定のファイルだけ見えないように
+
+.htaccessは該当ファイルと同じ階層に置く
+
+サーバーの設定のPHP一部
+      $mail->isSMTP(); // SMTP を使用
+      $mail->Host = MAIL_HOST; // SMTP サーバーを指定（phpmailvars.phpで定義）
+      $mail->SMTPAuth = true; // SMTP authentication を有効に
+      $mail->Username = MAIL_USER; // SMTP ユーザ名（phpmailvars.phpで定義）
+      $mail->Password = MAIL_PASSWORD; // SMTP パスワード（phpmailvars.phpで定義）
+      $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // TLS を有効に
+      $mail->Port = 587; // TCP ポートを指定（TLS の場合のポート番号）
