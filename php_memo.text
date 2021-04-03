@@ -6,6 +6,7 @@
 .htaccess　に記す　特定のファイルだけ見えないように
 
 .htaccessは該当ファイルと同じ階層に置く
+パーミッション属性は604
 
 サーバーの設定のPHP一部
       $mail->isSMTP(); // SMTP を使用
@@ -15,3 +16,29 @@
       $mail->Password = MAIL_PASSWORD; // SMTP パスワード（phpmailvars.phpで定義）
       $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // TLS を有効に
       $mail->Port = 587; // TCP ポートを指定（TLS の場合のポート番号）
+
+  $mail->SMTPDebug = SMTP::DEBUG_SERVER;  // デバグの出力を有効に（テスト環境での検証用）
+  $mail->isSMTP();   // SMTP を使用
+  $mail->Host       = 'smtp.lolipop.jp';  // SMTP サーバーを指定
+  $mail->SMTPAuth   = true;   // SMTP authentication を有効に
+  $mail->Username   = 'info@friekobo.com';  // SMTP ユーザ名
+  $mail->Password   = 'frie8528';  // SMTP パスワード
+  $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;  // 暗号化を有効に
+  $mail->Port       = 465;  // TCP ポートを指定
+
+  <?php
+//SMTP サーバー（サーバーの場合：localhost でも可）
+define('MAIL_HOST', 'mail.xxxxxx.com');
+
+//PHPMailer を使って送信するための E-mail アカウント
+define('MAIL_USER', 'xxxxx@xxxxxxx.com');
+
+//パスワード
+define('MAIL_PASSWORD', 'xxxxxxxxxx');
+
+//送信先
+define('SEND_TO', 'xxxx@xxxxxx.com');
+
+//送信先の名前
+define('SEND_TO_NAME', '送信先名前');
+
