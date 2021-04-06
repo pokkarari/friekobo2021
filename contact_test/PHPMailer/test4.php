@@ -14,7 +14,7 @@ require 'src/SMTP.php';
 //エラーメッセージ用日本語言語ファイルを読み込む場合
 require 'language/phpmailer.lang-ja.php';
 
-require 'phpmailvars.php';
+require './libs/phpmailvars.php';
 
 
 //言語、内部エンコーディングを指定

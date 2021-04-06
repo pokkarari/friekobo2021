@@ -1,3 +1,0 @@
-<Files ~ "^phpmailvars\.php$">
-Deny from all
-</Files>

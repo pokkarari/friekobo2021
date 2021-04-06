@@ -1,7 +1,16 @@
 <?php
 session_start();
+//セッションIDを更新して変更（セッションハイジャック対策）
+session_regenerate_id( TRUE );
 
-require_once 'util.inc.php';
+//エスケープ処理やデータチェックを行う関数のファイルの読み込み
+  require_once 'libs/function.php';
+
+  //ひみつ鍵を作るための関数を定義
+  function getToken(){
+    return hash("sha256",session_id());
+}
+
 
 // セッションに値がある場合、値を取り出す
 if(isset($_SESSION["contact"])){
@@ -14,8 +23,6 @@ if(isset($_SESSION["contact"])){
 }
 
 if($_SERVER["REQUEST_METHOD"] === "POST"){
-    //地図を非表示にするための情報
-    $_SESSION["show_map"] = false;
 
     //①バリデーション
     $name = $_POST["name"];
@@ -96,6 +103,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     <![endif]-->
   </head>
   <body class="pageTop" id="pageTop">
+      <?php echo getToken(); ?>
     <header class="navbar navbar-default navbar-fixed-top" role="banner">
       <div class="container">
         <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
@@ -136,11 +144,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
           </nav>
         </div>
       </div>
-      <?php if($_SESSION["show_map"]  !== false): ?>
       <div class="row">
-        <div class="col-md-8">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6479.926203846024!2d139.7001925!3d35.702525600000016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d2f6cba44df%3A0x18b3bc4c95b9f078!2z44CSMTY5LTAwNzMg5p2x5Lqs6YO95paw5a6_5Yy655m-5Lq655S677yS5LiB55uu77yU4oiS77yY!5e0!3m2!1sja!2sjp!4v1439870260921" width="100%" height="400px" frameborder="0" style="border:0" allowfullscreen></iframe>
-        </div>
         <div class="col-md-4">
           <h3>Contact Details</h3>
           <p>
@@ -153,7 +157,6 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
             月-金曜日: 9:00 AM to 5:00 PM</p>
           </div>
         </div>
-        <?php endif;?>
         <div class="row">
           <div class="col-md-4 hidden-sm hidden-xs contactleft">
             <div class="contact-img">
@@ -216,7 +219,8 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
               </div>
               <div class="form-group">
                 <div class="col-sm-offset-3 col-sm-10">
-                  <button type="submit" class="btn btn-success btn-lg">内容を確認して送信</button>
+                  <input type="hidden" name="token" value="<?php echo getToken(); ?>">
+                  <input type="submit" class="btn btn-success btn-lg">内容を確認して送信</input>
                 </div>
               </div>
             </form>
