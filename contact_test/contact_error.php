@@ -71,7 +71,7 @@
           <div class="col-md-8">
             <h3 class="page-header">Message Delivery Failed</h3>
             <p class="text-warning">大変申し訳ございません。内部エラーが発生しました。</p>
-            <p>お手数ですが、時間をおいて再度お試しいただくか、<b>03-1234-5678</b>までお電話いただけますようお願い申し上げます。</p>
+            <p>お手数ですが、時間をおいて再度お試しいただくようお願い申し上げます。</p>
             <p><a href="index.php">トップページへ戻る</a></p>
           </div>
         </div>
