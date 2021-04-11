@@ -9,7 +9,7 @@ define('MAIL_USER', 'info@friekobo.com');
 define('MAIL_PASSWORD', 'FRie8528-whone2');
 
 //送信先
-//define('SEND_TO', 'xxxx@xxxxxx.com');
+define('SEND_TO', 'info@friekobo.com');
 
 //送信先の名前
-//define('SEND_TO_NAME', '送信先名前');
+define('SEND_TO_NAME', 'エフリエこうぼうinfo担当');

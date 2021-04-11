@@ -2,9 +2,51 @@
 
 session_start();
 
-require_once 'util.inc.php';
-require_once 'libs/qdmail.php';
-require_once 'libs/qdsmtp.php';
+// HPMailer のクラスをグローバル名前空間（global namespace）にインポート
+// スクリプトの先頭で宣言する必要があります
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+//PHPmailer設定
+require "PHPMailer/src/Exception.php";
+require "PHPMailer/src/PHPMailer.php";
+require "PHPMailer/src/SMTP.php";
+//エラーメッセージ用日本語言語ファイルを読み込む場合
+require "PHPMailer/language/phpmailer.lang-ja.php";
+
+//データチェック
+require "./libs/phpmailvars.php";
+
+//エスケープ処理やデータチェックを行う関数のファイルの読み込み
+  require 'libs/function.php';
+
+
+//-------CSRF-------------------
+function getToken(){
+  return hash("sha256",session_id());
+}
+
+// if ($_SERVER['REQUEST_METHOD'] === "POST"){
+//   //ひみつの鍵を持っているかのチェック
+//   //1鍵をもっているか？
+//   //2正しい鍵か？ 1と2の両方の条件を。
+//   if (!isset($_POST["token"])) {
+//     //POSTでtokenがないため鍵を持っていないので不正
+//     exit("処理を正常に完了できません。不正の疑いあり");
+//   }
+//   elseif ($_POST["token"] !== getToken()) {
+//     //POSTのgetTokenの正しい鍵ではないので不正
+//     exit("不正の疑いあり");
+//   }
+// }
+// else{
+//   //直接このページを訪れた人は
+//   //不正アクセスと見なし、contact.phpに戻す
+//   header("Location: contact.php");
+//   exit;
+// }
+// // --------------------------
+
 
 // セッションから値を受け取る
 if(isset($_SESSION["contact"])){
@@ -25,23 +67,35 @@ if(isset($_POST["back"])){
 //送信ボタン
 if(isset($_POST["send"])){
     // ①メールを送信
-    $myEmail = "info@friekobo.com";//メールを変数にする
+    //言語、内部エンコーディングを指定
+    mb_language("japanese");
+    mb_internal_encoding("UTF-8");
 
-    $qdmail = new Qdmail();
+    // インスタンスを生成（引数に true を指定して例外 Exception を有効に）
+    $phpmail = new PHPMailer(true);
 
-  //1 SMTPの設定 この8行はお決まりの書き方
-    $param = ["host" => "smtp.lolipop.jp",
-               "port" => 465,
-               "from" => $myEmail,
-              "protocol" => "SMTP_AUTH",
-              "user" => $myEmail,
-              "pass" => ""];//ここの行にサーバー情報を入れる
-    $qdmail -> smtp(true);
-    $qdmail -> smtpServer($param);
+    //日本語用設定
+    $phpmail->CharSet = "iso-2022-jp";
+    $phpmail->Encoding = "7bit";
+
+    //エラーメッセージ用言語ファイルを使用する場合に指定
+    $phpmail->setLanguage("ja", "language/");
+
+
+  //1 SMTPの設定 お決まりの書き方
+  //サーバの設定
+  $phpmail->SMTPDebug = SMTP::DEBUG_SERVER;  // デバグの出力を有効に（テスト環境での検証用）
+  $phpmail->isSMTP();   // SMTP を使用
+  $phpmail->Host = MAIL_HOST; // SMTP サーバーを指定（phpmailvars.phpで定義）
+  $phpmail->SMTPAuth = true; // SMTP authentication を有効に
+  $phpmail->Username = MAIL_USER; // SMTP ユーザ名（phpmailvars.phpで定義）
+  $phpmail->Password = MAIL_PASSWORD; // SMTP パスワード（phpmailvars.phpで定義）
+  $phpmail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;  // 暗号化を有効に
+  $phpmail->Port       = 465;  // TCP ポートを指定
 
 
   //2メールのタイトルや本文の設定
-    $text = <<< EOT
+    $mail_text = <<< EOT
 サイトより以下のお問い合わせがありました。
 
 ◆氏名 : {$contact["name"]}
@@ -53,20 +107,36 @@ if(isset($_POST["send"])){
 {$contact["message"]}
 EOT;
 
-    $qdmail -> from($myEmail);
-    $qdmail -> to($myEmail);
-    $qdmail -> subject("サイトからの問い合わせ");
-    $qdmail -> text($text);
+//------------受信者設定-----------
+  //※名前などに日本語を使う場合は文字エンコーディングを変換
+  //差出人アドレス, 差出人名
+  $phpmail->setFrom("MAIL_USER", mb_encode_mimeheader("差出人名"));
+  //受信者アドレス, 受信者名（受信者名はオプション）
+  $phpmail->AddAddress(SEND_TO, mb_encode_mimeheader(SEND_TO_NAME)); //送信先アドレス・宛先名（phpmailvars.phpで定義）
+  //追加の受信者（受信者名は省略可能なのでここでは省略）
+  //$phpmail->addAddress('someone@gmail.com');
+  //返信用アドレス（差出人以外に別途指定する場合）
+  //$phpmail->addReplyTo('info@example.com', mb_encode_mimeheader("お問い合わせ"));
+  //Cc 受信者の指定
+  //$phpmail->addCC('foo@example.com');
+
+  //----------コンテンツ設定--------------
+  //$phpmail->isHTML(true);   // HTML形式を指定
+  //メール表題（文字エンコーディングを変換）
+  $phpmail->Subject = mb_encode_mimeheader("サイトからの問い合わせ");
+  //HTML形式の本文（文字エンコーディングを変換）
+  $phpmail->Body  = mb_convert_encoding($mail_text,"JIS","UTF-8");
+  //テキスト形式の本文（文字エンコーディングを変換）
+  //$phpmail->AltBody = mb_convert_encoding('テキストメッセージ',"JIS","UTF-8");
 
 
   //3メールを送信
-  $result = $qdmail -> send(); //メール送信の結果の表記する関数
+  $result = $phpmail -> send(); //メール送信の結果の表記する関数
 
     if ($result == true) {
     //②A:メール送信が成功の場合
       // 1セッションの破棄
       unset($_SESSION["contact"]);//内容を破棄
-      unset($_SESSION["show_map"]);//地図を再表示するため
 
     // 2完了画面に遷移
       header("Location: contact_done.php");
@@ -74,8 +144,6 @@ EOT;
     }
   else {
   //②B:メール送信が失敗の場合
-    //地図は映るように
-    unset($_SESSION["show_map"]);
     header("Location: contact_error.php");
     exit;//エラー画面に遷移するだけ
   }
@@ -159,7 +227,8 @@ EOT;
           <div class="col-md-8">
             <h3 class="page-header">Message Confirmation</h3>
             <p>内容を修正される場合は「修正する」ボタンを、送信される場合は「送信する」ボタンを押してください。</p>
-            <table class="table table-hover table-bordered">
+           	<form  action="" method="post"  >
+             <table border=1>
               <tr>
                 <th>お名前</th>
                 <td><?php h($contact["name"]); ?></td>
@@ -181,13 +250,9 @@ EOT;
                 <td><?php h($contact["message"]); ?></td>
               </tr>
             </table>
-            <form action="" method="post" class="form-horizontal">
-                <div class="form-group">
-                <div class="col-sm-10">
-                  <button type="submit" name="send" class="btn btn-success btn-lg">送信する</button>
-                  <button type="submit" name="back" class="btn btn-success btn-lg">修正する</button>
-                </div>
-              </div>
+            <input type="hidden" name="token" value="<?php echo getToken(); ?>">
+            <p><input type="submit" name="send" value="送信する"></p>
+            <p><input type="submit" name="back" value="修正する"></p>
             </form>
           </div>
         </div>

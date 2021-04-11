@@ -72,7 +72,7 @@
             <h3 class="page-header">Thank You</h3>
             <p>お問い合わせありがとうございました。</p>
             <p>折り返し担当者よりご連絡差し上げます。</p>
-            <p><a href="index.php">トップページへ戻る</a></p>
+            <p><a href="./index.html">トップページへ戻る</a></p>
           </div>
         </div>
       </div>

@@ -4,12 +4,13 @@ session_start();
 session_regenerate_id( TRUE );
 
 //エスケープ処理やデータチェックを行う関数のファイルの読み込み
-  require_once 'libs/function.php';
+  require 'libs/function.php';
 
   //ひみつ鍵を作るための関数を定義
   function getToken(){
     return hash("sha256",session_id());
 }
+
 
 
 // セッションに値がある場合、値を取り出す
@@ -103,7 +104,6 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     <![endif]-->
   </head>
   <body class="pageTop" id="pageTop">
-      <?php echo getToken(); ?>
     <header class="navbar navbar-default navbar-fixed-top" role="banner">
       <div class="container">
         <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
@@ -177,12 +177,11 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
                     <?php if(isset($errorMessage)):?>
             		<p><?php h($errorMessage);?></p>
             		<?php endif; ?>
-            <form class="form-horizontal" action="" method="post" novalidate>
+            <form class="form-horizontal" action="" method="post">
               <div class="form-group">
 
                 <label for="inputname" class="col-sm-3 control-label">お名前<span>(必須)</span></label>
                 <div class="col-sm-9">
-
                   <input type="text" class="form-control" id="inputname" name="name" value="<?php h($name); ?>" required>
                   <p class="help-block">(例)山田　太郎</p>
                 </div>
@@ -219,8 +218,8 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
               </div>
               <div class="form-group">
                 <div class="col-sm-offset-3 col-sm-10">
-                  <input type="hidden" name="token" value="<?php echo getToken(); ?>">
-                  <input type="submit" class="btn btn-success btn-lg">内容を確認して送信</input>
+
+                  <p><input type="submit" value="確認して送信する"></input></p>
                 </div>
               </div>
             </form>

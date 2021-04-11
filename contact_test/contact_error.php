@@ -72,7 +72,7 @@
             <h3 class="page-header">Message Delivery Failed</h3>
             <p class="text-warning">大変申し訳ございません。内部エラーが発生しました。</p>
             <p>お手数ですが、時間をおいて再度お試しいただくようお願い申し上げます。</p>
-            <p><a href="index.php">トップページへ戻る</a></p>
+            <p><a href="./contact.php">お問い合わせページトップへ</a></p>
           </div>
         </div>
       </div>
