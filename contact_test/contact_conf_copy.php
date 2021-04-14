@@ -18,7 +18,7 @@ require "PHPMailer/language/phpmailer.lang-ja.php";
 require "./libs/phpmailvars.php";
 
 //エスケープ処理やデータチェックを行う関数のファイルの読み込み
-  require './libs/function.php';
+  require 'libs/function.php';
 
 
 //-------CSRF-------------------
@@ -59,11 +59,13 @@ else{
 }
 
 //　戻るボタン
+
+
+
 if(isset($_POST["back"])){
     header("Location: contact.php");
     exit;
 }
-
 
 //送信ボタン
 if(isset($_POST["send"])){
@@ -72,16 +74,15 @@ if(isset($_POST["send"])){
     mb_language("japanese");
     mb_internal_encoding("UTF-8");
 
-    // インスタンスを生成
-    $phpmail = new PHPMailer();
+    // インスタンスを生成（引数に true を指定して例外 Exception を有効に）
+    $phpmail = new PHPMailer(true);
 
     //日本語用設定
-    //文字セットとエンコーディングの設定
-    $phpmail->CharSet = 'iso-2022-jp';
-    $phpmail->Encoding = '7bit';
+    $phpmail->CharSet = "iso-2022-jp";
+    $phpmail->Encoding = "7bit";
 
     //エラーメッセージ用言語ファイルを使用する場合に指定
-    $phpmail->setLanguage("ja", "PHPMailer/language/phpmailer.lang-ja.php");
+    $phpmail->setLanguage("ja", "language/");
 
 
   //1 SMTPの設定 お決まりの書き方
@@ -92,9 +93,8 @@ if(isset($_POST["send"])){
   $phpmail->SMTPAuth = true; // SMTP authentication を有効に
   $phpmail->Username = MAIL_USER; // SMTP ユーザ名（phpmailvars.phpで定義）
   $phpmail->Password = MAIL_PASSWORD; // SMTP パスワード（phpmailvars.phpで定義）
-  $phpmail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;//＊サーバーのセキュリティ＊
+  $phpmail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;  // 暗号化を有効に
   $phpmail->Port       = 465;  // TCP ポートを指定
-
 
 
   //2メールのタイトルや本文の設定
@@ -115,16 +115,22 @@ EOT;
   //差出人アドレス, 差出人名
   $phpmail->setFrom("MAIL_USER", mb_encode_mimeheader("差出人名"));
   //受信者アドレス, 受信者名（受信者名はオプション）
-  $phpmail->addAddress(SEND_TO, mb_encode_mimeheader(SEND_TO_NAME));
+  $phpmail->AddAddress(SEND_TO, mb_encode_mimeheader(SEND_TO_NAME)); //送信先アドレス・宛先名（phpmailvars.phpで定義）
+  //追加の受信者（受信者名は省略可能なのでここでは省略）
+  //$phpmail->addAddress('someone@gmail.com');
+  //返信用アドレス（差出人以外に別途指定する場合）
+  //$phpmail->addReplyTo('info@example.com', mb_encode_mimeheader("お問い合わせ"));
+  //Cc 受信者の指定
+  //$phpmail->addCC('foo@example.com');
 
   //----------コンテンツ設定--------------
-  $phpmail->isHTML(true);   // HTML形式を指定
+  //$phpmail->isHTML(true);   // HTML形式を指定
   //メール表題（文字エンコーディングを変換）
   $phpmail->Subject = mb_encode_mimeheader("サイトからの問い合わせ");
   //HTML形式の本文（文字エンコーディングを変換）
-  $phpmail->Body  = mb_convert_encoding($mail_text,'ISO-2022-JP', 'UTF-8');
+  $phpmail->Body  = mb_convert_encoding($mail_text,"JIS","UTF-8");
   //テキスト形式の本文（文字エンコーディングを変換）
-  $phpmail->AltBody = mb_convert_encoding('テキストメッセージ',"JIS","UTF-8");
+  //$phpmail->AltBody = mb_convert_encoding('テキストメッセージ',"JIS","UTF-8");
 
 
   //3メールを送信
@@ -161,7 +167,6 @@ EOT;
   <meta name="keyword" content="Crescent,shoes,クレセントシューズ,東京,新宿区,メンズシューズ,レディースシューズ,キッズシューズ,ベビーシューズ">
     <meta name="robots" content="noindex,nofollow,noarchive" />
 <!-- 検索エンジンに検索されないようにする -->
-
   <title>Contact | Crescent Shoes</title>
 
   <link rel="shortcut icon" href="images/favicon.ico">

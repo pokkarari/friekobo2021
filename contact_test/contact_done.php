@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="クレセントシューズは靴の素材と履き心地にこだわる方に満足をお届けする東京の靴屋です。後悔しない靴選びはぜひクレセントシューズにお任せください。">
   <meta name="keyword" content="Crescent,shoes,クレセントシューズ,東京,新宿区,メンズシューズ,レディースシューズ,キッズシューズ,ベビーシューズ">
-
+    <meta name="robots" content="noindex,nofollow,noarchive" />
+<!-- 検索エンジンに検索されないようにする -->
   <title>Contact | Crescent Shoes</title>
 
   <link rel="shortcut icon" href="images/favicon.ico">
