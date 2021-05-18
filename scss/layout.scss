@@ -101,16 +101,7 @@ p {
   width: 200px;
   margin: 20px auto;
 }
-.more-btn a:after {
-  content: url(../images/more-btn-right.svg);
-  display: inline-block;
-/*  transform: rotateZ( 90deg );*/
-  vertical-align:baseline;
-  padding-top: 2px;
-  margin-left: 10px;
-  width: 20px;
 
-}
 .more-btn a {
   display: block;
 /*  border: 2px solid #85B7D5;
@@ -121,9 +112,19 @@ p {
   font-size: 12px;
   padding: 6px 0;
 }
+
 .more-btn a:hover {
   color: #fff;
   opacity: 0.7;
+}
+.more-btn a:after {
+  content: url(../images/more-btn-right.svg);
+  display: inline-block;
+/*  transform: rotateZ( 90deg );*/
+  vertical-align:baseline;
+  padding-top: 2px;
+  margin-left: 10px;
+  width: 20px;
 }
 
 /*ライン*/
@@ -185,6 +186,7 @@ p {
   bottom: -20px;
   left: 45%;
   z-index: 50;
+  width:100px;
 }
 
 .home-content {
@@ -221,7 +223,7 @@ p {
 
 .home-news-title{
   padding: 20px;
-  padding-top: 60px;
+  padding-top: 20px;
   width: auto;
   margin: 0 auto;
 }
@@ -309,24 +311,30 @@ p {
   background-image: url(../images/home/home-gallery-top.png);
   background-size: 100%;
   background-color: #fff;
-  height: 600px;
+  height: 250px;
+  .page-title {
+    padding-top: 20px;
+  }
 }
 
-.home-gallery-suzume {
-  padding: 30px 30px 0 60%;
 
-}
 
-.home-gallery-top .more-btn {
-
-}
 
 .home-gallery-bg {
   position: relative;
+  background-color:#fff;
+  .more-btn {
+    // padding-bottom: 20px;
+  }
 }
-.home-gallery-bg > img {
-  border-radius: 20px;
+.home-gallery-bg:after {
+  content:"";
+  padding: 10px;
 }
+
+// .home-gallery-bg > img {
+//   border-radius: 20px;
+// }
 
 .home-gallery-list {
    position: relative;
@@ -344,11 +352,19 @@ p {
 
 /*ギャラリー slickカスタマイズ分*/
 .slick01 img {
-  border: 5px solid #fff;
+  border: 10px solid #fff;
   height: 40vw;
-  border-radius: 10px;
+
+  // border-radius: 10px;
 }
 
+.home-gallery-suzume {
+  text-align: center;
+  img {
+    margin: 20px 20px 0 60%;
+    width: 50px;
+  }
+}
 
 
 
@@ -382,7 +398,7 @@ p {
 .home-about-bg2 {
   position: absolute;
   width: 50%;
-  bottom:-150px;
+  bottom:-80px;
   left: 0px;
   z-index: -1;
 }
@@ -411,7 +427,7 @@ p {
 
 
 .home-about-mike {
-  width: 200px;
+  width: 125px;
   padding-top: 28px;
   padding-bottom: 28px;
 }
@@ -444,16 +460,24 @@ p {
 
 /* home-howto */
 .home-howto-area {
-  margin: 120px 0 0px 0;
-  padding-bottom: 200px;
+  margin: 75px 0 0px 0;
+  padding-bottom: 150px;
   background-color: #fff;
   background-image: url(../images/howto/brush-yellow.svg);
   background-position: 120% -20px;
   background-size: 200px auto;
+  .page-title img {
+    margin-top: 50px;
+  }
 }
 
-.home-howto-area .page-title img {
-  margin-top: 50px;
+.homo-howto-main{
+  position:relative;
+ .more-btn {
+  position: absolute;
+  left: 20%;
+  bottom: 3%;
+}
 
 }
 
