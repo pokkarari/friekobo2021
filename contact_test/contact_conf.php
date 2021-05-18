@@ -15,10 +15,10 @@ require "PHPMailer/src/SMTP.php";
 require "PHPMailer/language/phpmailer.lang-ja.php";
 
 //データチェック
-require "./libs/phpmailvars.php";
+ require "libs/phpmailvars.php";
 
 //エスケープ処理やデータチェックを行う関数のファイルの読み込み
-  require './libs/function.php';
+ require "libs/function.php";
 
 
 //-------CSRF-------------------

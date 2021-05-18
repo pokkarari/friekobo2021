@@ -60,14 +60,12 @@ p {
   padding: 50px 0 30px 0;
   line-height: 24px;
 }
-
 .page-title p {
   font-size: 1.4rem;
   font-family: fot-udmarugo-large-pr6n, sans-serif;
   font-weight: 600;
   padding-top: 20px;
 }
-
 .page-title img {
   height: 50px;
 }
@@ -215,7 +213,7 @@ p {
 
 .home-news-bg2 {
   position: absolute;
-  bottom: -100px;
+  bottom: -120px;
   left: -20px;
   z-index: -1;
   width: 60%;
@@ -273,9 +271,8 @@ p {
   display: grid;
   grid-template-columns: 1fr;
   /*  margin: 50px auto;*/
-  padding-top: 120px;
+  padding-top: 90px;
 }
-
 .home-line img {
   width: 100%;
   object-fit: cover;
@@ -285,7 +282,6 @@ p {
   text-align: center;
   padding: 20px 0 50px 0;
 }
-
 .home-line-move img {
   width: 100px;
   height: auto;
@@ -308,9 +304,10 @@ p {
 
 .home-gallery-top {
   text-align: center;
-  /*background-image: url(../images/home/texture02.png);*/
-  background-repeat: repeat;
+  background-image: url(../images/home/home-gallery-top.png);
+  background-size: 100%;
   background-color: #fff;
+  height: 600px;
 }
 
 .home-gallery-suzume {
@@ -382,18 +379,16 @@ p {
   margin: 60px auto;
   padding: 0 6%;
 }
-
 .home-about-top p {
   margin: 0 12px 12px 12px;
   text-align: left;
 }
 
-.home-about-top .page-title p {
-  text-align: center;
-}
-
 .home-about-top .page-title {
   padding: 0;
+}
+.home-about-top .page-title p {
+  text-align: center;
 }
 
 .home-about-bgcolor {
@@ -412,7 +407,6 @@ p {
 .home-about-move {
   position: relative;
 }
-
 .home-about-move p {
   text-align: right;
   color: #85B7D5;
@@ -437,30 +431,31 @@ p {
 
 /* home-howto */
 .home-howto-area {
-  margin: 120px 0 0 0;
-  padding-bottom: 50px;
+  margin: 120px 0 0px 0;
+  padding-bottom: 200px;
   background-color: #fff;
   background-image: url(../images/howto/brush-yellow.svg);
-  background-position: 80% -20px;
-  background-size: 45px auto;
+  background-position: 120% -20px;
+  background-size: 200px auto;
 }
 
 .home-howto-area .page-title img {
   margin-top: 50px;
-  /*  position: absolute;
-    bottom:-100px;
-    left: 15%;
-    padding-top: 20px;*/
 }
 
-/* homr-line3 */
 .home-line3 {
-  position: relative;
-  margin-top: 100px;
+  padding: 10px 0 10px 0;
+  margin-top: -100px;
   /*  transform: rotate( -15deg );*/
 }
 
-.home-line3 img {
+/* homr-line4 */
+.home-line4 {
+  position: relative;
+  /*  transform: rotate( -15deg );*/
+}
+
+.home-line4 img {
   position: absolute;
   top: 0;
   left: 0;
@@ -483,17 +478,12 @@ p {
     transform: translateX(-100%);
   }
 }
-.home-line4 {
-  padding: 100px 0 150px 0;
-  /*  transform: rotate( -15deg );*/
-}
-
 /* home-contact  */
 .home-contact-area {
   position: relative;
   text-align: center;
+  margin-top: 200px;
 }
-
 .home-contact-area p {
   padding-top: 20px;
 }
@@ -507,14 +497,12 @@ p {
   background-size: 50%;
   background-color: rgba(255, 255, 255, 0.5);
   width: auto;
-  height: 400px;
-  margin: 0 20px;
+  height: 380px;
 }
 
 .home-contact-top .page-title {
   padding-bottom: 20px;
 }
-
 .home-contact-top .page-title img {
   width: 200px;
 }
@@ -522,13 +510,13 @@ p {
 .home-contact-cat {
   position: absolute;
   top: -74px;
-  left: 35%;
+  left: 33%;
   width: 120px;
 }
 
 .home-contact-suzume {
   position: absolute;
-  bottom: -80px;
+  bottom: -70px;
   left: 0;
   width: 60%;
 }
@@ -540,7 +528,6 @@ p {
   padding: 10px;
   color: #fff;
 }
-
 .more-btn2 a {
   display: block;
   width: 220px;
@@ -582,16 +569,13 @@ p {
 }
 
 .sns-bt-nav {
-  padding-top: 20px;
-}
-
-.sns-bt-nav {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   list-style: none;
   margin: 0 10px;
+  padding-top: 20px;
 }
 
 .sns-bt-nav li {
@@ -620,7 +604,6 @@ p {
 .sns-blog {
   margin: 32px;
 }
-
 .sns-blog img {
   width: 180px;
 }
@@ -629,7 +612,6 @@ p {
   font-size: 1.6rem;
   text-align: right;
 }
-
 .home-topmark a {
   color: #85B7D5;
 }
@@ -652,7 +634,6 @@ footer {
   text-align: center;
   padding: 26px 0;
 }
-
 footer p {
   color: #fff;
   font-size: 1rem;
@@ -696,15 +677,9 @@ footer p {
   grid-template-columns: 30% 1fr;
 }
 
-.howto-toha img {
-  /*width:75%;*/
-  /*  left: -100px;*/
-}
-
 .howto-completion-img {
   text-align: center;
 }
-
 .howto-completion-img img {
   border: 5px solid #74A7CBFF;
 }
@@ -824,11 +799,10 @@ footer p {
   font-size: 1.0rem;
   display: inline-block;
   width: 75px;
-  background: #74A7CBFF;
+  background: #FC1B63FF;
   border-radius: 10px;
   color: #fff;
   margin: 5px;
-  /*border: 2px solid red;*/
 }
 
 .test-news-title p {
@@ -838,8 +812,6 @@ footer p {
   text-align: left;
   margin: 5px;
 }
-
-
 
 /* ーーーーーーーーーーーーーーーーーー
   PC版とタブレット版は
