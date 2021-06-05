@@ -8,6 +8,12 @@
     h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
   })(document);
 
+//フォント読みこのちらつき防止用で、Web フォントのロードが完了しない場合の対策用
+setTimeout(function() {
+    if (document.getElementsByTagName("html")[0].classList.contains('wf-active') != true) {
+        document.getElementsByTagName("html")[0].classList.add('loading-delay');
+    }
+}, 3000);
 
 // スムーススクロールsmooth-scroll.min.js
         var scroll = new SmoothScroll('a[href^="#"]', {
@@ -22,7 +28,7 @@ $(function(){
     ScrollReveal().reveal('.animate');
     // ScrollReveal().reveal('.animateright', { distance: '50px', origin: 'right', viewFactor: '0.2' });
     ScrollReveal().reveal('.animateleft', { distance: '200px', origin: 'left', viewFactor: '0.2' });
-    ScrollReveal().reveal('.animateslow', { duration: '3000', reset: 'true'});
+    ScrollReveal().reveal('.animateslow', { duration: '500', reset: 'true'});
     ScrollReveal().reveal('.animatespeed1', { duration: '1800' } );
     ScrollReveal().reveal('.animatespeed2', { duration: '1800' ,delay: '500'} );
     ScrollReveal().reveal('.animatespeed3', { duration: '1800' ,delay: '1000'} );

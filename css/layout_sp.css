@@ -44,7 +44,7 @@
 }
 
 
-/* GALLERY */
+/* Home-GALLERY */
 .home-gallery-area {
 
 }
@@ -58,14 +58,14 @@
   grid-template-columns: repeat(4,1fr);
 }
 
-/*HOW TO*/
+/*Home-HOW TO*/
 .homo-howto-main img {
 
 }
 
 
 
-/* フォーム */
+/* Home-フォーム */
 input[type="text"],
 input[type="email"],
 textarea {
@@ -77,6 +77,14 @@ textarea {
 /*article */
 
 
+/*galleryページ*/
+.gallery-grid {
+  display: grid;
+  gap: 26px;
+  grid-template-columns: repeat(2,1fr);
+  margin-top: 6%;
+  margin-bottom: 50px;
+}
 
 
 /* PC版 1024pxまでに設定
@@ -121,6 +129,13 @@ textarea {
 
 /* NEWS */
 
-
+/*galleryページ*/
+.gallery-grid {
+  display: grid;
+  gap: 26px;
+  grid-template-columns: repeat(3,1fr);
+  margin-top: 6%;
+  margin-bottom: 50px;
+}
 
 }

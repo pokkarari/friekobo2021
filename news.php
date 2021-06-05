@@ -53,7 +53,7 @@ $(function(){
 </head>
 
 <body>
-    <div id="news">
+
 
         <header class="page-header ">
     <!-- ここからハンバーガーメニュー -->
@@ -87,17 +87,23 @@ $(function(){
             </div><!-- hb-menu -->
         </header>
 
-        <div class="page-top-img wrapper">
-            <h1 class="page-top-title"><img src="images/kobo-logo.svg" alt=""></h1>
-            <div class="howto-top-title">
-              <h2><img src="images/home/moji-news.png" alt="NEWS"></h2>
-              <p>おしらせ</p>
-            </div>
-        </div><!-- /.page-top-img -->
 
 
      <main>
-        <article id="news" class="wrapper">
+        <div id="news">
+        <div class="page-top-img wrapper">
+            <h1 class="page-top-title"><img src="images/kobo-logo.svg" alt=""></h1>
+            <div class="howto-top-title">
+              <h2><img src="images/news/news-title.png" alt="NEWS"></h2>
+            </div>
+        </div><!-- /.page-top-img -->
+
+<!-- ぶらし絵 -->
+    <div class="top-brush">
+        <img src="images/howto/howto-top-bursh.png" alt="">
+    </div>
+
+        <article class="wrapper">
 <!-- ここからがおしらせリスト-->
           <section class="news-list">
                 <?php foreach ($newsList as $news): ?>
@@ -158,12 +164,10 @@ $(function(){
                     <li><a href="#"><p class=".news-cat-mark">おしらせ</p></a></li>
                     <li><a href="#"><p class=".news-cat-mark">ひとこと</p></a></li>
                 </ul>
-
             </aside>
-        </div><!-- /.news-contents -->
-    </main><!-- /ここまでがいるもの 現在のところ数は無限-->
-</div><!-- #news -->
 
+        </div><!-- #news -->
+    </main><!-- /ここまでがいるもの 現在のところ数は無限-->
 
     <div class="sns-area wrapper">
         <p class="home-topmark"><a href="#">▲トップへ</a></p>

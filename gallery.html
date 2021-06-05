@@ -2,53 +2,104 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>ねことろう画のエフリエこうぼう - ギャラリー</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ねことろう画のエフリエこうぼう</title>
     <meta name="description" content="ねこのろう画の絵とハンドメイド作品を制作しているエフリエこうぼうです。">
     <meta name="robots" content="noindex,nofollow,noarchive" />
 <!-- 検索エンジンに検索されないようにする -->
-
-    <meta name="viewport" content="width=device-width">
-
-    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-    <link rel="stylesheet" href="css/style2.css">
     <link rel="icon" type="images/png" href="images/favicon.png">
-    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css"><!-- リセットcss-->
+    <link rel="stylesheet" href="css/menu_style.css">
+    <link rel="stylesheet" href="css/layout.css"><!-- メインcssファイル モバイルファースト-->
+    <link rel="stylesheet" href="css/layout_sp.css">
+
+ <link rel="stylesheet" href="slick/slick-theme.css">
+<!--slickプラグイン-->
+ <link rel="stylesheet" href="slick/slick.css">
+ <!--slickプラグイン-->
+
+
+<!-- <link rel="stylesheet" type="text/css" href="fancybox-master/dist/jquery.fancybox.css"> --><!-- FancyBox3プラグイン -->
+    <link rel="stylesheet" href="colorbox/colorbox.css"><!-- colorboxプラグイン -->
+
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet"><!-- フォントアイコン-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!--JQueryプラグイン-->
+
+    <script src="colorbox/jquery.colorbox-min.js"></script>
+    <!-- 画像表示ColorBoxプラグイン -->
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.0/smooth-scroll.min.js"></script>
+      <!-- スクロールでページトップへ -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- スクロールでスライドイン -->
+
+    <script type="text/javascript">
+            $(function(){
+
+        });
+
+    </script>
 
 </head>
 
 <body>
-    <div id="gallery" class="big-bg">
-        <header class="page-header wrapper">
-            <h1><a href="index.html"><img class="logo" src="images/logo.svg" alt="エフリエこうぼうのロゴ"></a></h1>
-            <nav>
-                <ul class="main-nav">
-                    <li><a href="news.html">News</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
 
-<!-- ハンバーガーメニュー    -->
+        <header class="page-header">
 
+    <!-- ここからハンバーガーメニュー -->
+            <div class="hb-menu">
+                <div class="logo">
+                </div><!-- /. logo-->
+                <!-- ハンバーガーメニューの部分 -->
+                <div class="drawer">
+                  <input type="checkbox" id="drawer-check" class="drawer-hidden">
+                  <!-- ハンバーガーアイコン-->
+                  <label for="drawer-check" class="drawer-open"><span><p class="hb-menu-moji">MENU</p></span></label>
+                  <!-- メニュー -->
+                  <nav class="drawer-content">
+                    <div class="hb-menu-logo">
+                      <a href="index.html"><img src="images/kobo-logo.svg" alt=""></a>
+                    </div><!-- /.hb-menu-logo -->
+                  <ul class="drawer-list">
+                    <li class="drawer-item"><a href="index.html">Home <span>ホーム</span></a></li>
+                    <li class="drawer-item"><a href="news.php">News <span>おしらせ</span></a></li>
+                    <li class="drawer-item"><a href="">Gallery <span>ギャラリー</span></a></li>
+                    <li class="drawer-item"><a href="howto.html">How To <span>ろう画とは？</span></a></li>
+                    <li class="drawer-item"><a href="">About <span>エフリエこうぼうについて</span></a></li>
+                    <li class="drawer-item"><a href="">Contact <span>お問い合わせ</span></a></li>
+                    <li class="drawer-item"><a href="">Blog <span>ブログ</span></a></li>
+                  </ul><!-- /.drawer-list -->
+                    <div class="hb-menu-bg">
+                      <img src="images/home/home-suzume2.png" alt="">
+                    </div><!-- /.hb-menu-bg -->
+                    <div class="sns-bt">
+                        <ul class="sns-bt-nav">
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                        </ul><!-- /.sns-bt-nav -->
+                    </div><!-- /.sns-bt -->
 
-<!-- ハンバーガーメニュー    -->
+                  </nav><!-- /.drawer-content -->
+                </div> <!-- /.drawer -->
+            </div><!-- hb-menu -->
 
         </header>
 
-        <div class="gallery-content wrapper">
-            <h2 class="page-title">Gallery</h2>
-            <p>
-                ろう画作品を中心に紹介しています。
-            </p>
-        <!-- 本日の一枚 -->
-        <div class="ichimai wrapper">
-            <div class="ichimai-item">
-                <img src="images/gallery5.jpg" alt="">
-                <p>本日の一枚</p>
-            </div>
-        </div>
-        </div><!-- /.gallery-content -->
-    </div><!--  #gallery -->
+<main>
+<!-- 多きサイズのnavメニュー -->
+    <div class="home-menu-area">
+        <ul class="home-menu wrapper">
+            <li><a href="gallery.html">Home</a></li>
+            <li><a href="news.php">News</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="howto.html">How To</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="gallery.html">blog</a></li>
+        </ul>
+    </div> <!-- /.home-menu-area-->
 
 <!--  ジャンルわけ   <div class="wrapper ">
         <ul class="gallery-type">
@@ -57,47 +108,119 @@
         </ul>
     </div> -->
 
+    <div id="gallery">
+        <div class="page-top-img">
+            <h1 class="page-top-title"><img src="images/kobo-logo.svg" alt=""></h1>
+            <div class="howto-top-title">
+              <h2><img src="images/gallery/gallery-title.png" alt="HOW TO ろう画の描きかた"></h2>
+            </div><!-- /.howto-top-title -->
+        </div><!-- page-top-img -->
+
+<!-- ブラシ絵 -->
+        <div class="top-brush">
+            <img src="images/howto/howto-top-bursh.png" alt="">
+        </div><!-- /.top-brush -->
+
+<!-- ピックアップ -->
+        <div class="picup">
+            <div class="picup-work">
+                <p>ピックアップ</p>
+                <div class="picup-waku">
+                    <img src="images/gallery5.jpg" alt="">
+                    <p>タイトル</p>
+                    <p>赤ねこのお顔。ぼーっとしているときの返事のようなシーン。</p>
+                </div><!-- /.picup-waku -->
+            </div><!-- /.picup-work -->
+        </div><!-- picup -->
 
 
+        <img src="images/home-move-ber2.jpg" alt="">
 
-
-
-
-    <div class="wrapper grid">
-        <div class="item">
-            <img src="images/gallery1.jpg" alt="">
-            <p>作品タイトル</p>
+<!-- 作品たち -->
+        <div class="gallery-works-top">
+            <p>さくひん</p>
         </div>
-        <div class="item">
-            <img src="images/gallery2.jpg" alt="">
-            <p>作品タイトル</p>
-        </div>
-        <div class="item">
-            <img src="images/gallery3.jpg" alt="">
-            <p>作品タイトル</p>
-        </div>
-        <div class="item">
-            <img src="images/gallery4.jpg" alt="">
-            <p>作品タイトル</p>
-        </div>
-        <div class="item">
-            <img src="images/gallery5.jpg" alt="">
-            <p>作品タイトル</p>
-        </div>
-        <div class="item">
-            <img src="images/gallery1.jpg" alt="">
-            <p>作品タイトル</p>
-        </div>
-    </div><!-- /.grid -->
+        <div class="gallery-grid wrapper">
+                <div class="gallery-item-work">
+                    <img src="images/gallery1.jpg" alt="">
+                    <p>作品タイトル</p>
+                </div>
+                <div class="gallery-item-work">
+                    <img src="images/gallery2.jpg" alt="">
+                    <p>作品タイトル</p>
+                </div>
+                <div class="gallery-item-work">
+                    <img src="images/gallery3.jpg" alt="">
+                    <p>作品タイトル</p>
+                </div>
+                <div class="gallery-item-work">
+                    <img src="images/gallery4.jpg" alt="">
+                    <p>作品タイトル</p>
+                </div>
+                <div class="gallery-item-work">
+                    <img src="images/gallery5.jpg" alt="">
+                    <p>作品タイトル</p>
+                </div>
+                <div class="gallery-item-work">
+                    <img src="images/gallery1.jpg" alt="">
+                    <p>作品タイトル</p>
+                </div>
+        </div><!-- /.gallery-grid -->
+    </div><!--  #gallery -->
+</main>
 
 
+
+
+
+
+<!-- SNSやブログ -->
+    <div class="sns-area wrapper">
+
+        <img class="sns-fish" src="images/hikousen1.png" alt="">
+        <div class="sns-bt">
+            <p>FRIE KOBO OFFICIAL</p>
+<!--         <div class=sns-twitter>
+            <a class="twitter-timeline" data-width="350" data-height="200" href="https://twitter.com/friekobo?ref_src=twsrc%5Etfw">Tweets by friekobo</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div> -->
+            <lu class="sns-bt-nav">
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+            </lu><!-- /.sns-bt-nav -->
+        </div><!-- /.sns-bt -->
+        <div class="sns-blog">
+            <img src="images/home-blog-bar.png" alt="">
+        </div>
+        <p class="home-topmark"><a href="#">▲トップへ</a></p>
+    </div><!-- /.home-sns-area -->
+
+    <div class="home-sns-bg">
+        <img src="images/home-footer.jpg" alt="">
+    </div>
 
     <footer>
         <div class="wrapper">
-            <p><small>&copy; 2020 FRie Kobo</small></p>
+            <p><small>&copy; 2021 FRie Kobo</small></p>
         </div>
     </footer>
 
+    <div class="pagetop-btn smooths" >
+        <a href="#home" data-scroll><img src="images/arrow-top.png" alt="ページトップへ戻る"></a>
+    </div><!-- /.pagetop-btn --ページTOPへ戻るボタン-->
 
+<script src="js/script.js"></script>
+<script type="text/javascript" src="js/slick.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<!-- ギャラリーのスライドプラグイン slick -->
+<script src="fancybox-master/dist/jquery.fancybox.min.js"></script>
+<script>
+    $('[data-fancybox]').fancybox({
+        // オプションを下記に記載していきます
+        loop : true, // 複数画像表示時に最初と最後をループさせる
+        margin : [44, 0],
+    });//FancyBox3
+</script>
 </body>
 </html>

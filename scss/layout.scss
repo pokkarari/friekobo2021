@@ -1,13 +1,24 @@
 @charset "UTF-8";
 /* モバイルファーストのためスマホ版から作成してみる*/
 /* 共通部分 */
+
+//-------Font読み込みのちらつき防止--------はじめ
+html {
+    visibility: hidden;
+}
+html.wf-active,
+html.loading-delay {
+    visibility: visible;
+}
+//-------Font読み込みのちらつき防止--------おわり
+
 html {
   font-size: 62.5%;
 }
 body {
   font-size: 1.4rem;
   font-weight: 500;
-  font-family: "a-otf-jun-pro","fot-udmarugo-large-pr6n","Yu Gothic Medium", "游ゴシック Medium", "YuGothic","游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+  font-family: "a-otf-jun-pro","fot-udmarugo-large-pr6n", "ヒラギノ角ゴ Pro W3", sans-serif;
   line-height: 1.7;
   color: #271A10;
   /*color: #271A10 ---全体の文字の色こげ茶*/
@@ -16,6 +27,7 @@ body {
   background-color: #FFFFE1;
 /*  background-color: #FEFBF6;*/
 /*background-image: url(../images/home/kobo-texture01.png);*/
+  /*color: #fff6dc;---とりのこ色*/
 background-repeat: repeat;
 }
 a {
@@ -60,27 +72,42 @@ p {
 
     p {
     font-size: 1.4rem;
-    font-family: fot-udmarugo-large-pr6n, sans-serif;
+    font-family: donguri-kana, sans-serif;
     font-weight: 600;
-    padding-top: 20px;
+    padding-top: 10px;
     }
     img {
     height: 50px;
     }
 }
+
+/* 各ページのヒーローイメージ*/
+// category
 .page-top-title {
-  width: 60px;
-  margin: 20px;
-  opacity: 0.8;
+  text-align: left;
+  // background-color:#85B7D5;
+  padding-left: 20px;
+  img {
+    width: 60px;
+    margin-top: 10px;
+  }
+}
+.page-top-img {
+  position: relative;
+  text-align: center;
+  height: 100%;
+  // background-image: url("");
+  background-size:100%;
+  background-attachment: fixed;
 }
 
-
-.category-title {
-  text-align: center;
-  border-top: 2px solid #74A7CBFF;
-  border-bottom: 2px solid #74A7CBFF;
-  margin: 40px 20px;
-  padding: 20px 0;
+.top-brush {
+  position: relative;
+  img {
+    position: absolute;
+    top: -130px;
+    left: 0px;
+  }
 }
 
 /* ボタン */
@@ -100,6 +127,7 @@ p {
   border-image: url(../images/waku-blue01.png) 33%/25px 25px repeat;
   width: 200px;
   margin: 20px auto;
+
 }
 
 .more-btn a {
@@ -109,7 +137,8 @@ p {
   background: #85B7D5;
   border-radius: 10px;
   color: #fff;
-  font-size: 12px;
+  font-family: donguri-kana, sans-serif;
+  font-size: 16px;
   padding: 6px 0;
 }
 
@@ -135,15 +164,7 @@ p {
   border-color: #74A7CBFF;
 }
 
-/* 各ページのヒーローイメージ*/
-.page-top-img {
-  position: relative;
-  text-align: left;
-  height: 250px;
-  background-image: url(../images/howto/news-headimg.jpg);
-  background-size: cover;
-  background-position: center;
-}
+
 
 /* HOME */
 .home-content {
@@ -299,6 +320,9 @@ p {
 
 
 /* home-ギャラリー */
+.gallery-shadow {
+  drop-shadow: 15px 15px 0px 0 rgb(60, 194, 235);
+}
 .home-gallery-area {
 
 /*  background-image: url(../images/home-suzume2.png);
@@ -352,13 +376,18 @@ p {
 
 /*ギャラリー slickカスタマイズ分*/
 .slick01 img {
-  border: 10px solid #fff;
+padding:10px;
   height: 40vw;
-
+filter: drop-shadow(5px 3px 2px rgba(67,92,107,0.5));
   // border-radius: 10px;
 }
 
 .home-gallery-suzume {
+  p{
+    display: inline-block;
+    padding: 20px;
+
+  }
   text-align: center;
   img {
     margin: 20px 20px 0 60%;
@@ -522,7 +551,7 @@ p {
 .home-contact-area {
   position: relative;
   text-align: center;
-  margin-top: 200px;
+  margin-top: 300px;
   p {
     padding-top: 20px;
   }
@@ -678,13 +707,13 @@ footer {
 }
 
 
-/* --------HOW TOのページ--------*/
-/*howto 共通*/
-/*.category-title {
-タイトルは上にまとめてある
-}*/
+//  --------HOW TOのページ--------
+// howto 共通
+// category page-topタイトルは上にまとめてある
 #howto .page-top-img {
-  background-image: url(../images/howto/news-headimg.jpg);
+  position: relative;
+  background-image: url("../images/howto/howto-top-img.jpg");
+
 }
 
 .bg-fff {
@@ -692,31 +721,109 @@ footer {
 }
 
 .howto-point {
+  position:relative;
   border: 2px solid #74A7CBFF;
   border-radius: 10px;
   margin: 20px 10px;
   padding: 10px;
 }
+.howto-point:before {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  content: '';
+  display: inline-block;
+  width: 80px;
+  height: 50px;
+  background-image: url("../images/howto/howto-point.svg");
+  background-size: contain;
+  vertical-align: middle;
+}
 
 .howto-top-title {
-  position: absolute;
-  bottom: 10px;
-  right: 0;
   display: inline-block;
   text-align: center;
-  width: 50%;
-  background: rgba(254,255,218,1);
-  border-radius: 20px 0 0 20px;
-  padding: 20px 20px 20px 20px;
+  width: 70%;
+  padding: 20px;
 }
+
+.howto-contens {
+
+li {
+ list-style-type: none;
+  background-color:#74A7CBFF;
+  margin: 0;
+  padding: 10px 10px 10px 40px;
+  opacity: 0.6;
+  }
+  li:before {
+    content:"→ ";
+  }
+}
+
+.howto-top-toha {
+  margin-top:50px;
+  width:300px;
+
+}
+
+.howto-toha-area {
+  // position: relative;
+}
+
+
+
 .howto-toha {
-/*  position: relative;*/
-  display: grid;
-  grid-template-columns:30% 1fr;
+    position: relative;
+
+      }
+
+.howto-toha-ex {
+  background-color: #fff;
+  border-radius: 20px;
+  p {
+    padding:20px;
+    }
+  p:nth-child(1){
+    font-size:2.6rem;
+    }
+  p:nth-child(n+2){
+  padding:30px;
+    }
+  p:last-child{
+  padding-bottom:50px;
+    }
+}
+
+
+.howto-toha-img {
+  position: absolute;
+  left:0px;
+  bottom:-200px;
+  width:200px;
+    }
+
+// -------ろう画の描き方
+
+.howto-title {
+  font-size:2.4rem;
+  padding:50px 10px 0px 0;
+  border-bottom: 2px solid #74A7CBFF;
+  margin: 40px 25px;
+}
+
+.howto-title:before {
+  content: '';
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url("../images/howto/howto-suzume1.png");
+  background-size: contain;
+  vertical-align: middle;
 }
 
 .howto-rougahowto-area {
-
+  padding-top: 200px;
 }
 
 .howto-completion-img {
@@ -732,11 +839,17 @@ footer {
 .howto-tools-img {
   display: grid;
   grid-row-gap: 10px;
-  grid-column-gap: 20px;
+  grid-column-gap: 10px;
   grid-template-columns: repeat(3,1fr);
-  background: #fff;
+  grid-auto-rows: 80px;
   margin: 20px 0 10px 0;
+  li {
+    font-size:2.6rem;
+    background: #fff;
+    border-radius: 10px;
+  }
 }
+
 
 .howto-tools-name {
   padding: 20px;
@@ -747,22 +860,44 @@ footer {
 
 /*描き方ステップ*/
 .howto-painting-step {
-  background-color: #fff;
-/*  margin:20px;*/
+  border: 10px solid #fff;
+  background: #fff6dc;
+  margin: 0 10px;
+  padding: 20px;
+  p{
+    display: inline-block;
+    margin: 30px;
+  }
+}
+
+.painting-step-cursor {
+  position: relative;
+  margin-top: 50px; /*矢印画像の高さと配置を考慮して設定*/
+}
+.painting-step-cursor + .painting-step-cursor:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -40px; /*矢印画像の高さと配置を考慮して設定*/
+  width: 100%;
+  height: 35px;
+  background: url("../images/howto/howto-cursor.svg") no-repeat 50% 50%; /*矢印画像*/
+}
+
+
+.painting-step-area {
+      background: #fff;
+}
+
+
+
+.painting-step-title {
+  font-size: 2.4rem;
+  margin: 40px auto 80px 0;
   padding: 20px;
 }
-.howto-painting-step p{
-  font-size: 1.4rem;
-}
-.painting-step-area {
-
-}
-.painting-step-title {
-  margin: 40px auto 80px 0;
-  padding: 0 20px;
-}
 .painting-step-title:before {
-  content: "●";
+  content: "";
 /*  content: url(../images/howto/);*/
   width: 80px;
 }
@@ -786,8 +921,9 @@ footer {
 }*/
 .step-img-up {
   position: absolute;
-  top:-60px;
-  left: 25%;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
   width: 120px;
   height: 120px;
   border: 10px solid #fff;
@@ -805,14 +941,20 @@ footer {
 
 
 /*------------------------
-テスト用*/
+NEWSページ　一部テスト用 news.cssもあり←ここから移動予定*/
+#news .page-top-img {
+  position: relative;
+  background-image: url("../images/news/news-top-img.png");
+
+}
+
+
+
 .home-news-lineup {
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(2,1fr);
 }
-
-
 
 .test-news-area {
   text-align: center;
@@ -829,7 +971,9 @@ footer {
 .test-news-deta {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  margin: 0 5px;
+
   p {
     color: #74A7CBFF;
   }
@@ -842,7 +986,7 @@ footer {
 .test-news-deta p:nth-child(2){
   font-size: 1.0rem;
 display: inline-block;
-width: 75px;
+width: 50px;
 background: #FC1B63FF;
 border-radius: 10px;
 color: #fff;
@@ -857,8 +1001,77 @@ margin: 5px;
 }
 
 
+// --------ギャラリーページ
+// gallery 共通
+// category page-topタイトルは上にまとめてある
+#gallery .page-top-img {
+  position: relative;
+  background-image: url("../images/gallery/gallery-top-img.jpg");
+
+}
+//----gallery picup------
+.picup {
+  background: #FFFFE1;
+  }
+
+.picup-work {
+  text-align: center;
+  padding: 20px;
+  margin-top: 10px;
+  // background: #FFF;
+  > p {
+    font-size: 2.6rem;
+    font-family: donguri-kana, sans-serif;
+    margin: 10px;
+  }
+
+}
 
 
+
+.picup-waku {
+  text-align: center;
+  background-color: #fff;
+  margin: 40px  20px;
+  padding: 20px;
+  box-shadow: 2px 2px #ACC4D5FF;
+  transform: rotate( 3deg );
+  img {
+    width: 250px;
+    // transform: rotate( 5deg );
+  }
+
+}
+.picup-waku p:nth-child(2) {
+    font-size: 2.6rem;
+  }
+
+
+.gallery-works-top {
+  text-align: center;
+  p{
+    font-size: 2.6rem;
+    font-family: donguri-kana, sans-serif;
+    margin: 10px;
+  }
+}
+.gallery-grid {
+  display: grid;
+  gap: 26px;
+  grid-template-columns: repeat(2,1fr);
+  margin-top: 6%;
+  margin-bottom: 50px;
+}
+
+.gallery-item-work {
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 2px 2px #ACC4D5FF;
+  p{
+      font-size: 1.4rem;
+  }
+}
 
 
 
