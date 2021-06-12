@@ -249,45 +249,68 @@ p {
   margin: 0 auto;
 }
 
+
 .home-news-lineup {
-/*  display: grid;
-  gap:10px;
-  grid-template-columns: 100px auto;*/
-/*  font-size: 1.2rem;
-  line-height: 1.8em;
-  border: 2px solid #85B7D5;
-  border-image: url(../images/line_img.png) 33%/25px 25px repeat;
-  list-style: none;
-  background-color: rgba(255,255,255,.7);
-  padding: 15px;*/
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2,1fr);
 }
+.home-news-area {
+  text-align: center;
+/*  width: 170px;*/
+}
+.home-news-lineuparea {
+  text-align: center;
+/*  width: 170px;*/
+}
+.home-news-lineuparea p {
+  font-size: 1.2rem;
+}
+.home-news-lineuparea img {
+/*  width: 150px;*/
+  border-radius: 10px;
+  border: 3px solid #fff;
+}
+.home-news-deta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 5px;
 
-
-/*.home-news-item dt {
+  p {
+    color: #74A7CBFF;
+  }
+  p:nth-child(1){
+    display: inline-block;
+    font-family:sans-serif;
+    margin: 5px 0;
+  }
+}
+.home-news-deta p:nth-child(2){
+  font-size: 1.0rem;
+display: inline-block;
+width: 50px;
+background: #fff;
+border: 1px solid #74A7CBFF;
+border-radius: 10px;
+color: #74A7CBFF;
+margin: 5px;
+}
+.home-news-lineuptitle p{
+  display: inline-block;
+/*  background: #fff;*/
+  font-size: 1.2rem;
   text-align: left;
-  margin-bottom: 5px;
-  color: #000;
-  padding-left: 15px;
-  background-color: #85B7D5;
+  margin: 5px;
+}
+.home-news-titleNew p:after{
+  content:"NEW";
+  font-size: 1.2rem;
+  display: inline-block;
+  color: #E1334D;
+  margin: 5px;
 }
 
-.home-news-item dd {
-  text-align: left;
-  margin-bottom: 1em;
-  border-bottom: 1px solid #85B7D5;
-  padding-bottom: 5px;
-  padding-left: 20px;
-}*/
-
-.home-news-lineup a {
-  color:#271A10;
-}
-.home-news-lineup a:hover {
-  color:#0F92D3;
-}
-.home-news-lineup .more-btn a {
-  color: #fff;
-}
 
 /* home-line1 */
 .home-line {
@@ -321,7 +344,7 @@ p {
 
 /* home-ギャラリー */
 .gallery-shadow {
-  drop-shadow: 15px 15px 0px 0 rgb(60, 194, 235);
+  drop-shadow: 15px 15px 0px 0 rgb(150, 150, 150);
 }
 .home-gallery-area {
 
@@ -707,13 +730,126 @@ footer {
 }
 
 
+
+
+/*------------------------
+NEWSページ　一部 news.cssもあり←ここから移動予定*/
+#news {
+  position: relative;
+  background-image: url("../images/news/news-top-img.png");
+  background-color: rgba(255,255,255,.10);
+  background-blend-mode: lighten;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#news .page-title {
+  text-transform: none;
+}
+//news.cssファイルへ続く
+
+
+
+// --------ギャラリーページ
+// gallery 共通
+// category page-topタイトルは上にまとめてある
+#gallery {
+  position: relative;
+  background-image: url("../images/gallery/gallery-top-img.jpg");
+  background-color: rgba(255,255,255,.10);
+  background-blend-mode: lighten;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#gallery .page-title {
+  text-transform: none;
+}
+
+
+//----gallery picup------
+.picup {
+  background: #FFFFE1;
+  }
+
+.picup-work {
+  text-align: center;
+  padding: 20px;
+  margin-top: 10px;
+  // background: #FFF;
+  > p {
+    font-size: 2.6rem;
+    font-family: donguri-kana, sans-serif;
+    margin: 10px;
+  }
+
+}
+
+
+
+.picup-waku {
+  text-align: center;
+  background-color: #fff;
+  margin: 40px  20px;
+  padding: 20px;
+  box-shadow: 2px 2px #FDF5EE;
+  transform: rotate( 3deg );
+  img {
+    width: 250px;
+    // transform: rotate( 5deg );
+  }
+
+}
+.picup-waku p:nth-child(2) {
+    font-size: 2.6rem;
+  }
+
+
+.gallery-works-top {
+  text-align: center;
+  p{
+    font-size: 2.6rem;
+    font-family: donguri-kana, sans-serif;
+    margin: 10px;
+  }
+}
+.gallery-grid {
+  display: grid;
+  gap: 26px;
+  grid-template-columns: repeat(2,1fr);
+  margin-top: 6%;
+  margin-bottom: 50px;
+}
+
+.gallery-item-work {
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 2px 2px #FDF5EE;
+  p{
+      font-size: 1.4rem;
+  }
+}
+
+
 //  --------HOW TOのページ--------
 // howto 共通
 // category page-topタイトルは上にまとめてある
-#howto .page-top-img {
+
+#howto {
   position: relative;
   background-image: url("../images/howto/howto-top-img.jpg");
-
+  background-color: rgba(255,255,255,.10);
+  background-blend-mode: lighten;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#howto .page-title {
+  text-transform: none;
 }
 
 .bg-fff {
@@ -884,12 +1020,9 @@ li {
   background: url("../images/howto/howto-cursor.svg") no-repeat 50% 50%; /*矢印画像*/
 }
 
-
 .painting-step-area {
       background: #fff;
 }
-
-
 
 .painting-step-title {
   font-size: 2.4rem;
@@ -936,142 +1069,6 @@ li {
 }
 
 
-
-
-
-
-/*------------------------
-NEWSページ　一部テスト用 news.cssもあり←ここから移動予定*/
-#news .page-top-img {
-  position: relative;
-  background-image: url("../images/news/news-top-img.png");
-
-}
-
-
-
-.home-news-lineup {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(2,1fr);
-}
-
-.test-news-area {
-  text-align: center;
-/*  width: 170px;*/
-}
-.test-news-area p {
-  font-size: 1.2rem;
-}
-.test-news-area img {
-/*  width: 150px;*/
-  border-radius: 10px;
-  border: 3px solid #fff;
-}
-.test-news-deta {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0 5px;
-
-  p {
-    color: #74A7CBFF;
-  }
-  p:nth-child(1){
-    display: inline-block;
-    font-family:sans-serif;
-    margin: 5px 0;
-  }
-}
-.test-news-deta p:nth-child(2){
-  font-size: 1.0rem;
-display: inline-block;
-width: 50px;
-background: #FC1B63FF;
-border-radius: 10px;
-color: #fff;
-margin: 5px;
-}
-.test-news-title p{
-  display: inline-block;
-/*  background: #fff;*/
-  font-size: 1.2rem;
-  text-align: left;
-  margin: 5px;
-}
-
-
-// --------ギャラリーページ
-// gallery 共通
-// category page-topタイトルは上にまとめてある
-#gallery .page-top-img {
-  position: relative;
-  background-image: url("../images/gallery/gallery-top-img.jpg");
-
-}
-//----gallery picup------
-.picup {
-  background: #FFFFE1;
-  }
-
-.picup-work {
-  text-align: center;
-  padding: 20px;
-  margin-top: 10px;
-  // background: #FFF;
-  > p {
-    font-size: 2.6rem;
-    font-family: donguri-kana, sans-serif;
-    margin: 10px;
-  }
-
-}
-
-
-
-.picup-waku {
-  text-align: center;
-  background-color: #fff;
-  margin: 40px  20px;
-  padding: 20px;
-  box-shadow: 2px 2px #ACC4D5FF;
-  transform: rotate( 3deg );
-  img {
-    width: 250px;
-    // transform: rotate( 5deg );
-  }
-
-}
-.picup-waku p:nth-child(2) {
-    font-size: 2.6rem;
-  }
-
-
-.gallery-works-top {
-  text-align: center;
-  p{
-    font-size: 2.6rem;
-    font-family: donguri-kana, sans-serif;
-    margin: 10px;
-  }
-}
-.gallery-grid {
-  display: grid;
-  gap: 26px;
-  grid-template-columns: repeat(2,1fr);
-  margin-top: 6%;
-  margin-bottom: 50px;
-}
-
-.gallery-item-work {
-  text-align: center;
-  background-color: #fff;
-  padding: 20px;
-  box-shadow: 2px 2px #ACC4D5FF;
-  p{
-      font-size: 1.4rem;
-  }
-}
 
 
 

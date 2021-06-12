@@ -1,55 +1,44 @@
 @charset "UTF-8";
 /* News */
 #news p {
-/*  font-size: 1.4rem;*/
+  font-size: 1.6rem;
 }
 #news h3 {
-  font-size: 1.6rem;
+  font-size: 2.4rem;
 }
 
 .news-list {
 
+/*  padding: 10px;*/
 }
 .news-contents {
   display: flex;
   justify-content: space-between;
   margin: 40px 10px 0 10px;
-}
-.news-cat-mark {
-  display: inline-block;
-  text-align: center;
-  background: #74A7CBFF;
-  border: 2px solid #74A7CBFF;
-  border-radius: 14px;
+    background: #ffffff;
 }
 
-.news-cat-mark p{
-  font-size: 1.0rem;
-  color: #fff;
-  padding: 1px 25px 0 25px;
-}
 .media-object img {
   width: 20%;
 }
 .news-date p {
   display: inline-block;
-  font-family: "YuGothic";
   color: #74A7CBFF;
 }
 
 .news-title {
-  font-size: 1.6rem;
-  margin: 5px 20px 10px 20px;
+  font-size: 2.0rem;
+  margin: 10px auto 30px;
   padding: 0 5px 5px 5px;
 }
 
 .news-massage  {
-  margin: 0 20px;
-  padding: 20px;
-  border-bottom: 1px solid #74A7CBFF;
+  margin: 20px 5px 40px 5px;
+  padding-bottom: 40px;
+
 }
 .news-massage p {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 .news-list-img {
@@ -75,11 +64,8 @@
   margin: 40px;
   padding: 10px;
 }
-.news-yaer-menu a {
 
-}
 .news-yaer-menu a {
-  font-family: "YuGothic";
   color: #74A7CBFF;
 }
 
@@ -87,19 +73,40 @@
   list-style-type: none;
   display: inline-block;
   text-align: center;
-  background: #74A7CBFF;
-  border: 2px solid #74A7CBFF;
+/*  background: #fff;
+  border: 2px solid #74A7CBFF;*/
   border-radius: 14px;
   margin: 10px 0 0 10px;
   }
 
+
+.news-category-end {
+  background: #fff;
+  margin: 10px auto 30px;
+  padding: 10px;
+}
+
 .news-cat-menu p {
 }
 
-#news .category-title {
-  margin: 0;
+
+.news-cat-mark {
+  display: inline-block;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #74A7CBFF;
+  border-radius: 14px;
 }
 
-/* モバイル版
+.news-cat-mark p{
+  font-size: 1.0rem;
+  color: #74A7CBFF;
+  padding: 1px 25px 0 25px;
+}
+.news-category-aside .category-title {
+  font-size: 2.8rem;
+  margin: 20px;
+}
+/*
 -----------------------------------------*/
 

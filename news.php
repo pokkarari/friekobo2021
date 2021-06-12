@@ -89,14 +89,15 @@ $(function(){
 
 
 
-     <main>
-        <div id="news">
+<main>
+    <div id="news" class="big-bg">
         <div class="page-top-img wrapper">
             <h1 class="page-top-title"><img src="images/kobo-logo.svg" alt=""></h1>
             <div class="howto-top-title">
               <h2><img src="images/news/news-title.png" alt="NEWS"></h2>
             </div>
         </div><!-- /.page-top-img -->
+    </div><!-- /#news /.big-bg -->
 
 <!-- ぶらし絵 -->
     <div class="top-brush">
@@ -107,6 +108,7 @@ $(function(){
 <!-- ここからがおしらせリスト-->
           <section class="news-list">
                 <?php foreach ($newsList as $news): ?>
+            <div class="news-category-end">
 <!-- カテゴリーと日付 -->
                 <div class="news-contents">
                     <div class="news-cat-mark">
@@ -142,17 +144,19 @@ $(function(){
                 <div class="news-massage">
                     <p><?php h($news["message"]); ?></p>
                 </div><!-- news-massage -->
-
+<!-- 区切り -->
+            </div>
                    <?php endforeach; ?>
-<!-- line -->
+
                 </section>
+
             </article><!-- #news -->
 
 
 <!-- （ページの数字） -->
 
 <!-- サイド -->
-            <aside>
+            <aside class="news-category-aside">
 <!-- 年別一覧 -->
                 <h3 class="news-yaer-title category-title">年別一覧</h3>
                 <ul class="news-yaer-menu">
@@ -160,9 +164,9 @@ $(function(){
                 </ul>
 <!-- カテゴリー一覧 -->
                 <h3 class="news-cat-title category-title">カテゴリー一覧</h3>
-                <ul class="news-cat-menu news-cat-mark">
-                    <li><a href="#"><p class=".news-cat-mark">おしらせ</p></a></li>
-                    <li><a href="#"><p class=".news-cat-mark">ひとこと</p></a></li>
+                <ul class="news-cat-menu">
+                    <li class="news-cat-mark"><a href="#"><p >おしらせ</p></a></li>
+                    <li class="news-cat-mark"><a href="#"><p>ひとこと</p></a></li>
                 </ul>
             </aside>
 
