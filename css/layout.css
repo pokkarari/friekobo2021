@@ -724,6 +724,28 @@ NEWSページ　一部 news.cssもあり←ここから移動予定*/
   text-transform: none;
 }
 
+#about {
+  position: relative;
+  background-image: url("../images/about/about-top-img.png");
+  background-color: rgba(255, 255, 255, 0.1);
+  background-blend-mode: lighten;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#about .page-title {
+  text-transform: none;
+}
+
+.about-top-title {
+  display: inline-block;
+  text-align: center;
+  width: 70%;
+  padding: 20px;
+}
+
 #gallery {
   position: relative;
   background-image: url("../images/gallery/gallery-top-img.jpg");
