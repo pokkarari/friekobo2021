@@ -1,0 +1,264 @@
+@charset "UTF-8";
+// モバイルファーストのためスマホ版から作成してみる
+
+//  --------HOW TOのページ--------
+
+#howto {
+  position: relative;
+  background-image: url(../images/howto/howto-top-img.jpg);
+  background-color: rgba(255,255,255,.10);
+  background-blend-mode: lighten;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#howto .page-title {
+  text-transform: none;
+}
+
+.bg-fff {
+  background: #fff;
+}
+
+.howto-point {
+  position:relative;
+  background: #FFF;
+  border: 2px solid #74A7CBFF;
+  border-radius: 10px;
+  margin: 50px 10px;
+  padding: 10px;
+}
+.howto-point:before {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  content: '';
+  display: inline-block;
+  width: 80px;
+  height: 50px;
+  background-image: url(../images/howto/howto-point.svg);
+  background-size: contain;
+  vertical-align: middle;
+}
+
+.howto-top-title {
+  display: inline-block;
+  text-align: center;
+  width: 70%;
+  padding: 20px;
+}
+
+.howto-contens {
+li {
+ list-style-type: none;
+  background-color:#74A7CBFF;
+  margin: 0;
+  padding: 10px 10px 10px 40px;
+  opacity: 0.6;
+  }
+  li:before {
+    content:"→ ";
+  }
+}
+
+.howto-top-toha {
+  margin-top:50px;
+  width:300px;
+
+}
+
+.howto-toha-area {
+  // position: relative;
+}
+
+.howto-painting-kansei {
+  background-image: url(../images/howto/top_rouga_img.jpg);
+  background-size: cover;
+  height: 250px;
+}
+
+
+.howto-toha {
+    position: relative;
+
+      }
+
+.howto-toha-ex {
+  background-color: #fff;
+  border-radius: 20px;
+  p {
+    padding:20px;
+    }
+  p:nth-child(1){
+    font-size:2.6rem;
+    text-align: center;
+    }
+  p:nth-child(n+2){
+  padding:30px;
+    }
+  p:last-child{
+  padding-bottom:50px;
+    }
+}
+
+.howto-toha-img1 {
+  position: absolute;
+  left: -50px;
+  bottom: -170px;
+  width: 250px;
+  opacity: 0.3;
+
+    }
+
+.howto-toha-img2 {
+  position: absolute;
+  left:0px;
+  bottom:-200px;
+  width:200px;
+    }
+
+// -------ろう画の描き方
+
+.howto-title {
+  font-size:2.4rem;
+  padding:10px 10px 0px 0;
+  border-bottom: 2px solid #74A7CBFF;
+  margin: 25px 0;
+}
+
+.howto-title:before {
+  content: '';
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url("../images/howto/howto-suzume1.png");
+  background-size: contain;
+  vertical-align: middle;
+}
+
+
+
+.howto-rougahowto-area {
+  padding-top: 200px;
+}
+
+.howto-completion-img {
+  text-align: center;
+  img {
+    border: 5px solid #74A7CBFF;
+  }
+}
+
+.howto-painting ul{
+  list-style: none;
+}
+.howto-tools-img {
+  display: grid;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  grid-template-columns: repeat(3,1fr);
+  grid-auto-rows: 80px;
+  margin: 20px 0 10px 0;
+  li {
+    font-size:2.6rem;
+    background: #fff;
+    border-radius: 10px;
+  }
+}
+
+
+.howto-tools-name {
+  padding: 20px;
+  margin: 5px 30px;
+}
+
+
+
+//描き方ステップ
+.howto-painting-step {
+  border: 10px solid #fff;
+  background: #fff6dc;
+  margin: 0 10px;
+  padding: 20px;
+  p{
+    display: inline-block;
+    margin: 30px;
+  }
+}
+
+.painting-step-cursor {
+  position: relative;
+  margin-top: 100px; //矢印画像の高さと配置を考慮して設定
+}
+.painting-step-cursor + .painting-step-cursor:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -60px; //矢印画像の高さと配置を考慮して設定
+  width: 100%;
+  height: 35px;
+  background: url("../images/howto/howto-cursor.svg") no-repeat 50% 50%; /*矢印画像*/
+}
+.painting-step-cursor:nth-child(1) {
+  margin-top: 0;
+}
+
+.painting-step-area {
+      background: #fff;
+}
+
+.painting-step-title {
+  display: flex;
+  text-align: left;
+  margin: 10px auto 100px 0;
+  padding: 20px;
+  img {
+    width: 50px;
+    height:50px;
+  }
+  p{
+    font-family: fot-udmarugo-large-pr6n, sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 2.4rem;
+    line-height: 1.5;
+    margin: 10px;
+  }
+}
+
+.step-img {
+  text-align: center;
+  position: relative;
+}
+
+.step-img-fix{
+  border: 8px solid #74A7CBFF;
+  border-radius: 10px;
+  width: 250px;
+  height: 250px;
+}
+
+.step-img-up {
+  position: absolute;
+  top: -40%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 150px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  background-color: #ff1;
+}
+
+.step-caption {
+  margin: 20px auto 20px 10px;
+}
+
+.howto-attract {
+  // background: #fff;
+  border: 2px solid #74A7CBFF;
+  border-radius: 10px;
+  padding-bottom: 50px;
+  margin: 10px 10px;
+}

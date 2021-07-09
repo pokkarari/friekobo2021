@@ -73,10 +73,10 @@ $(function(){
                   <ul class="drawer-list">
                     <li class="drawer-item"><a href="index.html">Home <span>ホーム</span></a></li>
                     <li class="drawer-item"><a href="news.php">News <span>おしらせ</span></a></li>
-                    <li class="drawer-item"><a href="">Gallery <span>ギャラリー</span></a></li>
-                    <li class="drawer-item"><a href="">How To <span>ろう画ってなに？</span></a></li>
-                    <li class="drawer-item"><a href="">About <span>エフリエこうぼうについて</span></a></li>
-                    <li class="drawer-item"><a href="">Contact <span>お問い合わせ</span></a></li>
+                    <li class="drawer-item"><a href="gallery.html">Gallery <span>ギャラリー</span></a></li>
+                    <li class="drawer-item"><a href="howto.html">How To <span>ろう画ってなに？</span></a></li>
+                    <li class="drawer-item"><a href="about.html">About <span>エフリエこうぼうについて</span></a></li>
+                    <li class="drawer-item"><a href="contact.php">Contact <span>お問い合わせ</span></a></li>
                     <li class="drawer-item"><a href="">Blog <span>ブログ</span></a></li>
                   </ul><!-- /.drawer-list -->
                     <div class="hb-menu-bg">
@@ -92,7 +92,8 @@ $(function(){
 <main>
     <div id="news" class="big-bg">
         <div class="page-top-img wrapper">
-            <h1 class="page-top-title"><img src="images/kobo-logo.svg" alt=""></h1>
+            <h1 class="page-top-title">
+                <a href="index.html"><img src="images/kobo-logo.svg" alt=""></a></h1>
             <div class="howto-top-title">
               <h2><img src="images/news/news-title.png" alt="NEWS"></h2>
             </div>

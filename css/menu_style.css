@@ -7,7 +7,7 @@
 ------------------------------*/
 .hb-menu {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   position: fixed;
   z-index: 100;/* 重なり順を一番上に */
   width: 95%;
@@ -106,6 +106,7 @@
 .hb-menu-logo {
   padding-top: 20px;
   padding-left: 5%;
+  background: #85B7D5;
 }
 .hb-menu-logo img {
   width: 60px;

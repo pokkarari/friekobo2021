@@ -1,0 +1,124 @@
+@charset "UTF-8";
+/* モバイルファーストのためスマホ版から作成してみる*/
+
+/*------------------------
+NEWSページ　一部 news.cssもあり←ここから移動予定*/
+#news {
+  position: relative;
+  background-image: url("../images/news/news-top-img.png");
+  background-color: rgba(255,255,255,.10);
+  background-blend-mode: lighten;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#news .page-title {
+  text-transform: none;
+}
+//news.cssファイルへ続く
+
+// --------aboutページ
+// エフリエこうぼうについて
+#about {
+  position: relative;
+  background-image: url("../images/about/about-top-img.png");
+  background-color: rgba(255,255,255,.10);
+  background-blend-mode: lighten;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#about .page-title {
+  text-transform: none;
+}
+.about-top-title {
+  display: inline-block;
+  text-align: center;
+  width: 70%;
+  padding: 20px;
+}
+
+
+
+// --------ギャラリーページ
+// gallery 共通
+// category page-topタイトルは上にまとめてある
+#gallery {
+  position: relative;
+  background-image: url("../images/gallery/gallery-top-img.jpg");
+  background-color: rgba(255,255,255,.10);
+  background-blend-mode: lighten;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#gallery .page-title {
+  text-transform: none;
+}
+
+
+//----gallery picup------
+.picup {
+  background: #FFFFE1;
+  }
+
+.picup-work {
+  text-align: center;
+  padding: 20px;
+  margin-top: 10px;
+  // background: #FFF;
+  > p {
+    font-size: 2.6rem;
+    font-family: donguri-kana, sans-serif;
+    margin: 10px;
+  }
+
+}
+
+
+
+.picup-waku {
+  text-align: center;
+  background-color: #fff;
+  margin: 40px  20px;
+  padding: 20px;
+  box-shadow: 2px 2px #FDF5EE;
+  transform: rotate( 3deg );
+  img {
+    width: 250px;
+    // transform: rotate( 5deg );
+  }
+
+}
+.picup-waku p:nth-child(2) {
+    font-size: 2.6rem;
+  }
+
+.gallery-works-top {
+  text-align: center;
+  p{
+    font-size: 2.6rem;
+    font-family: donguri-kana, sans-serif;
+    margin: 10px;
+  }
+}
+.gallery-grid {
+  display: grid;
+  gap: 26px;
+  grid-template-columns: repeat(2,1fr);
+  margin-top: 6%;
+  margin-bottom: 50px;
+}
+
+.gallery-item-work {
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 2px 2px #FDF5EE;
+  p{
+      font-size: 1.4rem;
+  }
+}
