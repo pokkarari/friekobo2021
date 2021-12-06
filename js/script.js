@@ -22,6 +22,10 @@ setTimeout(function() {
         easing:'easeInOutQuint' // イージングも使えるよ！
         });
 
+// AOSを実行させる フェードやスクロールで表示するスクリプト
+    AOS.init({
+      // once: ture
+    });
 
 // スクロールでスライドscrollreveal
 $(function(){

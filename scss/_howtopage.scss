@@ -1,7 +1,7 @@
 @charset "UTF-8";
-// モバイルファーストのためスマホ版から作成してみる
+/*  モバイルファーストのためスマホ版から作成してみる */
 
-//  --------HOW TOのページ--------
+/*   --------HOW TOのページ-------- */
 
 #howto {
   position: relative;
@@ -118,7 +118,7 @@ li {
   width:200px;
     }
 
-// -------ろう画の描き方
+/* -------ろう画の描き方 -------*/
 
 .howto-title {
   font-size:2.4rem;
@@ -175,7 +175,7 @@ li {
 
 
 
-//描き方ステップ
+/* 描き方ステップ */
 .howto-painting-step {
   border: 10px solid #fff;
   background: #fff6dc;
@@ -218,7 +218,7 @@ li {
     height:50px;
   }
   p{
-    font-family: fot-udmarugo-large-pr6n, sans-serif;
+    // font-family: fot-udmarugo-large-pr6n, sans-serif;
     font-style: normal;
     font-weight: 800;
     font-size: 2.4rem;

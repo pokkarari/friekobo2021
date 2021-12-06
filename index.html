@@ -9,6 +9,7 @@
 <!-- 検索エンジンに検索されないようにする -->
     <link rel="icon" type="images/png" href="images/favicon.png">
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css"><!-- リセットcss-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">    <!-- AOLファイル フェードなどで表示させる -->
     <link rel="stylesheet" href="css/menu_style.css">
     <link rel="stylesheet" href="css/layout.css"><!-- メインcssファイル モバイルファースト-->
     <link rel="stylesheet" href="css/layout_sp.css">
@@ -89,7 +90,8 @@
 
 <main>
     <div id="home" class="big-bg">
-        <img class="home-scroll" src="images/home/scroll-bt.svg" alt="">
+        <!-- <img class="home-scroll" src="images/home/scroll-bt.svg" alt=""> -->
+        <img class="home-scroll" src="images/top-brush.png" alt="">
         <div class="home-content wrapper">
             <h1 class="home-logo">
             <a href="index.html"><img class="home-title" src="images/kobo-logo.svg" alt="エフリエこうぼう"></a></h1>
@@ -116,7 +118,7 @@
             <h2 class="page-title">
                 <img src="images/home/moji-news.png" alt="おしらせ">
                 <p>おしらせ</p></h2>
-            <div class="home-news-lineup wrapper">
+            <div class="home-news-lineup wrapper" data-aos="fade-up">
                 <div class="home-news-lineuparea">
                     <img src="images/gallery4.jpg" alt="ギャラリー更新">
                     <div class="home-news-deta">
@@ -127,6 +129,7 @@
                         <p>タイトルをここに入れて数行あってもオッケーです。</p>
                     </div><!-- /.home-news-title -->
                 </div><!-- /.home-news-area -->
+
                  <div class="home-news-lineuparea">
                     <img src="images/gallery4.jpg" alt="ギャラリー更新">
                     <div class="home-news-deta">
@@ -159,6 +162,7 @@
                     </div><!-- /.home-news-title -->
                 </div><!-- /.home-news-area -->
             </div><!-- /.home-news-lineup -->
+
             <div class="more-btn"><a href="news.php">もっとみる</a>
             </div><!-- /.more-btn -->
         </div><!-- /.home-news-title -->
@@ -187,7 +191,7 @@
             <h2 class="page-title"><img src="images/home/moji-gallery.png" alt="ギャラリー"><p class="subHeadings">ギャラリー</p></h2>
         </div><!-- /.home-gallery-top -->
             <div class="home-gallery-bg">
-                <div class=".home-gallery-list">
+                <div class=".home-gallery-list" data-aos="fade-up">
                     <ul class="slick01">
                         <li><a class="home-gallery-works" href="images/home/home-gallery-w1.jpg" title="カフェにて"><img alt="画像1" src="images/home/home-gallery-list01s.png"></a></li>
                         <li><a class="home-gallery-works" href="images/home/home-gallery-w2.jpg" title="おまつりのあと"><img alt="画像2" src="images/home/home-gallery-list02s.png"></a></li>
@@ -243,7 +247,7 @@
 <!-- HOW TO ろう画とは -->
     <div class="home-howto-area wrapper">
         <h2 class="page-title"><img src="images/home/moji-howto.png" alt=""><p>ろう画のかき方</p></h2>
-        <div class="homo-howto-main animateslow">
+        <div class="homo-howto-main " data-aos="fade-up">
                 <a href="howto.html"><img src="images/home/home-howto-img.png" alt=""></a>
             <div class="more-btn">
                 <p><a href="howto.html">もっとみる</a></p>
@@ -272,7 +276,7 @@
             <p>ご質問・ご感想などをどうぞ</p>
             <img class="home-contact-cat" src="images/contact-akaneko.png" alt="">
             <div class="more-btn2">
-              <p><a href="contact.php">お問い合わせはこちら</a></p>
+              <p><a href="contact.html">お問い合わせはこちら</a></p>
             </div>
         </div><!-- /.home-contact-top -->
         <img class="home-contact-suzume animatespeed1" src="images/home/home-suzume3.png" alt="">
@@ -316,6 +320,8 @@
         <a href="#home" data-scroll><img src="images/arrow-top.png" alt="ページトップへ戻る"></a>
     </div><!-- /.pagetop-btn --ページTOPへ戻るボタン-->
 
+<!-- Java Script -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="js/script.js"></script>
 <script type="text/javascript" src="js/slick.min.js"></script>
 <script type="text/javascript" src="js/common.js"></script>

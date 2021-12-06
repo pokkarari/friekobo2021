@@ -21,7 +21,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border-bottom: 20px solid #85B7D5;
+  // border-bottom: 20px solid #85B7D5;
 }
 
 #home {
@@ -124,12 +124,12 @@
 .home-news-deta p:nth-child(2){
   font-size: 1.0rem;
 display: inline-block;
-width: 50px;
 background: #fff;
 border: 1px solid #74A7CBFF;
 border-radius: 10px;
 color: #74A7CBFF;
 margin: 5px;
+padding:5px;
 }
 .home-news-lineuptitle p{
   display: inline-block;
@@ -386,7 +386,6 @@ filter: drop-shadow(5px 3px 2px rgba(67,92,107,0.5));
 /* homr-line4 */
 .home-line4 {
   position: relative;
-  // margin-top: 50px;
 /*  transform: rotate( -15deg );*/
 }
 .home-line4 img{

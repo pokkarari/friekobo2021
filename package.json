@@ -1,0 +1,18 @@
+{
+  "name": "starter",
+  "version": "1.0.0",
+  "description": "Landing Page for sass",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "fibers": "^5.0.0",
+    "sass": "^1.35.2"
+  },
+  "scripts": {
+    "compile:sass": "sass sass/test1.scss css/test1.css --watch"
+  },
+}

@@ -1,28 +1,25 @@
 @charset "UTF-8";
-@use "homepage";
-@use "_newspage";
-@use "gallerypage";
-@use "howtopage";
-@use "aboutpage";
 /* モバイルファーストのためスマホ版から作成してみる*/
 /* 共通部分 */
+/*-------Font読み込みのちらつき防止--------はじめ */
 html {
   visibility: hidden;
 }
 
 html.wf-active,
-html.loading-delay {
+html.loading-de1 {
   visibility: visible;
 }
 
+/*-------Font読み込みのちらつき防止--------おわり */
 html {
   font-size: 62.5%;
 }
 
 body {
   font-size: 1.4rem;
-  font-weight: 500;
-  font-family: "a-otf-jun-pro","fot-udmarugo-large-pr6n", "ヒラギノ角ゴ Pro W3", sans-serif;
+  font-weight: 100;
+  font-family: "nitalago-rera", "ヒラギノ角ゴ Pro W3", sans-serif;
   line-height: 1.7;
   color: #271A10;
   /*color: #271A10 ---全体の文字の色こげ茶*/
@@ -30,7 +27,7 @@ body {
   /*coloer:#FFFFE1 ---背景の色の黄色*/
   background-color: #FFFFE1;
   /*  background-color: #FEFBF6;*/
-  /*background-image: url(../images/home/kobo-texture01.png);*/
+  background-image: url(../images/back-main.png);
   /*color: #fff6dc;---とりのこ色*/
   background-repeat: repeat;
 }
@@ -68,6 +65,7 @@ h1 img {
   padding: 0 4%;
 }
 
+/* 見出し */
 .page-title {
   text-align: center;
   font-size: 3.2rem;
@@ -77,7 +75,7 @@ h1 img {
   line-height: 24px;
 }
 .page-title p {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   font-family: donguri-kana, sans-serif;
   font-weight: 600;
   padding-top: 10px;
@@ -86,6 +84,8 @@ h1 img {
   height: 50px;
 }
 
+/* 各ページのヒーローイメージ */
+/* category */
 .page-top-title {
   text-align: left;
   padding-left: 20px;
@@ -108,10 +108,12 @@ h1 img {
 }
 .top-brush img {
   position: absolute;
-  top: -130px;
-  left: 0px;
+  top: -80px;
+  left: 60%;
+  width: 50%;
 }
 
+/* ボタン */
 .button {
   font-size: 1.6rem;
   color: #fff;
@@ -129,7 +131,6 @@ h1 img {
   border-image: url(../images/waku-blue01.png) 33%/25px 25px repeat;
   width: 200px;
   margin: 20px auto;
-  box-shadow: 0 5px #253137;
 }
 
 .more-btn:active {
@@ -158,10 +159,1086 @@ h1 img {
   width: 20px;
 }
 
+/*ライン */
+/*細いドット*/
 .cp_hr01 {
   border-width: 1px 0 0 0;
   border-style: dotted;
   border-color: #74A7CBFF;
+}
+
+/* モバイルファーストのためスマホ版から作成してみる*/
+/* HOME ページのみ*/
+.home-content {
+  position: relative;
+  font-size: 1.2rem;
+  margin: 10px 0 42px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.home-title {
+  max-width: 150px;
+  opacity: 0.9;
+}
+
+/* 大きな背景画像 */
+.big-bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#home {
+  position: relative;
+  background-image: url(../images/hero_yasuuri.jpg);
+  background-color: rgba(255, 255, 255, 0.1);
+  background-blend-mode: lighten;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#home .page-title {
+  text-transform: none;
+}
+
+.home-scroll {
+  position: absolute;
+  bottom: -20px;
+  left: 45%;
+  z-index: 50;
+  width: 100px;
+}
+
+/* HOMEのPC用メニュー */
+.home-menu-area {
+  display: none;
+}
+
+/* home-news */
+.home-news-area {
+  position: relative;
+  text-align: center;
+}
+
+.home-news-bg1 {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  z-index: -2;
+  width: 35%;
+}
+
+.home-news-bg2 {
+  position: absolute;
+  bottom: -120px;
+  left: -20px;
+  z-index: -1;
+  width: 60%;
+}
+
+.home-news-title {
+  padding: 20px;
+  padding-top: 20px;
+  width: auto;
+  margin: 0 auto;
+}
+
+.home-news-lineup {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.home-news-area {
+  text-align: center;
+  /*  width: 170px;*/
+}
+
+.home-news-lineuparea {
+  text-align: center;
+  /*  width: 170px;*/
+}
+
+.home-news-lineuparea p {
+  font-size: 1.2rem;
+}
+
+.home-news-lineuparea img {
+  /*  width: 150px;*/
+  border-radius: 10px;
+  border: 3px solid #fff;
+}
+
+.home-news-deta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 5px;
+}
+.home-news-deta p {
+  color: #74A7CBFF;
+}
+.home-news-deta p:nth-child(1) {
+  display: inline-block;
+  font-family: sans-serif;
+  margin: 5px 0;
+}
+
+.home-news-deta p:nth-child(2) {
+  font-size: 1rem;
+  display: inline-block;
+  background: #fff;
+  border: 1px solid #74A7CBFF;
+  border-radius: 10px;
+  color: #74A7CBFF;
+  margin: 5px;
+  padding: 5px;
+}
+
+.home-news-lineuptitle p {
+  display: inline-block;
+  /*  background: #fff;*/
+  font-size: 1.2rem;
+  text-align: left;
+  margin: 5px;
+}
+
+.home-news-titleNew p:after {
+  content: "NEW";
+  font-size: 1.2rem;
+  display: inline-block;
+  color: #E1334D;
+  margin: 5px;
+}
+
+/* home-line1 */
+.home-line {
+  display: grid;
+  grid-template-columns: 1fr;
+  /*  margin: 50px auto;*/
+  padding-top: 90px;
+}
+.home-line img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.home-line-move {
+  text-align: center;
+  padding: 20px 0 50px 0;
+}
+.home-line-move img {
+  width: 100px;
+  height: auto;
+  animation: animationZoom1 1s ease-in-out forwards;
+}
+
+/*@keyframes animationZoom1 {
+  0% {
+    margin-top: -150px;
+  }
+
+  100% { transform: scale(1.5)}
+}*/
+/* home-ギャラリー */
+.gallery-shadow {
+  drop-shadow: 15px 15px 0px 0 #969696;
+}
+
+.home-gallery-area {
+  /*  background-image: url(../images/home-suzume2.png);
+    background-size: 20%;
+    background-position: 70% 100%;*/
+}
+
+.home-gallery-top {
+  text-align: center;
+  background-image: url(../images/home/home-gallery-top.png);
+  background-size: 100%;
+  background-color: #fff;
+  height: 250px;
+}
+.home-gallery-top .page-title {
+  padding-top: 20px;
+}
+
+.home-gallery-bg {
+  position: relative;
+  background-color: #fff;
+}
+.home-gallery-bg:after {
+  content: "";
+  padding: 10px;
+}
+
+.home-gallery-list {
+  position: relative;
+  /*  bottom: -50px;*/
+  /*  display: flex;
+    flex-wrap: wrap;
+    align-items: top;
+    justify-content: center;
+    padding: 10px;*/
+}
+
+.slick01 {
+  position: absolute;
+  border-top: -50px;
+}
+
+/*ギャラリー slickカスタマイズ分*/
+.slick01 img {
+  padding: 10px;
+  height: 40vw;
+  filter: drop-shadow(5px 3px 2px rgba(67, 92, 107, 0.5));
+}
+
+.home-gallery-suzume {
+  text-align: center;
+}
+.home-gallery-suzume p {
+  display: inline-block;
+  padding: 20px;
+}
+.home-gallery-suzume img {
+  margin: 20px 20px 0 60%;
+  width: 50px;
+}
+
+/*-----------------------*/
+.home-line2 {
+  padding-bottom: 120px;
+  /*  transform: rotate( 10deg );*/
+  padding-top: 50px;
+}
+
+/*-----------------------*/
+/* home-about */
+.home-about-area {
+  position: relative;
+  text-align: center;
+  height: 800px;
+}
+
+.home-about-bg1 {
+  position: absolute;
+  right: 0px;
+  top: -100px;
+  z-index: -2;
+  width: 50%;
+}
+
+.home-about-bg2 {
+  position: absolute;
+  width: 50%;
+  bottom: -80px;
+  left: 0px;
+  z-index: -1;
+}
+
+.home-about-top {
+  margin: 60px auto;
+  padding: 0 6%;
+}
+.home-about-top p {
+  margin: 0 12px 12px 12px;
+  text-align: left;
+}
+
+.home-about-top .page-title {
+  padding: 0;
+}
+.home-about-top .page-title p {
+  text-align: center;
+}
+
+.home-about-bgcolor {
+  border-radius: 28px;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 12px;
+  margin: 20px;
+}
+
+.home-about-mike {
+  width: 125px;
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+
+.home-about-move {
+  position: relative;
+}
+.home-about-move p {
+  text-align: right;
+  color: #85B7D5;
+}
+
+.home-kochira a {
+  font-size: 1.2rem;
+  text-align: right;
+  color: #85B7D5;
+}
+
+.home-kochira a:hover {
+  color: #85B7D5;
+  border-bottom: 1px solid #85B7D5;
+}
+
+.home-about-car p {
+  font-size: 1.6rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* home-howto */
+.home-howto-area {
+  margin: 75px 0 0px 0;
+  padding-bottom: 150px;
+  background-color: #fff;
+  background-image: url(../images/howto/brush-yellow.svg);
+  background-position: 120% -20px;
+  background-size: 200px auto;
+}
+.home-howto-area .page-title img {
+  margin-top: 50px;
+}
+
+.homo-howto-main {
+  position: relative;
+  box-shadow: 0 5px #253137;
+}
+.homo-howto-main .more-btn {
+  position: absolute;
+  left: 20%;
+  bottom: 3%;
+}
+
+.homo-howto-main:active {
+  box-shadow: none;
+  position: relative;
+  top: 5px;
+}
+
+.home-line3 {
+  padding: 10px 0 10px 0;
+  margin-top: -100px;
+  /*  transform: rotate( -15deg );*/
+}
+
+/* homr-line4 */
+.home-line4 {
+  position: relative;
+  /*  transform: rotate( -15deg );*/
+}
+
+.home-line4 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  animation: animeSlide1 8s linear;
+  transform: translateX(-100%);
+  /*初期位置*/
+  animation-fill-mode: forwards;
+  /*コレが最後停止*/
+  animation-iteration-count: infinite;
+  /*アニメーションをエンドレス再生する*/
+}
+
+@keyframes animeSlide1 {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-right: 100%;
+    transform: translateX(-100%);
+  }
+}
+/* home-contact  */
+.home-contact-area {
+  position: relative;
+  text-align: center;
+  margin-top: 300px;
+}
+.home-contact-area p {
+  padding-top: 20px;
+}
+
+.home-contact-top {
+  /*border: 2px solid #85B7D5;*/
+  border: 1px solid #fff;
+  border-image: url(../images/waku-blue01.png) 33%/25px 25px repeat;
+  background-repeat: no-repeat;
+  background-position: left 20px bottom 20px;
+  background-size: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: auto;
+  height: 380px;
+}
+
+.home-contact-top .page-title {
+  padding-bottom: 20px;
+}
+.home-contact-top .page-title img {
+  width: 200px;
+}
+
+.home-contact-cat {
+  position: absolute;
+  top: -74px;
+  left: 33%;
+  width: 120px;
+}
+
+.home-contact-suzume {
+  position: absolute;
+  bottom: -70px;
+  left: 0;
+  width: 60%;
+}
+
+.more-btn2 {
+  text-align: center;
+  width: 220px;
+  margin: 0 auto;
+  padding: 10px;
+  color: #fff;
+}
+.more-btn2 a {
+  display: block;
+  width: 220px;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #FAAF3B;
+  color: #fff;
+}
+
+.more-btn2 a:hover {
+  color: #fff;
+  background-color: #FC8F00;
+}
+
+/* home-sns */
+.sns-area {
+  text-align: center;
+  font-size: 1.8rem;
+  padding: 50px;
+}
+
+.sns-fish {
+  width: 100px;
+  margin-top: 150px;
+}
+
+.sns-bt p {
+  text-align: center;
+  color: #85B7D5;
+  margin: 32px;
+}
+
+.sns-twitter {
+  border: 2px solid #85B7D5;
+  border-radius: 20px;
+  padding: 10px;
+  background: #fff;
+}
+
+.sns-bt-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin: 0 10px;
+  padding-top: 20px;
+}
+
+.sns-bt-nav li {
+  font-size: 2.2rem;
+  /*  margin-right: 20px;*/
+  padding: 0 10px;
+}
+
+.sns-bt-nav li:last-child {
+  margin-right: 0;
+}
+
+.sns-bt-nav a {
+  display: block;
+  color: #85B7D5;
+  border: 1px solid #85B7D5;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.sns-bt-nav a:hover {
+  color: #85B7D5;
+}
+
+.sns-blog {
+  margin: 32px;
+}
+.sns-blog img {
+  width: 180px;
+}
+
+.home-topmark {
+  font-size: 1.6rem;
+  text-align: right;
+}
+.home-topmark a {
+  color: #85B7D5;
+}
+
+.pagetop-btn a {
+  display: block;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  position: fixed;
+  right: 10px;
+  bottom: 72px;
+  z-index: 100;
+}
+
+/* フッター */
+footer {
+  background: #85B7D5;
+  text-align: center;
+  padding: 26px 0;
+}
+footer p {
+  color: #fff;
+  font-size: 1rem;
+}
+
+/* モバイルファーストのためスマホ版から作成してみる */
+/*------------------------
+NEWSページ　一部 news.cssもあり←ここから移動予定 */
+#news {
+  position: relative;
+  background-image: url("../images/news/news-top-img.png");
+  background-color: rgba(255, 255, 255, 0.1);
+  background-blend-mode: lighten;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#news .page-title {
+  text-transform: none;
+}
+
+/* news.cssファイルへ続く
+
+/*  --------aboutページ---------- */
+/*  エフリエこうぼうについて  */
+#about {
+  position: relative;
+  background-image: url("../images/about/about-top-img.png");
+  background-color: rgba(255, 255, 255, 0.1);
+  background-blend-mode: lighten;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#about .page-title {
+  text-transform: none;
+}
+
+.about-top-title {
+  display: inline-block;
+  text-align: center;
+  width: 70%;
+  padding: 20px;
+}
+
+/* --------ギャラリーページ------- */
+/* gallery 共通 */
+/*  category page-topタイトルは上にまとめてある  */
+#gallery {
+  position: relative;
+  background-image: url("../images/gallery/gallery-top-img.jpg");
+  background-color: rgba(255, 255, 255, 0.1);
+  background-blend-mode: lighten;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#gallery .page-title {
+  text-transform: none;
+}
+
+/* ----gallery picup------  */
+.picup {
+  background: #FFFFE1;
+}
+
+.picup-work {
+  text-align: center;
+  padding: 20px;
+  margin-top: 10px;
+  /* background: #FFF; */
+}
+.picup-work > p {
+  font-size: 2.6rem;
+  font-family: donguri-kana, sans-serif;
+  margin: 10px;
+}
+
+.picup-waku {
+  text-align: center;
+  background-color: #fff;
+  margin: 40px 20px;
+  padding: 20px;
+  box-shadow: 2px 2px #FDF5EE;
+  transform: rotate(3deg);
+}
+.picup-waku img {
+  width: 250px;
+}
+
+.picup-waku p:nth-child(2) {
+  font-size: 2.6rem;
+}
+
+.gallery-works-top {
+  text-align: center;
+}
+.gallery-works-top p {
+  font-size: 2.6rem;
+  font-family: donguri-kana, sans-serif;
+  margin: 10px;
+}
+
+.gallery-grid {
+  display: grid;
+  gap: 26px;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 6%;
+  margin-bottom: 50px;
+}
+
+.gallery-item-work {
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 2px 2px #FDF5EE;
+}
+.gallery-item-work p {
+  font-size: 1.4rem;
+}
+
+/* モバイルファーストのためスマホ版から作成してみる */
+/* --------ギャラリーページ */
+#gallery {
+  position: relative;
+  background-image: url("../images/gallery/gallery-top-img.jpg");
+  background-color: rgba(255, 255, 255, 0.1);
+  background-blend-mode: lighten;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#gallery .page-title {
+  text-transform: none;
+}
+
+/*----gallery picup------*/
+.picup {
+  background: #FFFFE1;
+}
+
+.picup-work {
+  text-align: center;
+  padding: 20px;
+  margin-top: 10px;
+}
+.picup-work > p {
+  font-size: 2.6rem;
+  font-family: donguri-kana, sans-serif;
+  margin: 10px;
+}
+
+.picup-waku {
+  text-align: center;
+  background-color: #fff;
+  margin: 40px 20px;
+  padding: 20px;
+  box-shadow: 2px 2px #FDF5EE;
+  transform: rotate(3deg);
+}
+.picup-waku img {
+  width: 250px;
+}
+
+.picup-waku p:nth-child(2) {
+  font-size: 2.6rem;
+}
+
+.gallery-works-top {
+  text-align: center;
+}
+.gallery-works-top p {
+  font-size: 2.6rem;
+  font-family: donguri-kana, sans-serif;
+  margin: 10px;
+}
+
+.gallery-grid {
+  display: grid;
+  gap: 26px;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 6%;
+  margin-bottom: 50px;
+}
+
+.gallery-item-work {
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 2px 2px #FDF5EE;
+}
+.gallery-item-work p {
+  font-size: 1.4rem;
+}
+
+/*  モバイルファーストのためスマホ版から作成してみる */
+/*   --------HOW TOのページ-------- */
+#howto {
+  position: relative;
+  background-image: url(../images/howto/howto-top-img.jpg);
+  background-color: rgba(255, 255, 255, 0.1);
+  background-blend-mode: lighten;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#howto .page-title {
+  text-transform: none;
+}
+
+.bg-fff {
+  background: #fff;
+}
+
+.howto-point {
+  position: relative;
+  background: #FFF;
+  border: 2px solid #74A7CBFF;
+  border-radius: 10px;
+  margin: 50px 10px;
+  padding: 10px;
+}
+
+.howto-point:before {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  content: "";
+  display: inline-block;
+  width: 80px;
+  height: 50px;
+  background-image: url(../images/howto/howto-point.svg);
+  background-size: contain;
+  vertical-align: middle;
+}
+
+.howto-top-title {
+  display: inline-block;
+  text-align: center;
+  width: 70%;
+  padding: 20px;
+}
+
+.howto-contens li {
+  list-style-type: none;
+  background-color: #74A7CBFF;
+  margin: 0;
+  padding: 10px 10px 10px 40px;
+  opacity: 0.6;
+}
+.howto-contens li:before {
+  content: "→ ";
+}
+
+.howto-top-toha {
+  margin-top: 50px;
+  width: 300px;
+}
+
+.howto-painting-kansei {
+  background-image: url(../images/howto/top_rouga_img.jpg);
+  background-size: cover;
+  height: 250px;
+}
+
+.howto-toha {
+  position: relative;
+}
+
+.howto-toha-ex {
+  background-color: #fff;
+  border-radius: 20px;
+}
+.howto-toha-ex p {
+  padding: 20px;
+}
+.howto-toha-ex p:nth-child(1) {
+  font-size: 2.6rem;
+  text-align: center;
+}
+.howto-toha-ex p:nth-child(n+2) {
+  padding: 30px;
+}
+.howto-toha-ex p:last-child {
+  padding-bottom: 50px;
+}
+
+.howto-toha-img1 {
+  position: absolute;
+  left: -50px;
+  bottom: -170px;
+  width: 250px;
+  opacity: 0.3;
+}
+
+.howto-toha-img2 {
+  position: absolute;
+  left: 0px;
+  bottom: -200px;
+  width: 200px;
+}
+
+/* -------ろう画の描き方 -------*/
+.howto-title {
+  font-size: 2.4rem;
+  padding: 10px 10px 0px 0;
+  border-bottom: 2px solid #74A7CBFF;
+  margin: 25px 0;
+}
+
+.howto-title:before {
+  content: "";
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url("../images/howto/howto-suzume1.png");
+  background-size: contain;
+  vertical-align: middle;
+}
+
+.howto-rougahowto-area {
+  padding-top: 200px;
+}
+
+.howto-completion-img {
+  text-align: center;
+}
+.howto-completion-img img {
+  border: 5px solid #74A7CBFF;
+}
+
+.howto-painting ul {
+  list-style: none;
+}
+
+.howto-tools-img {
+  display: grid;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 80px;
+  margin: 20px 0 10px 0;
+}
+.howto-tools-img li {
+  font-size: 2.6rem;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.howto-tools-name {
+  padding: 20px;
+  margin: 5px 30px;
+}
+
+/* 描き方ステップ */
+.howto-painting-step {
+  border: 10px solid #fff;
+  background: #fff6dc;
+  margin: 0 10px;
+  padding: 20px;
+}
+.howto-painting-step p {
+  display: inline-block;
+  margin: 30px;
+}
+
+.painting-step-cursor {
+  position: relative;
+  margin-top: 100px;
+}
+
+.painting-step-cursor + .painting-step-cursor:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -60px;
+  width: 100%;
+  height: 35px;
+  background: url("../images/howto/howto-cursor.svg") no-repeat 50% 50%;
+  /*矢印画像*/
+}
+
+.painting-step-cursor:nth-child(1) {
+  margin-top: 0;
+}
+
+.painting-step-area {
+  background: #fff;
+}
+
+.painting-step-title {
+  display: flex;
+  text-align: left;
+  margin: 10px auto 100px 0;
+  padding: 20px;
+}
+.painting-step-title img {
+  width: 50px;
+  height: 50px;
+}
+.painting-step-title p {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 2.4rem;
+  line-height: 1.5;
+  margin: 10px;
+}
+
+.step-img {
+  text-align: center;
+  position: relative;
+}
+
+.step-img-fix {
+  border: 8px solid #74A7CBFF;
+  border-radius: 10px;
+  width: 250px;
+  height: 250px;
+}
+
+.step-img-up {
+  position: absolute;
+  top: -40%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 150px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  background-color: #ff1;
+}
+
+.step-caption {
+  margin: 20px auto 20px 10px;
+}
+
+.howto-attract {
+  border: 2px solid #74A7CBFF;
+  border-radius: 10px;
+  padding-bottom: 50px;
+  margin: 10px 10px;
+}
+
+/* モバイルファーストのためスマホ版から作成してみる*/
+/* --------aboutページ */
+/*  エフリエこうぼうについて */
+#about {
+  position: relative;
+  background-image: url("../images/about/about-top-img.png");
+  background-color: rgba(255, 255, 255, 0.1);
+  background-blend-mode: lighten;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#about .page-title {
+  text-transform: none;
+}
+
+.about-top-title {
+  display: inline-block;
+  text-align: center;
+  width: 70%;
+  padding: 20px;
+}
+
+/* モバイルファーストのためスマホ版から作成してみる*/
+/* --------contactページ */
+/*  お問い合わせ */
+.contact_form_area {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 1%;
+}
+
+.contact_form_area_space {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  padding: 25px 25px 0 25px;
+}
+
+.contact_form_area_wra {
+  border: 1px solid #999;
+  border-radius: 10px;
+  text-align: left;
+}
+.contact_form_area_wra input[type=text] {
+  background-color: #fff;
+  display: block;
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid #999;
+  width: 80%;
+}
+.contact_form_area_wra textarea {
+  background-color: #fff;
+  padding: 20px;
+  margin: 10px;
+  height: 100px;
+  font-size: 14px;
+  border: 1px solid #999;
+}
+.contact_form_area_wra button {
+  background: #FAAF3B;
+  color: white;
+  padding: 10px 30px;
+  margin: 0 5px;
+  font-size: 16px;
+  letter-spacing: 0.25px;
+  border-radius: 8px;
+  width: 100px;
 }
 
 /* ーーーーーーーーーーーーーーーーーー

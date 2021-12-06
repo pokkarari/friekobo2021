@@ -1,7 +1,7 @@
 @charset "UTF-8";
-/* モバイルファーストのためスマホ版から作成してみる*/
+/* モバイルファーストのためスマホ版から作成してみる */
 
-// --------ギャラリーページ
+/* --------ギャラリーページ */
 #gallery {
   position: relative;
   background-image: url("../images/gallery/gallery-top-img.jpg");
@@ -17,7 +17,7 @@
 }
 
 
-//----gallery picup------
+/*----gallery picup------*/
 .picup {
   background: #FFFFE1;
   }
@@ -26,7 +26,6 @@
   text-align: center;
   padding: 20px;
   margin-top: 10px;
-  // background: #FFF;
   > p {
     font-size: 2.6rem;
     font-family: donguri-kana, sans-serif;

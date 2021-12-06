@@ -2,59 +2,223 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>ねことろう画のエフリエこうぼう - CONTACT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ねことろう画のエフリエこうぼう</title>
     <meta name="description" content="ねこのろう画の絵とハンドメイド作品を制作しているエフリエこうぼうです。">
-
     <meta name="robots" content="noindex,nofollow,noarchive" />
 <!-- 検索エンジンに検索されないようにする -->
-    <meta name="viewport" content="width=device-width">
-
-    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-    <link rel="stylesheet" href="css/style2.css">
     <link rel="icon" type="images/png" href="images/favicon.png">
-    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css"><!-- リセットcss-->
+    <link rel="stylesheet" href="css/menu_style.css">
+    <link rel="stylesheet" href="css/layout.css"><!-- メインcssファイル モバイルファースト-->
+    <link rel="stylesheet" href="css/layout_sp.css">
+
+ <link rel="stylesheet" href="slick/slick-theme.css">
+<!--slickプラグイン-->
+ <link rel="stylesheet" href="slick/slick.css">
+ <!--slickプラグイン-->
+
+
+<!-- <link rel="stylesheet" type="text/css" href="fancybox-master/dist/jquery.fancybox.css"> --><!-- FancyBox3プラグイン -->
+    <link rel="stylesheet" href="colorbox/colorbox.css"><!-- colorboxプラグイン -->
+
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet"><!-- フォントアイコン-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!--JQueryプラグイン-->
+
+    <script src="colorbox/jquery.colorbox-min.js"></script>
+    <!-- 画像表示ColorBoxプラグイン -->
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.0/smooth-scroll.min.js"></script>
+      <!-- スクロールでページトップへ -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- スクロールでスライドイン -->
+
+    <script type="text/javascript">
+            $(function(){
+
+        });
+
+    </script>
 
 </head>
 
 <body>
-    <div id="contact" class="big-bg">
-        <header class="page-header wrapper">
-            <h1><a href="index.html"><img class="logo" src="images/logo.svg" alt="エフリエこうぼうのロゴ"></a></h1>
-            <nav>
-                <ul class="main-nav">
-                    <li><a href="news.html">News</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+
+        <header class="page-header">
+
+    <!-- ここからハンバーガーメニュー -->
+            <div class="hb-menu">
+                <div class="logo">
+                </div><!-- /. logo-->
+                <!-- ハンバーガーメニューの部分 -->
+                <div class="drawer">
+                  <input type="checkbox" id="drawer-check" class="drawer-hidden">
+                  <!-- ハンバーガーアイコン-->
+                  <label for="drawer-check" class="drawer-open"><span><p class="hb-menu-moji">MENU</p></span></label>
+                  <!-- メニュー -->
+                  <nav class="drawer-content">
+                    <div class="hb-menu-logo">
+                      <a href="index.html"><img src="images/kobo-logo.svg" alt=""></a>
+                    </div><!-- /.hb-menu-logo -->
+                  <ul class="drawer-list">
+                    <li class="drawer-item"><a href="index.html">Home <span>ホーム</span></a></li>
+                    <li class="drawer-item"><a href="news.php">News <span>おしらせ</span></a></li>
+                    <li class="drawer-item"><a href="">Gallery <span>ギャラリー</span></a></li>
+                    <li class="drawer-item"><a href="howto.html">How To <span>ろう画とは？</span></a></li>
+                    <li class="drawer-item"><a href="">About <span>エフリエこうぼうについて</span></a></li>
+                    <li class="drawer-item"><a href="contact.html">Contact <span>お問い合わせ</span></a></li>
+                    <li class="drawer-item"><a href="">Blog <span>ブログ</span></a></li>
+                  </ul><!-- /.drawer-list -->
+                    <div class="hb-menu-bg">
+                      <img src="images/home/home-suzume2.png" alt="">
+                    </div><!-- /.hb-menu-bg -->
+                    <div class="sns-bt">
+                        <ul class="sns-bt-nav">
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                        </ul><!-- /.sns-bt-nav -->
+                    </div><!-- /.sns-bt -->
+
+                  </nav><!-- /.drawer-content -->
+                </div> <!-- /.drawer -->
+            </div><!-- hb-menu -->
+
         </header>
 
-    <div class="contact-area wrapper">
-        <h2 class="page-title">Contact</h2>
-        <form action="#">
-            <div>
-                <label for="name">お名前</label>
-                <input type="text" id="name" name="your-name">
+<main>
+<!-- 多きいサイズのnavメニュー -->
+    <div class="home-menu-area">
+        <ul class="home-menu wrapper">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="news.php">News</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="howto.html">How To</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">blog</a></li>
+        </ul>
+    </div> <!-- /.home-menu-area-->
+
+<!--  ジャンルわけ   作品がふえたら検討
+    <div class="wrapper ">
+        <ul class="gallery-type">
+            <li>ろう画</li>
+            <li>グッズ</li>
+        </ul>
+    </div> -->
+
+    <div id="gallery" class="big-bg">
+        <div class="page-top-img">
+            <h1 class="page-top-title">
+                <a href="index.html"><img src="images/kobo-logo.svg" alt=""></a>
+            </h1>
+            <div class="howto-top-title">
+              <h2><img src="images/gallery/gallery-title.png" alt=""></h2>
+            </div><!-- /.howto-top-title -->
+        </div><!-- page-top-img -->
+    </div><!--  /#gallery /.big-bg-->
+
+<!-- ブラシ絵 -->
+        <div class="top-brush">
+            <img src="images/top-brush.png" alt="">
+        </div><!-- /.top-brush -->
+
+<!-- Googleフォーム -->
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeJJKWzMdL3n1nt4Kbiw7zPC1KC5WfKjKxrdeYQNK2qajPeEw/viewform?embedded=true" width="100%" height="1045" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+<div class="contact_form_area">
+    <div class="contact_form_area_title">
+        <h2>お問い合わせ</h2>
+        <p>*は必須項目です。</p>
+    </div>
+    <div class="contact_form_area_wra">
+        <form action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSeJJKWzMdL3n1nt4Kbiw7zPC1KC5WfKjKxrdeYQNK2qajPeEw/formResponse">
+
+
+
+            <div class="contact_form_area_space">
+                <label for="form_email">お名前*</label>
+                <input id="form_email" type="text" name="entry.1087611964" placeholder="">
+            </div><!--  /.contact_form_area_space-->
+
+            <div class="contact_form_area_space">
+                <label for="formemail">メールアドレス*</label>
+                <input id="form_email" type="text" name="entry.287958044" placeholder="example@mail.co.jp">
+            </div><!--  /.contact_form_area_space-->
+
+            <div class="contact_form_area_space">
+                <label for="form_title">題名*</label>
+                <input id="form_title" type="text" name="entry.1789636408" placeholder="お問い合わせ内容のタイトルを入力してください。"></input>
+            </div><!--  /.contact_form_area_space-->
+
+            <div class="contact_form_area_space">
+                <label for="form_msg">メッセージ本文*</label>
+                <textarea id="fomre_msg" name="entry.1767994658" placeholder="お問い合わせ内容"></textarea>
+            </div><!--  /.contact_form_area_space-->
+            <div class="contact_form_area_space">
+                <button type="submit" name="button" value="送信">送信</button>
+                <p>お気軽にお問い合わせ下さい。</p>
             </div>
-            <div>
-                <label for="email">メールアドレス</label>
-                <input type="email" id="email" name="your-email">
-            </div>
-            <div>
-                <label for="message">メッセージ</label>
-                <textarea id="message" name="your-message"></textarea>
-            </div>
-            <input type="submit" class="button" value="送信">
         </form>
-    </div><!-- /.wrapper-->
-   </div><!--  #contact -->
+    </div><!-- /.contact_form_area_wra-->
+</div><!-- /.contact_form_area -->
+
+
+</main>
+
+
+
+
+
+
+<!-- SNSやブログ -->
+    <div class="sns-area wrapper">
+
+        <img class="sns-fish" src="images/hikousen1.png" alt="">
+        <div class="sns-bt">
+            <p>FRIE KOBO OFFICIAL</p>
+<!--         <div class=sns-twitter>
+            <a class="twitter-timeline" data-width="350" data-height="200" href="https://twitter.com/friekobo?ref_src=twsrc%5Etfw">Tweets by friekobo</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div> -->
+            <lu class="sns-bt-nav">
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+            </lu><!-- /.sns-bt-nav -->
+        </div><!-- /.sns-bt -->
+        <div class="sns-blog">
+            <img src="images/home-blog-bar.png" alt="">
+        </div>
+        <p class="home-topmark"><a href="#">▲トップへ</a></p>
+    </div><!-- /.home-sns-area -->
+
+    <div class="home-sns-bg">
+        <img src="images/home-footer.jpg" alt="">
+    </div>
 
     <footer>
         <div class="wrapper">
-            <p><small>&copy; 2020 FRie Kobo</small></p>
+            <p><small>&copy; 2021 FRie Kobo</small></p>
         </div>
     </footer>
 
+    <div class="pagetop-btn smooths" >
+        <a href="#home" data-scroll><img src="images/arrow-top.png" alt="ページトップへ戻る"></a>
+    </div><!-- /.pagetop-btn --ページTOPへ戻るボタン-->
 
+<script src="js/script.js"></script>
+<script type="text/javascript" src="js/slick.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<!-- ギャラリーのスライドプラグイン slick -->
+<script src="fancybox-master/dist/jquery.fancybox.min.js"></script>
+<script>
+    $('[data-fancybox]').fancybox({
+        // オプションを下記に記載していきます
+        loop : true, // 複数画像表示時に最初と最後をループさせる
+        margin : [44, 0],
+    });//FancyBox3
+</script>
 </body>
 </html>

@@ -1,8 +1,8 @@
 @charset "UTF-8";
-/* モバイルファーストのためスマホ版から作成してみる*/
+/* モバイルファーストのためスマホ版から作成してみる */
 
 /*------------------------
-NEWSページ　一部 news.cssもあり←ここから移動予定*/
+NEWSページ　一部 news.cssもあり←ここから移動予定 */
 #news {
   position: relative;
   background-image: url("../images/news/news-top-img.png");
@@ -16,10 +16,10 @@ NEWSページ　一部 news.cssもあり←ここから移動予定*/
 #news .page-title {
   text-transform: none;
 }
-//news.cssファイルへ続く
+/* news.cssファイルへ続く
 
-// --------aboutページ
-// エフリエこうぼうについて
+/*  --------aboutページ---------- */
+/*  エフリエこうぼうについて  */
 #about {
   position: relative;
   background-image: url("../images/about/about-top-img.png");
@@ -42,9 +42,9 @@ NEWSページ　一部 news.cssもあり←ここから移動予定*/
 
 
 
-// --------ギャラリーページ
-// gallery 共通
-// category page-topタイトルは上にまとめてある
+/* --------ギャラリーページ------- */
+/* gallery 共通 */
+/*  category page-topタイトルは上にまとめてある  */
 #gallery {
   position: relative;
   background-image: url("../images/gallery/gallery-top-img.jpg");
@@ -60,7 +60,7 @@ NEWSページ　一部 news.cssもあり←ここから移動予定*/
 }
 
 
-//----gallery picup------
+/* ----gallery picup------  */
 .picup {
   background: #FFFFE1;
   }
@@ -69,7 +69,7 @@ NEWSページ　一部 news.cssもあり←ここから移動予定*/
   text-align: center;
   padding: 20px;
   margin-top: 10px;
-  // background: #FFF;
+  /* background: #FFF; */
   > p {
     font-size: 2.6rem;
     font-family: donguri-kana, sans-serif;

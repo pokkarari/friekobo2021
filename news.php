@@ -101,9 +101,9 @@ $(function(){
     </div><!-- /#news /.big-bg -->
 
 <!-- ぶらし絵 -->
-    <div class="top-brush">
+<!--     <div class="top-brush">
         <img src="images/howto/howto-top-bursh.png" alt="">
-    </div>
+    </div> -->
 
         <article class="wrapper">
 <!-- ここからがおしらせリスト-->
